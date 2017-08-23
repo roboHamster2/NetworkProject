@@ -1,0 +1,55 @@
+22:19:33 **** Build of configuration Debug for project lab10 ****
+make all 
+Building file: ../AuthRequestsDispatcher.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"AuthRequestsDispatcher.d" -MT"AuthRequestsDispatcher.o" -o "AuthRequestsDispatcher.o" "../AuthRequestsDispatcher.cpp"
+Finished building: ../AuthRequestsDispatcher.cpp
+ 
+Building file: ../MThread.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"MThread.d" -MT"MThread.o" -o "MThread.o" "../MThread.cpp"
+Finished building: ../MThread.cpp
+ 
+Building file: ../MultipleTCPSocketsListener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"MultipleTCPSocketsListener.d" -MT"MultipleTCPSocketsListener.o" -o "MultipleTCPSocketsListener.o" "../MultipleTCPSocketsListener.cpp"
+Finished building: ../MultipleTCPSocketsListener.cpp
+ 
+Building file: ../PeersRequestsDispatcher.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"PeersRequestsDispatcher.d" -MT"PeersRequestsDispatcher.o" -o "PeersRequestsDispatcher.o" "../PeersRequestsDispatcher.cpp"
+Finished building: ../PeersRequestsDispatcher.cpp
+ 
+Building file: ../TCPMessengerServer.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPMessengerServer.d" -MT"TCPMessengerServer.o" -o "TCPMessengerServer.o" "../TCPMessengerServer.cpp"
+Finished building: ../TCPMessengerServer.cpp
+ 
+Building file: ../TCPSessionBroker.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPSessionBroker.d" -MT"TCPSessionBroker.o" -o "TCPSessionBroker.o" "../TCPSessionBroker.cpp"
+Finished building: ../TCPSessionBroker.cpp
+ 
+Building file: ../TCPSocket.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPSocket.d" -MT"TCPSocket.o" -o "TCPSocket.o" "../TCPSocket.cpp"
+Finished building: ../TCPSocket.cpp
+ 
+Building file: ../User.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"User.d" -MT"User.o" -o "User.o" "../User.cpp"
+Finished building: ../User.cpp
+ 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: lab10
+Invoking: GCC C++ Linker
+g++  -o "lab10"  ./AuthRequestsDispatcher.o ./MThread.o ./MultipleTCPSocketsListener.o ./PeersRequestsDispatcher.o ./TCPMessengerServer.o ./TCPSessionBroker.o ./TCPSocket.o ./User.o ./main.o   -lpthread
+Finished building target: lab10
+ 
+
+22:19:43 Build Finished (took 10s.216ms)
+

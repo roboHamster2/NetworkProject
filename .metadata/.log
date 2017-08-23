@@ -1,0 +1,13 @@
+!SESSION 2017-08-23 22:16:12.619 -----------------------------------------------
+eclipse.buildId=4.6.0.I20160606-1100
+java.version=9-internal
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-08-23 22:18:38.206
+!MESSAGE Indexed 'lab10' (9 sources, 185 headers) in 25.6 sec: 15,283 declarations; 23,871 references; 20 unresolved inclusions; 0 syntax errors; 548 unresolved names (1.4%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-08-23 22:19:18.846
+!MESSAGE Indexed 'lab8' (5 sources, 152 headers) in 11.9 sec: 11,059 declarations; 16,939 references; 17 unresolved inclusions; 0 syntax errors; 148 unresolved names (0.53%)
