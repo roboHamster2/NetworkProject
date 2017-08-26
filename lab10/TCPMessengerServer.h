@@ -132,6 +132,11 @@ private:
 	 * load users from CSV
 	 */
 	map<string,User*> loadUsersFromFile(string path);
+
+	/**
+	* register peer
+	*/
+	string registerUser(string name, string password);
 };
 
 #endif

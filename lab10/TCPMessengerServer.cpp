@@ -4,6 +4,7 @@
 #include <sstream>
 #include <cstdlib>
 #include <algorithm>
+#include <tr1/functional>
 
 
 using namespace std;
@@ -246,4 +247,20 @@ map<string,User*> TCPMessengerServer::loadUsersFromFile(string path){
 		}
 	}
 	return users;
+}
+
+string TCPMessengerServer::registerUser(string name, string password){
+	if (name.length() < 4 && password.length() < 4){
+		return "password and user must be at least 4 characters";
+	}
+	if (users[name]!=NULL){
+		return "user already taken";
+	}
+	std::tr1::hash<string> hash_fn;
+	size_t str_hash = hash_fn(password);
+	int res = str_hash ;
+	stringstream ss;
+	ss << res;
+	string str = ss.str();
+	users[name] = new User(name,str,0);
 }
