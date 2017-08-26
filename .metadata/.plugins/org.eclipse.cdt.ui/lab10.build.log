@@ -1,4 +1,4 @@
-22:19:33 **** Build of configuration Debug for project lab10 ****
+17:52:50 **** Build of configuration Debug for project lab10 ****
 make all 
 Building file: ../AuthRequestsDispatcher.cpp
 Invoking: GCC C++ Compiler
@@ -51,5 +51,5 @@ g++  -o "lab10"  ./AuthRequestsDispatcher.o ./MThread.o ./MultipleTCPSocketsList
 Finished building target: lab10
  
 
-22:19:43 Build Finished (took 10s.216ms)
+17:52:54 Build Finished (took 3s.692ms)
 
