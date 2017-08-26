@@ -54,3 +54,1436 @@ Invoking: GCC C++ Linker
 g++  -o "lab10"  ./AuthRequestsDispatcher.o ./MThread.o ./MultipleTCPSocketsListener.o ./PeersRequestsDispatcher.o ./TCPMessengerServer.o ./TCPSessionBroker.o ./TCPSocket.o ./User.o ./main.o   -lpthread
 Finished building target: lab10
  
+12:39:21 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Cannot run program "make": Unknown reason
+12:39:23 **** Clean-only build of configuration Debug for project lab8 ****
+make clean 
+Cannot run program "make": Unknown reason
+12:39:23 **** Build of configuration Debug for project lab8 ****
+make all 
+Cannot run program "make": Unknown reason
+12:42:48 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Building file: ../AuthRequestsDispatcher.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"AuthRequestsDispatcher.d" -MT"AuthRequestsDispatcher.o" -o "AuthRequestsDispatcher.o" "../AuthRequestsDispatcher.cpp"
+In file included from ../AuthRequestsDispatcher.cpp:11:0:
+../TCPMessengerServer.h:139:25: error: expected ‘)’ before ‘name’
+  string register(string name, string password);
+                         ^
+../AuthRequestsDispatcher.cpp: In member function ‘void AuthRequestsDispatcher::HandleCommandFromPeer(TCPSocket*)’:
+../AuthRequestsDispatcher.cpp:42:26: error: expected unqualified-id before ‘register’
+   scondPeer = messenger->register("a","a");
+                          ^
+subdir.mk:42: recipe for target 'AuthRequestsDispatcher.o' failed
+make: *** [AuthRequestsDispatcher.o] Error 1
+12:42:52 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+make: Nothing to be done for 'all'.
+12:47:17 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Building file: ../AuthRequestsDispatcher.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"AuthRequestsDispatcher.d" -MT"AuthRequestsDispatcher.o" -o "AuthRequestsDispatcher.o" "../AuthRequestsDispatcher.cpp"
+../AuthRequestsDispatcher.cpp: In member function ‘void AuthRequestsDispatcher::HandleCommandFromPeer(TCPSocket*)’:
+../AuthRequestsDispatcher.cpp:42:26: error: expected unqualified-id before ‘register’
+   scondPeer = messenger->register("a","a");
+                          ^
+subdir.mk:42: recipe for target 'AuthRequestsDispatcher.o' failed
+make: *** [AuthRequestsDispatcher.o] Error 1
+12:47:20 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+make: Nothing to be done for 'all'.
+12:51:56 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Building file: ../AuthRequestsDispatcher.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"AuthRequestsDispatcher.d" -MT"AuthRequestsDispatcher.o" -o "AuthRequestsDispatcher.o" "../AuthRequestsDispatcher.cpp"
+../AuthRequestsDispatcher.cpp: In member function ‘void AuthRequestsDispatcher::HandleCommandFromPeer(TCPSocket*)’:
+../AuthRequestsDispatcher.cpp:42:26: error: expected unqualified-id before ‘register’
+   scondPeer = messenger->register("a","a");
+                          ^
+make: *** [AuthRequestsDispatcher.o] Error 1
+subdir.mk:42: recipe for target 'AuthRequestsDispatcher.o' failed
+12:51:58 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+make: Nothing to be done for 'all'.
+12:52:11 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Building file: ../AuthRequestsDispatcher.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"AuthRequestsDispatcher.d" -MT"AuthRequestsDispatcher.o" -o "AuthRequestsDispatcher.o" "../AuthRequestsDispatcher.cpp"
+../AuthRequestsDispatcher.cpp: In member function ‘void AuthRequestsDispatcher::HandleCommandFromPeer(TCPSocket*)’:
+../AuthRequestsDispatcher.cpp:42:26: error: expected unqualified-id before ‘register’
+   scondPeer = messenger->register("a","a");
+                          ^
+make: *** [AuthRequestsDispatcher.o] Error 1
+subdir.mk:42: recipe for target 'AuthRequestsDispatcher.o' failed
+12:52:13 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+make: Nothing to be done for 'all'.
+12:52:23 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Building file: ../AuthRequestsDispatcher.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"AuthRequestsDispatcher.d" -MT"AuthRequestsDispatcher.o" -o "AuthRequestsDispatcher.o" "../AuthRequestsDispatcher.cpp"
+Finished building: ../AuthRequestsDispatcher.cpp
+ 
+Building file: ../PeersRequestsDispatcher.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"PeersRequestsDispatcher.d" -MT"PeersRequestsDispatcher.o" -o "PeersRequestsDispatcher.o" "../PeersRequestsDispatcher.cpp"
+Finished building: ../PeersRequestsDispatcher.cpp
+ 
+Building file: ../TCPMessengerServer.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPMessengerServer.d" -MT"TCPMessengerServer.o" -o "TCPMessengerServer.o" "../TCPMessengerServer.cpp"
+../TCPMessengerServer.cpp: In member function ‘std::__cxx11::string TCPMessengerServer::registerUser(std::__cxx11::string, std::__cxx11::string)’:
+../TCPMessengerServer.cpp:252:11: error: no match for ‘operator==’ (operand types are ‘std::__cxx11::string {aka std::__cxx11::basic_string<char>}’ and ‘long int’)
+  if (name == NULL){
+           ^
+In file included from /usr/include/c++/5/bits/stl_algobase.h:64:0,
+                 from /usr/include/c++/5/bits/stl_tree.h:63,
+                 from /usr/include/c++/5/map:60,
+                 from ../TCPMessengerServer.h:5,
+                 from ../TCPMessengerServer.cpp:1:
+/usr/include/c++/5/bits/stl_pair.h:214:5: note: candidate: template<class _T1, class _T2> bool std::operator==(const std::pair<_T1, _T2>&, const std::pair<_T1, _T2>&)
+     operator==(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
+     ^
+/usr/include/c++/5/bits/stl_pair.h:214:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/stdlib.h:32:0,
+                 from /usr/include/c++/5/cstdlib:72,
+                 from ../TCPMessengerServer.cpp:5:
+../TCPMessengerServer.cpp:252:14: note:   ‘std::__cxx11::string {aka std::__cxx11::basic_string<char>}’ is not derived from ‘const std::pair<_T1, _T2>’
+  if (name == NULL){
+              ^
+In file included from /usr/include/c++/5/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/5/bits/stl_tree.h:63,
+                 from /usr/include/c++/5/map:60,
+                 from ../TCPMessengerServer.h:5,
+                 from ../TCPMessengerServer.cpp:1:
+/usr/include/c++/5/bits/stl_iterator.h:292:5: note: candidate: template<class _Iterator> bool std::operator==(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_Iterator>&)
+     operator==(const reverse_iterator<_Iterator>& __x,
+     ^
+/usr/include/c++/5/bits/stl_iterator.h:292:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/stdlib.h:32:0,
+                 from /usr/include/c++/5/cstdlib:72,
+                 from ../TCPMessengerServer.cpp:5:
+../TCPMessengerServer.cpp:252:14: note:   ‘std::__cxx11::string {aka std::__cxx11::basic_string<char>}’ is not derived from ‘const std::reverse_iterator<_Iterator>’
+  if (name == NULL){
+              ^
+In file included from /usr/include/c++/5/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/5/bits/stl_tree.h:63,
+                 from /usr/include/c++/5/map:60,
+                 from ../TCPMessengerServer.h:5,
+                 from ../TCPMessengerServer.cpp:1:
+/usr/include/c++/5/bits/stl_iterator.h:342:5: note: candidate: template<class _IteratorL, class _IteratorR> bool std::operator==(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_IteratorR>&)
+     operator==(const reverse_iterator<_IteratorL>& __x,
+     ^
+/usr/include/c++/5/bits/stl_iterator.h:342:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/stdlib.h:32:0,
+                 from /usr/include/c++/5/cstdlib:72,
+                 from ../TCPMessengerServer.cpp:5:
+../TCPMessengerServer.cpp:252:14: note:   ‘std::__cxx11::string {aka std::__cxx11::basic_string<char>}’ is not derived from ‘const std::reverse_iterator<_Iterator>’
+  if (name == NULL){
+              ^
+In file included from /usr/include/c++/5/bits/stl_tree.h:64:0,
+                 from /usr/include/c++/5/map:60,
+                 from ../TCPMessengerServer.h:5,
+                 from ../TCPMessengerServer.cpp:1:
+/usr/include/c++/5/bits/allocator.h:128:5: note: candidate: template<class _T1, class _T2> bool std::operator==(const std::allocator<_Tp1>&, const std::allocator<_T2>&)
+     operator==(const allocator<_T1>&, const allocator<_T2>&)
+     ^
+/usr/include/c++/5/bits/allocator.h:128:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/stdlib.h:32:0,
+                 from /usr/include/c++/5/cstdlib:72,
+                 from ../TCPMessengerServer.cpp:5:
+../TCPMessengerServer.cpp:252:14: note:   ‘std::__cxx11::string {aka std::__cxx11::basic_string<char>}’ is not derived from ‘const std::allocator<_Tp1>’
+  if (name == NULL){
+              ^
+In file included from /usr/include/c++/5/bits/stl_tree.h:64:0,
+                 from /usr/include/c++/5/map:60,
+                 from ../TCPMessengerServer.h:5,
+                 from ../TCPMessengerServer.cpp:1:
+/usr/include/c++/5/bits/allocator.h:134:5: note: candidate: template<class _Tp> bool std::operator==(const std::allocator<_Tp1>&, const std::allocator<_Tp1>&)
+     operator==(const allocator<_Tp>&, const allocator<_Tp>&)
+     ^
+/usr/include/c++/5/bits/allocator.h:134:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/stdlib.h:32:0,
+                 from /usr/include/c++/5/cstdlib:72,
+                 from ../TCPMessengerServer.cpp:5:
+../TCPMessengerServer.cpp:252:14: note:   ‘std::__cxx11::string {aka std::__cxx11::basic_string<char>}’ is not derived from ‘const std::allocator<_Tp1>’
+  if (name == NULL){
+              ^
+In file included from /usr/include/c++/5/map:60:0,
+                 from ../TCPMessengerServer.h:5,
+                 from ../TCPMessengerServer.cpp:1:
+/usr/include/c++/5/bits/stl_tree.h:324:5: note: candidate: template<class _Val> bool std::operator==(const std::_Rb_tree_iterator<_Tp>&, const std::_Rb_tree_const_iterator<_Val>&)
+     operator==(const _Rb_tree_iterator<_Val>& __x,
+     ^
+/usr/include/c++/5/bits/stl_tree.h:324:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/stdlib.h:32:0,
+                 from /usr/include/c++/5/cstdlib:72,
+                 from ../TCPMessengerServer.cpp:5:
+../TCPMessengerServer.cpp:252:14: note:   ‘std::__cxx11::string {aka std::__cxx11::basic_string<char>}’ is not derived from ‘const std::_Rb_tree_iterator<_Tp>’
+  if (name == NULL){
+              ^
+In file included from /usr/include/c++/5/map:60:0,
+                 from ../TCPMessengerServer.h:5,
+                 from ../TCPMessengerServer.cpp:1:
+/usr/include/c++/5/bits/stl_tree.h:1273:5: note: candidate: template<class _Key, class _Val, class _KeyOfValue, class _Compare, class _Alloc> bool std::operator==(const std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>&, const std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>&)
+     operator==(const _Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>& __x,
+     ^
+/usr/include/c++/5/bits/stl_tree.h:1273:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/stdlib.h:32:0,
+                 from /usr/include/c++/5/cstdlib:72,
+                 from ../TCPMessengerServer.cpp:5:
+../TCPMessengerServer.cpp:252:14: note:   ‘std::__cxx11::string {aka std::__cxx11::basic_string<char>}’ is not derived from ‘const std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>’
+  if (name == NULL){
+              ^
+In file included from /usr/include/c++/5/map:61:0,
+                 from ../TCPMessengerServer.h:5,
+                 from ../TCPMessengerServer.cpp:1:
+/usr/include/c++/5/bits/stl_map.h:1073:5: note: candidate: template<class _Key, class _Tp, class _Compare, class _Alloc> bool std::operator==(const std::map<_Key, _Tp, _Compare, _Alloc>&, const std::map<_Key, _Tp, _Compare, _Alloc>&)
+     operator==(const map<_Key, _Tp, _Compare, _Alloc>& __x,
+     ^
+/usr/include/c++/5/bits/stl_map.h:1073:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/stdlib.h:32:0,
+                 from /usr/include/c++/5/cstdlib:72,
+                 from ../TCPMessengerServer.cpp:5:
+../TCPMessengerServer.cpp:252:14: note:   ‘std::__cxx11::string {aka std::__cxx11::basic_string<char>}’ is not derived from ‘const std::map<_Key, _Tp, _Compare, _Alloc>’
+  if (name == NULL){
+              ^
+In file included from /usr/include/c++/5/map:62:0,
+                 from ../TCPMessengerServer.h:5,
+                 from ../TCPMessengerServer.cpp:1:
+/usr/include/c++/5/bits/stl_multimap.h:974:5: note: candidate: template<class _Key, class _Tp, class _Compare, class _Alloc> bool std::operator==(const std::multimap<_Key, _Tp, _Compare, _Alloc>&, const std::multimap<_Key, _Tp, _Compare, _Alloc>&)
+     operator==(const multimap<_Key, _Tp, _Compare, _Alloc>& __x,
+     ^
+/usr/include/c++/5/bits/stl_multimap.h:974:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/stdlib.h:32:0,
+                 from /usr/include/c++/5/cstdlib:72,
+                 from ../TCPMessengerServer.cpp:5:
+../TCPMessengerServer.cpp:252:14: note:   ‘std::__cxx11::string {aka std::__cxx11::basic_string<char>}’ is not derived from ‘const std::multimap<_Key, _Tp, _Compare, _Alloc>’
+  if (name == NULL){
+              ^
+In file included from /usr/include/c++/5/vector:64:0,
+                 from ../TCPMessengerServer.h:6,
+                 from ../TCPMessengerServer.cpp:1:
+/usr/include/c++/5/bits/stl_vector.h:1511:5: note: candidate: template<class _Tp, class _Alloc> bool std::operator==(const std::vector<_Tp, _Alloc>&, const std::vector<_Tp, _Alloc>&)
+     operator==(const vector<_Tp, _Alloc>& __x, const vector<_Tp, _Alloc>& __y)
+     ^
+/usr/include/c++/5/bits/stl_vector.h:1511:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/stdlib.h:32:0,
+                 from /usr/include/c++/5/cstdlib:72,
+                 from ../TCPMessengerServer.cpp:5:
+../TCPMessengerServer.cpp:252:14: note:   ‘std::__cxx11::string {aka std::__cxx11::basic_string<char>}’ is not derived from ‘const std::vector<_Tp, _Alloc>’
+  if (name == NULL){
+              ^
+In file included from /usr/include/c++/5/iosfwd:40:0,
+                 from /usr/include/c++/5/ios:38,
+                 from /usr/include/c++/5/ostream:38,
+                 from /usr/include/c++/5/iostream:39,
+                 from ../TCPSocket.h:4,
+                 from ../TCPMessengerServer.h:8,
+                 from ../TCPMessengerServer.cpp:1:
+/usr/include/c++/5/bits/postypes.h:216:5: note: candidate: template<class _StateT> bool std::operator==(const std::fpos<_StateT>&, const std::fpos<_StateT>&)
+     operator==(const fpos<_StateT>& __lhs, const fpos<_StateT>& __rhs)
+     ^
+/usr/include/c++/5/bits/postypes.h:216:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/stdlib.h:32:0,
+                 from /usr/include/c++/5/cstdlib:72,
+                 from ../TCPMessengerServer.cpp:5:
+../TCPMessengerServer.cpp:252:14: note:   ‘std::__cxx11::string {aka std::__cxx11::basic_string<char>}’ is not derived from ‘const std::fpos<_StateT>’
+  if (name == NULL){
+              ^
+In file included from /usr/include/c++/5/string:52:0,
+                 from /usr/include/c++/5/bits/locale_classes.h:40,
+                 from /usr/include/c++/5/bits/ios_base.h:41,
+                 from /usr/include/c++/5/ios:42,
+                 from /usr/include/c++/5/ostream:38,
+                 from /usr/include/c++/5/iostream:39,
+                 from ../TCPSocket.h:4,
+                 from ../TCPMessengerServer.h:8,
+                 from ../TCPMessengerServer.cpp:1:
+/usr/include/c++/5/bits/basic_string.h:4904:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> bool std::operator==(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)
+     operator==(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^
+/usr/include/c++/5/bits/basic_string.h:4904:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/stdlib.h:32:0,
+                 from /usr/include/c++/5/cstdlib:72,
+                 from ../TCPMessengerServer.cpp:5:
+../TCPMessengerServer.cpp:252:14: note:   mismatched types ‘const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>’ and ‘long int’
+  if (name == NULL){
+              ^
+In file included from /usr/include/c++/5/string:52:0,
+                 from /usr/include/c++/5/bits/locale_classes.h:40,
+                 from /usr/include/c++/5/bits/ios_base.h:41,
+                 from /usr/include/c++/5/ios:42,
+                 from /usr/include/c++/5/ostream:38,
+                 from /usr/include/c++/5/iostream:39,
+                 from ../TCPSocket.h:4,
+                 from ../TCPMessengerServer.h:8,
+                 from ../TCPMessengerServer.cpp:1:
+/usr/include/c++/5/bits/basic_string.h:4911:5: note: candidate: template<class _CharT> typename __gnu_cxx::__enable_if<std::__is_char<_Tp>::__value, bool>::__type std::operator==(const std::__cxx11::basic_string<_CharT>&, const std::__cxx11::basic_string<_CharT>&)
+     operator==(const basic_string<_CharT>& __lhs,
+     ^
+/usr/include/c++/5/bits/basic_string.h:4911:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/stdlib.h:32:0,
+                 from /usr/include/c++/5/cstdlib:72,
+                 from ../TCPMessengerServer.cpp:5:
+../TCPMessengerServer.cpp:252:14: note:   mismatched types ‘const std::__cxx11::basic_string<_CharT>’ and ‘long int’
+  if (name == NULL){
+              ^
+In file included from /usr/include/c++/5/string:52:0,
+                 from /usr/include/c++/5/bits/locale_classes.h:40,
+                 from /usr/include/c++/5/bits/ios_base.h:41,
+                 from /usr/include/c++/5/ios:42,
+                 from /usr/include/c++/5/ostream:38,
+                 from /usr/include/c++/5/iostream:39,
+                 from ../TCPSocket.h:4,
+                 from ../TCPMessengerServer.h:8,
+                 from ../TCPMessengerServer.cpp:1:
+/usr/include/c++/5/bits/basic_string.h:4925:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> bool std::operator==(const _CharT*, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)
+     operator==(const _CharT* __lhs,
+     ^
+/usr/include/c++/5/bits/basic_string.h:4925:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/stdlib.h:32:0,
+                 from /usr/include/c++/5/cstdlib:72,
+                 from ../TCPMessengerServer.cpp:5:
+../TCPMessengerServer.cpp:252:14: note:   mismatched types ‘const _CharT*’ and ‘std::__cxx11::basic_string<char>’
+  if (name == NULL){
+              ^
+In file included from /usr/include/c++/5/string:52:0,
+                 from /usr/include/c++/5/bits/locale_classes.h:40,
+                 from /usr/include/c++/5/bits/ios_base.h:41,
+                 from /usr/include/c++/5/ios:42,
+                 from /usr/include/c++/5/ostream:38,
+                 from /usr/include/c++/5/iostream:39,
+                 from ../TCPSocket.h:4,
+                 from ../TCPMessengerServer.h:8,
+                 from ../TCPMessengerServer.cpp:1:
+/usr/include/c++/5/bits/basic_string.h:4937:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> bool std::operator==(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)
+     operator==(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^
+/usr/include/c++/5/bits/basic_string.h:4937:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/stdlib.h:32:0,
+                 from /usr/include/c++/5/cstdlib:72,
+                 from ../TCPMessengerServer.cpp:5:
+../TCPMessengerServer.cpp:252:14: note:   mismatched types ‘const _CharT*’ and ‘long int’
+  if (name == NULL){
+              ^
+In file included from /usr/include/c++/5/bits/locale_facets.h:48:0,
+                 from /usr/include/c++/5/bits/basic_ios.h:37,
+                 from /usr/include/c++/5/ios:44,
+                 from /usr/include/c++/5/ostream:38,
+                 from /usr/include/c++/5/iostream:39,
+                 from ../TCPSocket.h:4,
+                 from ../TCPMessengerServer.h:8,
+                 from ../TCPMessengerServer.cpp:1:
+/usr/include/c++/5/bits/streambuf_iterator.h:204:5: note: candidate: template<class _CharT, class _Traits> bool std::operator==(const std::istreambuf_iterator<_CharT, _Traits>&, const std::istreambuf_iterator<_CharT, _Traits>&)
+     operator==(const istreambuf_iterator<_CharT, _Traits>& __a,
+     ^
+/usr/include/c++/5/bits/streambuf_iterator.h:204:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/stdlib.h:32:0,
+                 from /usr/include/c++/5/cstdlib:72,
+                 from ../TCPMessengerServer.cpp:5:
+../TCPMessengerServer.cpp:252:14: note:   ‘std::__cxx11::string {aka std::__cxx11::basic_string<char>}’ is not derived from ‘const std::istreambuf_iterator<_CharT, _Traits>’
+  if (name == NULL){
+              ^
+In file included from /usr/include/x86_64-linux-gnu/c++/5/bits/c++allocator.h:33:0,
+                 from /usr/include/c++/5/bits/allocator.h:46,
+                 from /usr/include/c++/5/bits/stl_tree.h:64,
+                 from /usr/include/c++/5/map:60,
+                 from ../TCPMessengerServer.h:5,
+                 from ../TCPMessengerServer.cpp:1:
+/usr/include/c++/5/ext/new_allocator.h:139:5: note: candidate: template<class _Tp> bool __gnu_cxx::operator==(const __gnu_cxx::new_allocator<_Tp>&, const __gnu_cxx::new_allocator<_Tp>&)
+     operator==(const new_allocator<_Tp>&, const new_allocator<_Tp>&)
+     ^
+/usr/include/c++/5/ext/new_allocator.h:139:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/stdlib.h:32:0,
+                 from /usr/include/c++/5/cstdlib:72,
+                 from ../TCPMessengerServer.cpp:5:
+../TCPMessengerServer.cpp:252:14: note:   ‘std::__cxx11::string {aka std::__cxx11::basic_string<char>}’ is not derived from ‘const __gnu_cxx::new_allocator<_Tp>’
+  if (name == NULL){
+              ^
+In file included from /usr/include/c++/5/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/5/bits/stl_tree.h:63,
+                 from /usr/include/c++/5/map:60,
+                 from ../TCPMessengerServer.h:5,
+                 from ../TCPMessengerServer.cpp:1:
+/usr/include/c++/5/bits/stl_iterator.h:827:5: note: candidate: template<class _Iterator, class _Container> bool __gnu_cxx::operator==(const __gnu_cxx::__normal_iterator<_Iterator, _Container>&, const __gnu_cxx::__normal_iterator<_Iterator, _Container>&)
+     operator==(const __normal_iterator<_Iterator, _Container>& __lhs,
+     ^
+/usr/include/c++/5/bits/stl_iterator.h:827:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/stdlib.h:32:0,
+                 from /usr/include/c++/5/cstdlib:72,
+                 from ../TCPMessengerServer.cpp:5:
+../TCPMessengerServer.cpp:252:14: note:   ‘std::__cxx11::string {aka std::__cxx11::basic_string<char>}’ is not derived from ‘const __gnu_cxx::__normal_iterator<_Iterator, _Container>’
+  if (name == NULL){
+              ^
+In file included from /usr/include/c++/5/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/5/bits/stl_tree.h:63,
+                 from /usr/include/c++/5/map:60,
+                 from ../TCPMessengerServer.h:5,
+                 from ../TCPMessengerServer.cpp:1:
+/usr/include/c++/5/bits/stl_iterator.h:820:5: note: candidate: template<class _IteratorL, class _IteratorR, class _Container> bool __gnu_cxx::operator==(const __gnu_cxx::__normal_iterator<_IteratorL, _Container>&, const __gnu_cxx::__normal_iterator<_IteratorR, _Container>&)
+     operator==(const __normal_iterator<_IteratorL, _Container>& __lhs,
+     ^
+/usr/include/c++/5/bits/stl_iterator.h:820:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/stdlib.h:32:0,
+                 from /usr/include/c++/5/cstdlib:72,
+                 from ../TCPMessengerServer.cpp:5:
+../TCPMessengerServer.cpp:252:14: note:   ‘std::__cxx11::string {aka std::__cxx11::basic_string<char>}’ is not derived from ‘const __gnu_cxx::__normal_iterator<_IteratorL, _Container>’
+  if (name == NULL){
+              ^
+../TCPMessengerServer.cpp:255:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+subdir.mk:42: recipe for target 'TCPMessengerServer.o' failed
+make: *** [TCPMessengerServer.o] Error 1
+12:52:29 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+make: Nothing to be done for 'all'.
+12:56:11 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Building file: ../TCPMessengerServer.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPMessengerServer.d" -MT"TCPMessengerServer.o" -o "TCPMessengerServer.o" "../TCPMessengerServer.cpp"
+../TCPMessengerServer.cpp: In member function ‘std::__cxx11::string TCPMessengerServer::registerUser(std::__cxx11::string, std::__cxx11::string)’:
+../TCPMessengerServer.cpp:255:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../TCPMessengerServer.cpp
+ 
+Building file: ../TCPSessionBroker.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPSessionBroker.d" -MT"TCPSessionBroker.o" -o "TCPSessionBroker.o" "../TCPSessionBroker.cpp"
+Finished building: ../TCPSessionBroker.cpp
+ 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: lab10
+Invoking: GCC C++ Linker
+g++  -o "lab10"  ./AuthRequestsDispatcher.o ./MThread.o ./MultipleTCPSocketsListener.o ./PeersRequestsDispatcher.o ./TCPMessengerServer.o ./TCPSessionBroker.o ./TCPSocket.o ./User.o ./main.o   -lpthread
+Finished building target: lab10
+ 
+12:56:18 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+make: Nothing to be done for 'all'.
+13:17:30 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Cannot run program "make": Unknown reason
+13:17:33 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+Cannot run program "make": Unknown reason
+13:17:43 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Cannot run program "make": Unknown reason
+13:17:43 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+Cannot run program "make": Unknown reason
+13:18:05 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Cannot run program "make": Unknown reason
+13:18:06 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+Cannot run program "make": Unknown reason
+13:18:29 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Cannot run program "make": Unknown reason
+13:18:29 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+Cannot run program "make": Unknown reason
+13:18:47 **** Clean-only build of configuration Debug for project lab10 ****
+make clean 
+Cannot run program "make": Unknown reason
+13:18:52 **** Build of configuration Debug for project lab10 ****
+make all 
+Cannot run program "make": Unknown reason
+13:18:53 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+Cannot run program "make": Unknown reason
+13:19:17 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Cannot run program "make": Unknown reason
+13:21:20 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Cannot run program "make": Unknown reason
+13:25:18 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Building file: ../TCPMessengerServer.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPMessengerServer.d" -MT"TCPMessengerServer.o" -o "TCPMessengerServer.o" "../TCPMessengerServer.cpp"
+../TCPMessengerServer.cpp: In member function ‘std::__cxx11::string TCPMessengerServer::registerUser(std::__cxx11::string, std::__cxx11::string)’:
+../TCPMessengerServer.cpp:259:2: error: ‘hash’ is not a member of ‘std’
+  std::hash<std::string> str_hash;
+  ^
+../TCPMessengerServer.cpp:259:23: error: expected primary-expression before ‘>’ token
+  std::hash<std::string> str_hash;
+                       ^
+../TCPMessengerServer.cpp:259:25: error: ‘str_hash’ was not declared in this scope
+  std::hash<std::string> str_hash;
+                         ^
+../TCPMessengerServer.cpp:261:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+subdir.mk:42: recipe for target 'TCPMessengerServer.o' failed
+make: *** [TCPMessengerServer.o] Error 1
+13:27:40 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Building file: ../TCPMessengerServer.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPMessengerServer.d" -MT"TCPMessengerServer.o" -o "TCPMessengerServer.o" "../TCPMessengerServer.cpp"
+../TCPMessengerServer.cpp: In member function ‘std::__cxx11::string TCPMessengerServer::registerUser(std::__cxx11::string, std::__cxx11::string)’:
+../TCPMessengerServer.cpp:259:2: error: ‘hash’ was not declared in this scope
+  hash<std::string> str_hash;
+  ^
+../TCPMessengerServer.cpp:259:18: error: expected primary-expression before ‘>’ token
+  hash<std::string> str_hash;
+                  ^
+../TCPMessengerServer.cpp:259:20: error: ‘str_hash’ was not declared in this scope
+  hash<std::string> str_hash;
+                    ^
+../TCPMessengerServer.cpp:261:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+subdir.mk:42: recipe for target 'TCPMessengerServer.o' failed
+make: *** [TCPMessengerServer.o] Error 1
+13:28:04 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Building file: ../TCPMessengerServer.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPMessengerServer.d" -MT"TCPMessengerServer.o" -o "TCPMessengerServer.o" "../TCPMessengerServer.cpp"
+../TCPMessengerServer.cpp: In member function ‘std::__cxx11::string TCPMessengerServer::registerUser(std::__cxx11::string, std::__cxx11::string)’:
+../TCPMessengerServer.cpp:259:2: error: ‘hash’ is not a member of ‘std’
+  std::hash<std::string>()("foo");
+  ^
+../TCPMessengerServer.cpp:259:23: error: expected primary-expression before ‘>’ token
+  std::hash<std::string>()("foo");
+                       ^
+../TCPMessengerServer.cpp:259:25: error: expected primary-expression before ‘)’ token
+  std::hash<std::string>()("foo");
+                         ^
+../TCPMessengerServer.cpp:261:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+subdir.mk:42: recipe for target 'TCPMessengerServer.o' failed
+make: *** [TCPMessengerServer.o] Error 1
+13:29:49 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Cannot run program "make": Unknown reason
+13:30:03 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Cannot run program "make": Unknown reason
+13:32:03 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Cannot run program "make": Unknown reason
+13:32:48 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Cannot run program "make": Unknown reason
+13:33:20 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Cannot run program "make": Unknown reason
+13:33:48 **** Clean-only build of configuration Debug for project lab10 ****
+make clean 
+Cannot run program "make": Unknown reason
+13:33:59 **** Build of configuration Debug for project lab10 ****
+make all 
+Cannot run program "make": Unknown reason
+13:36:14 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Cannot run program "make": Unknown reason
+13:36:24 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Cannot run program "make": Unknown reason
+13:36:38 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Cannot run program "make": Unknown reason
+13:37:10 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Cannot run program "make": Unknown reason
+13:37:44 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Cannot run program "make": Unknown reason
+13:38:13 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Cannot run program "make": Unknown reason
+13:42:01 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Building file: ../AuthRequestsDispatcher.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"AuthRequestsDispatcher.d" -MT"AuthRequestsDispatcher.o" -o "AuthRequestsDispatcher.o" "../AuthRequestsDispatcher.cpp"
+Finished building: ../AuthRequestsDispatcher.cpp
+ 
+Building file: ../MThread.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"MThread.d" -MT"MThread.o" -o "MThread.o" "../MThread.cpp"
+Finished building: ../MThread.cpp
+ 
+Building file: ../MultipleTCPSocketsListener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"MultipleTCPSocketsListener.d" -MT"MultipleTCPSocketsListener.o" -o "MultipleTCPSocketsListener.o" "../MultipleTCPSocketsListener.cpp"
+Finished building: ../MultipleTCPSocketsListener.cpp
+ 
+Building file: ../PeersRequestsDispatcher.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"PeersRequestsDispatcher.d" -MT"PeersRequestsDispatcher.o" -o "PeersRequestsDispatcher.o" "../PeersRequestsDispatcher.cpp"
+Finished building: ../PeersRequestsDispatcher.cpp
+ 
+Building file: ../TCPMessengerServer.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPMessengerServer.d" -MT"TCPMessengerServer.o" -o "TCPMessengerServer.o" "../TCPMessengerServer.cpp"
+../TCPMessengerServer.cpp: In member function ‘std::__cxx11::string TCPMessengerServer::registerUser(std::__cxx11::string, std::__cxx11::string)’:
+../TCPMessengerServer.cpp:261:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../TCPMessengerServer.cpp
+ 
+Building file: ../TCPSessionBroker.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPSessionBroker.d" -MT"TCPSessionBroker.o" -o "TCPSessionBroker.o" "../TCPSessionBroker.cpp"
+Finished building: ../TCPSessionBroker.cpp
+ 
+Building file: ../TCPSocket.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPSocket.d" -MT"TCPSocket.o" -o "TCPSocket.o" "../TCPSocket.cpp"
+Finished building: ../TCPSocket.cpp
+ 
+Building file: ../User.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"User.d" -MT"User.o" -o "User.o" "../User.cpp"
+Finished building: ../User.cpp
+ 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: lab10
+Invoking: GCC C++ Linker
+g++  -o "lab10"  ./AuthRequestsDispatcher.o ./MThread.o ./MultipleTCPSocketsListener.o ./PeersRequestsDispatcher.o ./TCPMessengerServer.o ./TCPSessionBroker.o ./TCPSocket.o ./User.o ./main.o   
+./MThread.o: In function `MThread::start()':
+/home/user/NetworkProject/lab10/Debug/../MThread.cpp:16: undefined reference to `pthread_create'
+makefile:44: recipe for target 'lab10' failed
+./MThread.o: In function `MThread::waitForThread()':
+/home/user/NetworkProject/lab10/Debug/../MThread.cpp:20: undefined reference to `pthread_join'
+./MThread.o: In function `MThread::~MThread()':
+/home/user/NetworkProject/lab10/Debug/../MThread.cpp:27: undefined reference to `pthread_cancel'
+collect2: error: ld returned 1 exit status
+make: *** [lab10] Error 1
+13:42:33 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Building target: lab10
+Invoking: GCC C++ Linker
+g++  -o "lab10"  ./AuthRequestsDispatcher.o ./MThread.o ./MultipleTCPSocketsListener.o ./PeersRequestsDispatcher.o ./TCPMessengerServer.o ./TCPSessionBroker.o ./TCPSocket.o ./User.o ./main.o   
+./MThread.o: In function `MThread::start()':
+/home/user/NetworkProject/lab10/Debug/../MThread.cpp:16: undefined reference to `pthread_create'
+./MThread.o: In function `MThread::waitForThread()':
+/home/user/NetworkProject/lab10/Debug/../MThread.cpp:20: undefined reference to `pthread_join'
+./MThread.o: In function `MThread::~MThread()':
+/home/user/NetworkProject/lab10/Debug/../MThread.cpp:27: undefined reference to `pthread_cancel'
+collect2: error: ld returned 1 exit status
+make: *** [lab10] Error 1
+makefile:44: recipe for target 'lab10' failed
+13:42:46 **** Clean-only build of configuration Debug for project lab10 ****
+make clean 
+rm -rf  ./AuthRequestsDispatcher.o ./MThread.o ./MultipleTCPSocketsListener.o ./PeersRequestsDispatcher.o ./TCPMessengerServer.o ./TCPSessionBroker.o ./TCPSocket.o ./User.o ./main.o  ./AuthRequestsDispatcher.d ./MThread.d ./MultipleTCPSocketsListener.d ./PeersRequestsDispatcher.d ./TCPMessengerServer.d ./TCPSessionBroker.d ./TCPSocket.d ./User.d ./main.d  lab10
+ 
+13:42:55 **** Build of configuration Debug for project lab10 ****
+make all 
+Building file: ../AuthRequestsDispatcher.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"AuthRequestsDispatcher.d" -MT"AuthRequestsDispatcher.o" -o "AuthRequestsDispatcher.o" "../AuthRequestsDispatcher.cpp"
+Finished building: ../AuthRequestsDispatcher.cpp
+ 
+Building file: ../MThread.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"MThread.d" -MT"MThread.o" -o "MThread.o" "../MThread.cpp"
+Finished building: ../MThread.cpp
+ 
+Building file: ../MultipleTCPSocketsListener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"MultipleTCPSocketsListener.d" -MT"MultipleTCPSocketsListener.o" -o "MultipleTCPSocketsListener.o" "../MultipleTCPSocketsListener.cpp"
+Finished building: ../MultipleTCPSocketsListener.cpp
+ 
+Building file: ../PeersRequestsDispatcher.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"PeersRequestsDispatcher.d" -MT"PeersRequestsDispatcher.o" -o "PeersRequestsDispatcher.o" "../PeersRequestsDispatcher.cpp"
+Finished building: ../PeersRequestsDispatcher.cpp
+ 
+Building file: ../TCPMessengerServer.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPMessengerServer.d" -MT"TCPMessengerServer.o" -o "TCPMessengerServer.o" "../TCPMessengerServer.cpp"
+../TCPMessengerServer.cpp: In member function ‘std::__cxx11::string TCPMessengerServer::registerUser(std::__cxx11::string, std::__cxx11::string)’:
+../TCPMessengerServer.cpp:261:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../TCPMessengerServer.cpp
+ 
+Building file: ../TCPSessionBroker.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPSessionBroker.d" -MT"TCPSessionBroker.o" -o "TCPSessionBroker.o" "../TCPSessionBroker.cpp"
+Finished building: ../TCPSessionBroker.cpp
+ 
+Building file: ../TCPSocket.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPSocket.d" -MT"TCPSocket.o" -o "TCPSocket.o" "../TCPSocket.cpp"
+Finished building: ../TCPSocket.cpp
+ 
+Building file: ../User.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"User.d" -MT"User.o" -o "User.o" "../User.cpp"
+Finished building: ../User.cpp
+ 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: lab10
+Invoking: GCC C++ Linker
+g++  -o "lab10"  ./AuthRequestsDispatcher.o ./MThread.o ./MultipleTCPSocketsListener.o ./PeersRequestsDispatcher.o ./TCPMessengerServer.o ./TCPSessionBroker.o ./TCPSocket.o ./User.o ./main.o   -lpthread
+Finished building target: lab10
+ 
+13:51:22 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Building file: ../TCPMessengerServer.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPMessengerServer.d" -MT"TCPMessengerServer.o" -o "TCPMessengerServer.o" "../TCPMessengerServer.cpp"
+../TCPMessengerServer.cpp: In member function ‘std::__cxx11::string TCPMessengerServer::registerUser(std::__cxx11::string, std::__cxx11::string)’:
+../TCPMessengerServer.cpp:262:4: error: no match for ‘operator<<’ (operand types are ‘std::__cxx11::string {aka std::__cxx11::basic_string<char>}’ and ‘size_t {aka long unsigned int}’)
+  x << str_hash << "\n";
+    ^
+In file included from /usr/include/c++/5/string:52:0,
+                 from /usr/include/c++/5/bits/locale_classes.h:40,
+                 from /usr/include/c++/5/bits/ios_base.h:41,
+                 from /usr/include/c++/5/ios:42,
+                 from /usr/include/c++/5/ostream:38,
+                 from /usr/include/c++/5/iostream:39,
+                 from ../TCPSocket.h:4,
+                 from ../TCPMessengerServer.h:8,
+                 from ../TCPMessengerServer.cpp:1:
+/usr/include/c++/5/bits/basic_string.h:5172:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)
+     operator<<(basic_ostream<_CharT, _Traits>& __os,
+     ^
+/usr/include/c++/5/bits/basic_string.h:5172:5: note:   template argument deduction/substitution failed:
+../TCPMessengerServer.cpp:262:7: note:   ‘std::__cxx11::string {aka std::__cxx11::basic_string<char>}’ is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  x << str_hash << "\n";
+       ^
+In file included from /usr/include/c++/5/iostream:39:0,
+                 from ../TCPSocket.h:4,
+                 from ../TCPMessengerServer.h:8,
+                 from ../TCPMessengerServer.cpp:1:
+/usr/include/c++/5/ostream:497:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, _CharT)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, _CharT __c)
+     ^
+/usr/include/c++/5/ostream:497:5: note:   template argument deduction/substitution failed:
+../TCPMessengerServer.cpp:262:7: note:   ‘std::__cxx11::string {aka std::__cxx11::basic_string<char>}’ is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  x << str_hash << "\n";
+       ^
+In file included from /usr/include/c++/5/iostream:39:0,
+                 from ../TCPSocket.h:4,
+                 from ../TCPMessengerServer.h:8,
+                 from ../TCPMessengerServer.cpp:1:
+/usr/include/c++/5/ostream:502:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, char)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, char __c)
+     ^
+/usr/include/c++/5/ostream:502:5: note:   template argument deduction/substitution failed:
+../TCPMessengerServer.cpp:262:7: note:   ‘std::__cxx11::string {aka std::__cxx11::basic_string<char>}’ is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  x << str_hash << "\n";
+       ^
+In file included from /usr/include/c++/5/iostream:39:0,
+                 from ../TCPSocket.h:4,
+                 from ../TCPMessengerServer.h:8,
+                 from ../TCPMessengerServer.cpp:1:
+/usr/include/c++/5/ostream:508:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, char)
+     operator<<(basic_ostream<char, _Traits>& __out, char __c)
+     ^
+/usr/include/c++/5/ostream:508:5: note:   template argument deduction/substitution failed:
+../TCPMessengerServer.cpp:262:7: note:   ‘std::__cxx11::string {aka std::__cxx11::basic_string<char>}’ is not derived from ‘std::basic_ostream<char, _Traits>’
+  x << str_hash << "\n";
+       ^
+In file included from /usr/include/c++/5/iostream:39:0,
+                 from ../TCPSocket.h:4,
+                 from ../TCPMessengerServer.h:8,
+                 from ../TCPMessengerServer.cpp:1:
+/usr/include/c++/5/ostream:514:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, signed char)
+     operator<<(basic_ostream<char, _Traits>& __out, signed char __c)
+     ^
+/usr/include/c++/5/ostream:514:5: note:   template argument deduction/substitution failed:
+../TCPMessengerServer.cpp:262:7: note:   ‘std::__cxx11::string {aka std::__cxx11::basic_string<char>}’ is not derived from ‘std::basic_ostream<char, _Traits>’
+  x << str_hash << "\n";
+       ^
+In file included from /usr/include/c++/5/iostream:39:0,
+                 from ../TCPSocket.h:4,
+                 from ../TCPMessengerServer.h:8,
+                 from ../TCPMessengerServer.cpp:1:
+/usr/include/c++/5/ostream:519:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, unsigned char)
+     operator<<(basic_ostream<char, _Traits>& __out, unsigned char __c)
+     ^
+/usr/include/c++/5/ostream:519:5: note:   template argument deduction/substitution failed:
+../TCPMessengerServer.cpp:262:7: note:   ‘std::__cxx11::string {aka std::__cxx11::basic_string<char>}’ is not derived from ‘std::basic_ostream<char, _Traits>’
+  x << str_hash << "\n";
+       ^
+In file included from /usr/include/c++/5/iostream:39:0,
+                 from ../TCPSocket.h:4,
+                 from ../TCPMessengerServer.h:8,
+                 from ../TCPMessengerServer.cpp:1:
+/usr/include/c++/5/ostream:539:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const _CharT*)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const _CharT* __s)
+     ^
+/usr/include/c++/5/ostream:539:5: note:   template argument deduction/substitution failed:
+../TCPMessengerServer.cpp:262:7: note:   ‘std::__cxx11::string {aka std::__cxx11::basic_string<char>}’ is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  x << str_hash << "\n";
+       ^
+In file included from /usr/include/c++/5/ostream:638:0,
+                 from /usr/include/c++/5/iostream:39,
+                 from ../TCPSocket.h:4,
+                 from ../TCPMessengerServer.h:8,
+                 from ../TCPMessengerServer.cpp:1:
+/usr/include/c++/5/bits/ostream.tcc:321:5: note: candidate: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const char*)
+     operator<<(basic_ostream<_CharT, _Traits>& __out, const char* __s)
+     ^
+/usr/include/c++/5/bits/ostream.tcc:321:5: note:   template argument deduction/substitution failed:
+../TCPMessengerServer.cpp:262:7: note:   ‘std::__cxx11::string {aka std::__cxx11::basic_string<char>}’ is not derived from ‘std::basic_ostream<_CharT, _Traits>’
+  x << str_hash << "\n";
+       ^
+In file included from /usr/include/c++/5/iostream:39:0,
+                 from ../TCPSocket.h:4,
+                 from ../TCPMessengerServer.h:8,
+                 from ../TCPMessengerServer.cpp:1:
+/usr/include/c++/5/ostream:556:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const char* __s)
+     ^
+/usr/include/c++/5/ostream:556:5: note:   template argument deduction/substitution failed:
+../TCPMessengerServer.cpp:262:7: note:   ‘std::__cxx11::string {aka std::__cxx11::basic_string<char>}’ is not derived from ‘std::basic_ostream<char, _Traits>’
+  x << str_hash << "\n";
+       ^
+In file included from /usr/include/c++/5/iostream:39:0,
+                 from ../TCPSocket.h:4,
+                 from ../TCPMessengerServer.h:8,
+                 from ../TCPMessengerServer.cpp:1:
+/usr/include/c++/5/ostream:569:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const signed char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const signed char* __s)
+     ^
+/usr/include/c++/5/ostream:569:5: note:   template argument deduction/substitution failed:
+../TCPMessengerServer.cpp:262:7: note:   ‘std::__cxx11::string {aka std::__cxx11::basic_string<char>}’ is not derived from ‘std::basic_ostream<char, _Traits>’
+  x << str_hash << "\n";
+       ^
+In file included from /usr/include/c++/5/iostream:39:0,
+                 from ../TCPSocket.h:4,
+                 from ../TCPMessengerServer.h:8,
+                 from ../TCPMessengerServer.cpp:1:
+/usr/include/c++/5/ostream:574:5: note: candidate: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const unsigned char*)
+     operator<<(basic_ostream<char, _Traits>& __out, const unsigned char* __s)
+     ^
+/usr/include/c++/5/ostream:574:5: note:   template argument deduction/substitution failed:
+../TCPMessengerServer.cpp:262:7: note:   ‘std::__cxx11::string {aka std::__cxx11::basic_string<char>}’ is not derived from ‘std::basic_ostream<char, _Traits>’
+  x << str_hash << "\n";
+       ^
+../TCPMessengerServer.cpp:263:31: error: no matching function for call to ‘User::User(std::__cxx11::string&, std::__cxx11::string&)’
+  users[name] = new User(name,x);
+                               ^
+In file included from ../TCPMessengerServer.h:13:0,
+                 from ../TCPMessengerServer.cpp:1:
+../User.h:29:2: note: candidate: User::User(std::__cxx11::string, std::__cxx11::string, int)
+  User(string uname, string pass, int score);
+  ^
+../User.h:29:2: note:   candidate expects 3 arguments, 2 provided
+../User.h:16:7: note: candidate: User::User(const User&)
+ class User{
+       ^
+../User.h:16:7: note:   candidate expects 1 argument, 2 provided
+../TCPMessengerServer.cpp:264:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+subdir.mk:42: recipe for target 'TCPMessengerServer.o' failed
+make: *** [TCPMessengerServer.o] Error 1
+13:59:22 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Building file: ../TCPMessengerServer.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPMessengerServer.d" -MT"TCPMessengerServer.o" -o "TCPMessengerServer.o" "../TCPMessengerServer.cpp"
+../TCPMessengerServer.cpp: In member function ‘std::__cxx11::string TCPMessengerServer::registerUser(std::__cxx11::string, std::__cxx11::string)’:
+../TCPMessengerServer.cpp:265:33: error: no matching function for call to ‘User::User(std::__cxx11::string&, std::__cxx11::string&)’
+  users[name] = new User(name,str);
+                                 ^
+In file included from ../TCPMessengerServer.h:13:0,
+                 from ../TCPMessengerServer.cpp:1:
+../User.h:29:2: note: candidate: User::User(std::__cxx11::string, std::__cxx11::string, int)
+  User(string uname, string pass, int score);
+  ^
+../User.h:29:2: note:   candidate expects 3 arguments, 2 provided
+../User.h:16:7: note: candidate: User::User(const User&)
+ class User{
+       ^
+../User.h:16:7: note:   candidate expects 1 argument, 2 provided
+../TCPMessengerServer.cpp:266:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+subdir.mk:42: recipe for target 'TCPMessengerServer.o' failed
+make: *** [TCPMessengerServer.o] Error 1
+14:00:33 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Building file: ../TCPMessengerServer.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPMessengerServer.d" -MT"TCPMessengerServer.o" -o "TCPMessengerServer.o" "../TCPMessengerServer.cpp"
+../TCPMessengerServer.cpp: In member function ‘std::__cxx11::string TCPMessengerServer::registerUser(std::__cxx11::string, std::__cxx11::string)’:
+../TCPMessengerServer.cpp:266:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../TCPMessengerServer.cpp
+ 
+Building target: lab10
+Invoking: GCC C++ Linker
+g++  -o "lab10"  ./AuthRequestsDispatcher.o ./MThread.o ./MultipleTCPSocketsListener.o ./PeersRequestsDispatcher.o ./TCPMessengerServer.o ./TCPSessionBroker.o ./TCPSocket.o ./User.o ./main.o   -lpthread
+Finished building target: lab10
+ 
+14:32:22 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+make: Nothing to be done for 'all'.
+14:32:24 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+make: Nothing to be done for 'all'.
+14:32:43 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Building file: ../AuthRequestsDispatcher.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"AuthRequestsDispatcher.d" -MT"AuthRequestsDispatcher.o" -o "AuthRequestsDispatcher.o" "../AuthRequestsDispatcher.cpp"
+../AuthRequestsDispatcher.cpp: In member function ‘void AuthRequestsDispatcher::HandleCommandFromPeer(TCPSocket*)’:
+../AuthRequestsDispatcher.cpp:44:8: error: ‘istream_iterator’ was not declared in this scope
+   copy(istream_iterator<string>(iss),
+        ^
+../AuthRequestsDispatcher.cpp:44:31: error: expected primary-expression before ‘>’ token
+   copy(istream_iterator<string>(iss),
+                               ^
+../AuthRequestsDispatcher.cpp:44:33: error: ‘iss’ was not declared in this scope
+   copy(istream_iterator<string>(iss),
+                                 ^
+../AuthRequestsDispatcher.cpp:45:31: error: expected primary-expression before ‘>’ token
+        istream_iterator<string>(),
+                               ^
+../AuthRequestsDispatcher.cpp:45:33: error: expected primary-expression before ‘)’ token
+        istream_iterator<string>(),
+                                 ^
+../AuthRequestsDispatcher.cpp:65:2: error: jump to case label [-fpermissive]
+  default:
+  ^
+../AuthRequestsDispatcher.cpp:43:18: note:   crosses initialization of ‘std::vector<std::__cxx11::basic_string<char> > tokens’
+   vector<string> tokens;
+                  ^
+subdir.mk:42: recipe for target 'AuthRequestsDispatcher.o' failed
+make: *** [AuthRequestsDispatcher.o] Error 1
+14:32:45 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+make: Nothing to be done for 'all'.
+14:36:20 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Building file: ../AuthRequestsDispatcher.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"AuthRequestsDispatcher.d" -MT"AuthRequestsDispatcher.o" -o "AuthRequestsDispatcher.o" "../AuthRequestsDispatcher.cpp"
+../AuthRequestsDispatcher.cpp: In member function ‘void AuthRequestsDispatcher::HandleCommandFromPeer(TCPSocket*)’:
+../AuthRequestsDispatcher.cpp:44:8: error: ‘istream_iterator’ was not declared in this scope
+   copy(istream_iterator<string>(iss),
+        ^
+../AuthRequestsDispatcher.cpp:44:31: error: expected primary-expression before ‘>’ token
+   copy(istream_iterator<string>(iss),
+                               ^
+../AuthRequestsDispatcher.cpp:44:33: error: ‘iss’ was not declared in this scope
+   copy(istream_iterator<string>(iss),
+                                 ^
+../AuthRequestsDispatcher.cpp:45:31: error: expected primary-expression before ‘>’ token
+        istream_iterator<string>(),
+                               ^
+../AuthRequestsDispatcher.cpp:45:33: error: expected primary-expression before ‘)’ token
+        istream_iterator<string>(),
+                                 ^
+../AuthRequestsDispatcher.cpp:65:2: error: jump to case label [-fpermissive]
+  default:
+  ^
+../AuthRequestsDispatcher.cpp:43:18: note:   crosses initialization of ‘std::vector<std::__cxx11::basic_string<char> > tokens’
+   vector<string> tokens;
+                  ^
+subdir.mk:42: recipe for target 'AuthRequestsDispatcher.o' failed
+make: *** [AuthRequestsDispatcher.o] Error 1
+14:36:24 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+make: Nothing to be done for 'all'.
+14:37:22 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Building file: ../AuthRequestsDispatcher.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"AuthRequestsDispatcher.d" -MT"AuthRequestsDispatcher.o" -o "AuthRequestsDispatcher.o" "../AuthRequestsDispatcher.cpp"
+../AuthRequestsDispatcher.cpp: In member function ‘void AuthRequestsDispatcher::HandleCommandFromPeer(TCPSocket*)’:
+../AuthRequestsDispatcher.cpp:44:8: error: ‘istream_iterator’ was not declared in this scope
+   copy(istream_iterator<string>(iss),
+        ^
+../AuthRequestsDispatcher.cpp:44:31: error: expected primary-expression before ‘>’ token
+   copy(istream_iterator<string>(iss),
+                               ^
+../AuthRequestsDispatcher.cpp:44:33: error: ‘iss’ was not declared in this scope
+   copy(istream_iterator<string>(iss),
+                                 ^
+../AuthRequestsDispatcher.cpp:45:31: error: expected primary-expression before ‘>’ token
+        istream_iterator<string>(),
+                               ^
+../AuthRequestsDispatcher.cpp:45:33: error: expected primary-expression before ‘)’ token
+        istream_iterator<string>(),
+                                 ^
+../AuthRequestsDispatcher.cpp:65:2: error: jump to case label [-fpermissive]
+  default:
+  ^
+../AuthRequestsDispatcher.cpp:43:18: note:   crosses initialization of ‘std::vector<std::__cxx11::basic_string<char> > tokens’
+   vector<string> tokens;
+                  ^
+subdir.mk:42: recipe for target 'AuthRequestsDispatcher.o' failed
+make: *** [AuthRequestsDispatcher.o] Error 1
+14:37:24 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+make: Nothing to be done for 'all'.
+14:37:29 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Building file: ../AuthRequestsDispatcher.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"AuthRequestsDispatcher.d" -MT"AuthRequestsDispatcher.o" -o "AuthRequestsDispatcher.o" "../AuthRequestsDispatcher.cpp"
+../AuthRequestsDispatcher.cpp: In member function ‘void AuthRequestsDispatcher::HandleCommandFromPeer(TCPSocket*)’:
+../AuthRequestsDispatcher.cpp:64:30: error: invalid initialization of reference of type ‘const string& {aka const std::__cxx11::basic_string<char>&}’ from expression of type ‘char’
+   Tokenize(input, tokens, ';');
+                              ^
+../AuthRequestsDispatcher.cpp:16:6: note: in passing argument 3 of ‘void Tokenize(const string&, std::vector<std::__cxx11::basic_string<char> >&, const string&)’
+ void Tokenize(const string& str,
+      ^
+subdir.mk:42: recipe for target 'AuthRequestsDispatcher.o' failed
+make: *** [AuthRequestsDispatcher.o] Error 1
+14:37:32 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+make: Nothing to be done for 'all'.
+14:38:32 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Building file: ../AuthRequestsDispatcher.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"AuthRequestsDispatcher.d" -MT"AuthRequestsDispatcher.o" -o "AuthRequestsDispatcher.o" "../AuthRequestsDispatcher.cpp"
+Finished building: ../AuthRequestsDispatcher.cpp
+ 
+Building target: lab10
+Invoking: GCC C++ Linker
+g++  -o "lab10"  ./AuthRequestsDispatcher.o ./MThread.o ./MultipleTCPSocketsListener.o ./PeersRequestsDispatcher.o ./TCPMessengerServer.o ./TCPSessionBroker.o ./TCPSocket.o ./User.o ./main.o   -lpthread
+Finished building target: lab10
+ 
+14:38:36 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+make: Nothing to be done for 'all'.
+14:42:43 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Building file: ../AuthRequestsDispatcher.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"AuthRequestsDispatcher.d" -MT"AuthRequestsDispatcher.o" -o "AuthRequestsDispatcher.o" "../AuthRequestsDispatcher.cpp"
+../AuthRequestsDispatcher.cpp: In member function ‘void AuthRequestsDispatcher::HandleCommandFromPeer(TCPSocket*)’:
+../AuthRequestsDispatcher.cpp:65:13: error: no match for ‘operator!=’ (operand types are ‘std::vector<std::__cxx11::basic_string<char> >’ and ‘long int’)
+   if(tokens != NULL && tokens.size() == 2){
+             ^
+In file included from /usr/include/c++/5/bits/stl_algobase.h:64:0,
+                 from /usr/include/c++/5/bits/stl_tree.h:63,
+                 from /usr/include/c++/5/map:60,
+                 from ../TCPMessengerServer.h:5,
+                 from ../AuthRequestsDispatcher.cpp:11:
+/usr/include/c++/5/bits/stl_pair.h:227:5: note: candidate: template<class _T1, class _T2> bool std::operator!=(const std::pair<_T1, _T2>&, const std::pair<_T1, _T2>&)
+     operator!=(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
+     ^
+/usr/include/c++/5/bits/stl_pair.h:227:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/_G_config.h:15:0,
+                 from /usr/include/libio.h:31,
+                 from /usr/include/stdio.h:74,
+                 from ../TCPSocket.h:14,
+                 from ../TCPMessengerServer.h:8,
+                 from ../AuthRequestsDispatcher.cpp:11:
+../AuthRequestsDispatcher.cpp:65:16: note:   ‘std::vector<std::__cxx11::basic_string<char> >’ is not derived from ‘const std::pair<_T1, _T2>’
+   if(tokens != NULL && tokens.size() == 2){
+                ^
+In file included from /usr/include/c++/5/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/5/bits/stl_tree.h:63,
+                 from /usr/include/c++/5/map:60,
+                 from ../TCPMessengerServer.h:5,
+                 from ../AuthRequestsDispatcher.cpp:11:
+/usr/include/c++/5/bits/stl_iterator.h:304:5: note: candidate: template<class _Iterator> bool std::operator!=(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_Iterator>&)
+     operator!=(const reverse_iterator<_Iterator>& __x,
+     ^
+/usr/include/c++/5/bits/stl_iterator.h:304:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/_G_config.h:15:0,
+                 from /usr/include/libio.h:31,
+                 from /usr/include/stdio.h:74,
+                 from ../TCPSocket.h:14,
+                 from ../TCPMessengerServer.h:8,
+                 from ../AuthRequestsDispatcher.cpp:11:
+../AuthRequestsDispatcher.cpp:65:16: note:   ‘std::vector<std::__cxx11::basic_string<char> >’ is not derived from ‘const std::reverse_iterator<_Iterator>’
+   if(tokens != NULL && tokens.size() == 2){
+                ^
+In file included from /usr/include/c++/5/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/5/bits/stl_tree.h:63,
+                 from /usr/include/c++/5/map:60,
+                 from ../TCPMessengerServer.h:5,
+                 from ../AuthRequestsDispatcher.cpp:11:
+/usr/include/c++/5/bits/stl_iterator.h:354:5: note: candidate: template<class _IteratorL, class _IteratorR> bool std::operator!=(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_IteratorR>&)
+     operator!=(const reverse_iterator<_IteratorL>& __x,
+     ^
+/usr/include/c++/5/bits/stl_iterator.h:354:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/_G_config.h:15:0,
+                 from /usr/include/libio.h:31,
+                 from /usr/include/stdio.h:74,
+                 from ../TCPSocket.h:14,
+                 from ../TCPMessengerServer.h:8,
+                 from ../AuthRequestsDispatcher.cpp:11:
+../AuthRequestsDispatcher.cpp:65:16: note:   ‘std::vector<std::__cxx11::basic_string<char> >’ is not derived from ‘const std::reverse_iterator<_Iterator>’
+   if(tokens != NULL && tokens.size() == 2){
+                ^
+In file included from /usr/include/c++/5/bits/stl_tree.h:64:0,
+                 from /usr/include/c++/5/map:60,
+                 from ../TCPMessengerServer.h:5,
+                 from ../AuthRequestsDispatcher.cpp:11:
+/usr/include/c++/5/bits/allocator.h:140:5: note: candidate: template<class _T1, class _T2> bool std::operator!=(const std::allocator<_Tp1>&, const std::allocator<_T2>&)
+     operator!=(const allocator<_T1>&, const allocator<_T2>&)
+     ^
+/usr/include/c++/5/bits/allocator.h:140:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/_G_config.h:15:0,
+                 from /usr/include/libio.h:31,
+                 from /usr/include/stdio.h:74,
+                 from ../TCPSocket.h:14,
+                 from ../TCPMessengerServer.h:8,
+                 from ../AuthRequestsDispatcher.cpp:11:
+../AuthRequestsDispatcher.cpp:65:16: note:   ‘std::vector<std::__cxx11::basic_string<char> >’ is not derived from ‘const std::allocator<_Tp1>’
+   if(tokens != NULL && tokens.size() == 2){
+                ^
+In file included from /usr/include/c++/5/bits/stl_tree.h:64:0,
+                 from /usr/include/c++/5/map:60,
+                 from ../TCPMessengerServer.h:5,
+                 from ../AuthRequestsDispatcher.cpp:11:
+/usr/include/c++/5/bits/allocator.h:146:5: note: candidate: template<class _Tp> bool std::operator!=(const std::allocator<_Tp1>&, const std::allocator<_Tp1>&)
+     operator!=(const allocator<_Tp>&, const allocator<_Tp>&)
+     ^
+/usr/include/c++/5/bits/allocator.h:146:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/_G_config.h:15:0,
+                 from /usr/include/libio.h:31,
+                 from /usr/include/stdio.h:74,
+                 from ../TCPSocket.h:14,
+                 from ../TCPMessengerServer.h:8,
+                 from ../AuthRequestsDispatcher.cpp:11:
+../AuthRequestsDispatcher.cpp:65:16: note:   ‘std::vector<std::__cxx11::basic_string<char> >’ is not derived from ‘const std::allocator<_Tp1>’
+   if(tokens != NULL && tokens.size() == 2){
+                ^
+In file included from /usr/include/c++/5/map:60:0,
+                 from ../TCPMessengerServer.h:5,
+                 from ../AuthRequestsDispatcher.cpp:11:
+/usr/include/c++/5/bits/stl_tree.h:330:5: note: candidate: template<class _Val> bool std::operator!=(const std::_Rb_tree_iterator<_Tp>&, const std::_Rb_tree_const_iterator<_Val>&)
+     operator!=(const _Rb_tree_iterator<_Val>& __x,
+subdir.mk:42: recipe for target 'AuthRequestsDispatcher.o' failed
+     ^
+/usr/include/c++/5/bits/stl_tree.h:330:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/_G_config.h:15:0,
+                 from /usr/include/libio.h:31,
+                 from /usr/include/stdio.h:74,
+                 from ../TCPSocket.h:14,
+                 from ../TCPMessengerServer.h:8,
+                 from ../AuthRequestsDispatcher.cpp:11:
+../AuthRequestsDispatcher.cpp:65:16: note:   ‘std::vector<std::__cxx11::basic_string<char> >’ is not derived from ‘const std::_Rb_tree_iterator<_Tp>’
+   if(tokens != NULL && tokens.size() == 2){
+                ^
+In file included from /usr/include/c++/5/map:60:0,
+                 from ../TCPMessengerServer.h:5,
+                 from ../AuthRequestsDispatcher.cpp:11:
+/usr/include/c++/5/bits/stl_tree.h:1293:5: note: candidate: template<class _Key, class _Val, class _KeyOfValue, class _Compare, class _Alloc> bool std::operator!=(const std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>&, const std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>&)
+     operator!=(const _Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>& __x,
+     ^
+/usr/include/c++/5/bits/stl_tree.h:1293:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/_G_config.h:15:0,
+                 from /usr/include/libio.h:31,
+                 from /usr/include/stdio.h:74,
+                 from ../TCPSocket.h:14,
+                 from ../TCPMessengerServer.h:8,
+                 from ../AuthRequestsDispatcher.cpp:11:
+../AuthRequestsDispatcher.cpp:65:16: note:   ‘std::vector<std::__cxx11::basic_string<char> >’ is not derived from ‘const std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>’
+   if(tokens != NULL && tokens.size() == 2){
+                ^
+In file included from /usr/include/c++/5/map:61:0,
+                 from ../TCPMessengerServer.h:5,
+                 from ../AuthRequestsDispatcher.cpp:11:
+/usr/include/c++/5/bits/stl_map.h:1097:5: note: candidate: template<class _Key, class _Tp, class _Compare, class _Alloc> bool std::operator!=(const std::map<_Key, _Tp, _Compare, _Alloc>&, const std::map<_Key, _Tp, _Compare, _Alloc>&)
+     operator!=(const map<_Key, _Tp, _Compare, _Alloc>& __x,
+     ^
+/usr/include/c++/5/bits/stl_map.h:1097:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/_G_config.h:15:0,
+                 from /usr/include/libio.h:31,
+                 from /usr/include/stdio.h:74,
+                 from ../TCPSocket.h:14,
+                 from ../TCPMessengerServer.h:8,
+                 from ../AuthRequestsDispatcher.cpp:11:
+../AuthRequestsDispatcher.cpp:65:16: note:   ‘std::vector<std::__cxx11::basic_string<char> >’ is not derived from ‘const std::map<_Key, _Tp, _Compare, _Alloc>’
+   if(tokens != NULL && tokens.size() == 2){
+                ^
+In file included from /usr/include/c++/5/map:62:0,
+                 from ../TCPMessengerServer.h:5,
+                 from ../AuthRequestsDispatcher.cpp:11:
+/usr/include/c++/5/bits/stl_multimap.h:998:5: note: candidate: template<class _Key, class _Tp, class _Compare, class _Alloc> bool std::operator!=(const std::multimap<_Key, _Tp, _Compare, _Alloc>&, const std::multimap<_Key, _Tp, _Compare, _Alloc>&)
+     operator!=(const multimap<_Key, _Tp, _Compare, _Alloc>& __x,
+     ^
+/usr/include/c++/5/bits/stl_multimap.h:998:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/_G_config.h:15:0,
+                 from /usr/include/libio.h:31,
+                 from /usr/include/stdio.h:74,
+                 from ../TCPSocket.h:14,
+                 from ../TCPMessengerServer.h:8,
+                 from ../AuthRequestsDispatcher.cpp:11:
+../AuthRequestsDispatcher.cpp:65:16: note:   ‘std::vector<std::__cxx11::basic_string<char> >’ is not derived from ‘const std::multimap<_Key, _Tp, _Compare, _Alloc>’
+   if(tokens != NULL && tokens.size() == 2){
+                ^
+In file included from /usr/include/c++/5/vector:64:0,
+                 from ../TCPMessengerServer.h:6,
+                 from ../AuthRequestsDispatcher.cpp:11:
+/usr/include/c++/5/bits/stl_vector.h:1535:5: note: candidate: template<class _Tp, class _Alloc> bool std::operator!=(const std::vector<_Tp, _Alloc>&, const std::vector<_Tp, _Alloc>&)
+     operator!=(const vector<_Tp, _Alloc>& __x, const vector<_Tp, _Alloc>& __y)
+     ^
+/usr/include/c++/5/bits/stl_vector.h:1535:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/_G_config.h:15:0,
+                 from /usr/include/libio.h:31,
+                 from /usr/include/stdio.h:74,
+                 from ../TCPSocket.h:14,
+                 from ../TCPMessengerServer.h:8,
+                 from ../AuthRequestsDispatcher.cpp:11:
+../AuthRequestsDispatcher.cpp:65:16: note:   mismatched types ‘const std::vector<_Tp, _Alloc>’ and ‘long int’
+   if(tokens != NULL && tokens.size() == 2){
+                ^
+In file included from /usr/include/c++/5/iosfwd:40:0,
+                 from /usr/include/c++/5/ios:38,
+                 from /usr/include/c++/5/ostream:38,
+                 from /usr/include/c++/5/iostream:39,
+                 from ../TCPSocket.h:4,
+                 from ../TCPMessengerServer.h:8,
+                 from ../AuthRequestsDispatcher.cpp:11:
+/usr/include/c++/5/bits/postypes.h:221:5: note: candidate: template<class _StateT> bool std::operator!=(const std::fpos<_StateT>&, const std::fpos<_StateT>&)
+     operator!=(const fpos<_StateT>& __lhs, const fpos<_StateT>& __rhs)
+     ^
+/usr/include/c++/5/bits/postypes.h:221:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/_G_config.h:15:0,
+                 from /usr/include/libio.h:31,
+                 from /usr/include/stdio.h:74,
+                 from ../TCPSocket.h:14,
+                 from ../TCPMessengerServer.h:8,
+                 from ../AuthRequestsDispatcher.cpp:11:
+../AuthRequestsDispatcher.cpp:65:16: note:   ‘std::vector<std::__cxx11::basic_string<char> >’ is not derived from ‘const std::fpos<_StateT>’
+   if(tokens != NULL && tokens.size() == 2){
+                ^
+In file included from /usr/include/c++/5/string:52:0,
+                 from /usr/include/c++/5/bits/locale_classes.h:40,
+                 from /usr/include/c++/5/bits/ios_base.h:41,
+                 from /usr/include/c++/5/ios:42,
+                 from /usr/include/c++/5/ostream:38,
+                 from /usr/include/c++/5/iostream:39,
+                 from ../TCPSocket.h:4,
+                 from ../TCPMessengerServer.h:8,
+                 from ../AuthRequestsDispatcher.cpp:11:
+/usr/include/c++/5/bits/basic_string.h:4950:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> bool std::operator!=(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)
+     operator!=(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^
+/usr/include/c++/5/bits/basic_string.h:4950:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/_G_config.h:15:0,
+                 from /usr/include/libio.h:31,
+                 from /usr/include/stdio.h:74,
+                 from ../TCPSocket.h:14,
+                 from ../TCPMessengerServer.h:8,
+                 from ../AuthRequestsDispatcher.cpp:11:
+../AuthRequestsDispatcher.cpp:65:16: note:   ‘std::vector<std::__cxx11::basic_string<char> >’ is not derived from ‘const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>’
+   if(tokens != NULL && tokens.size() == 2){
+                ^
+In file included from /usr/include/c++/5/string:52:0,
+                 from /usr/include/c++/5/bits/locale_classes.h:40,
+                 from /usr/include/c++/5/bits/ios_base.h:41,
+                 from /usr/include/c++/5/ios:42,
+                 from /usr/include/c++/5/ostream:38,
+                 from /usr/include/c++/5/iostream:39,
+                 from ../TCPSocket.h:4,
+                 from ../TCPMessengerServer.h:8,
+                 from ../AuthRequestsDispatcher.cpp:11:
+/usr/include/c++/5/bits/basic_string.h:4962:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> bool std::operator!=(const _CharT*, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)
+     operator!=(const _CharT* __lhs,
+     ^
+/usr/include/c++/5/bits/basic_string.h:4962:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/_G_config.h:15:0,
+                 from /usr/include/libio.h:31,
+                 from /usr/include/stdio.h:74,
+                 from ../TCPSocket.h:14,
+                 from ../TCPMessengerServer.h:8,
+                 from ../AuthRequestsDispatcher.cpp:11:
+../AuthRequestsDispatcher.cpp:65:16: note:   mismatched types ‘const _CharT*’ and ‘std::vector<std::__cxx11::basic_string<char> >’
+   if(tokens != NULL && tokens.size() == 2){
+                ^
+In file included from /usr/include/c++/5/string:52:0,
+                 from /usr/include/c++/5/bits/locale_classes.h:40,
+                 from /usr/include/c++/5/bits/ios_base.h:41,
+                 from /usr/include/c++/5/ios:42,
+                 from /usr/include/c++/5/ostream:38,
+                 from /usr/include/c++/5/iostream:39,
+                 from ../TCPSocket.h:4,
+                 from ../TCPMessengerServer.h:8,
+                 from ../AuthRequestsDispatcher.cpp:11:
+/usr/include/c++/5/bits/basic_string.h:4974:5: note: candidate: template<class _CharT, class _Traits, class _Alloc> bool std::operator!=(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)
+     operator!=(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^
+/usr/include/c++/5/bits/basic_string.h:4974:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/_G_config.h:15:0,
+                 from /usr/include/libio.h:31,
+                 from /usr/include/stdio.h:74,
+                 from ../TCPSocket.h:14,
+                 from ../TCPMessengerServer.h:8,
+                 from ../AuthRequestsDispatcher.cpp:11:
+../AuthRequestsDispatcher.cpp:65:16: note:   ‘std::vector<std::__cxx11::basic_string<char> >’ is not derived from ‘const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>’
+   if(tokens != NULL && tokens.size() == 2){
+                ^
+In file included from /usr/include/c++/5/bits/locale_facets.h:48:0,
+                 from /usr/include/c++/5/bits/basic_ios.h:37,
+                 from /usr/include/c++/5/ios:44,
+                 from /usr/include/c++/5/ostream:38,
+                 from /usr/include/c++/5/iostream:39,
+                 from ../TCPSocket.h:4,
+                 from ../TCPMessengerServer.h:8,
+                 from ../AuthRequestsDispatcher.cpp:11:
+/usr/include/c++/5/bits/streambuf_iterator.h:210:5: note: candidate: template<class _CharT, class _Traits> bool std::operator!=(const std::istreambuf_iterator<_CharT, _Traits>&, const std::istreambuf_iterator<_CharT, _Traits>&)
+     operator!=(const istreambuf_iterator<_CharT, _Traits>& __a,
+     ^
+/usr/include/c++/5/bits/streambuf_iterator.h:210:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/_G_config.h:15:0,
+                 from /usr/include/libio.h:31,
+                 from /usr/include/stdio.h:74,
+                 from ../TCPSocket.h:14,
+                 from ../TCPMessengerServer.h:8,
+                 from ../AuthRequestsDispatcher.cpp:11:
+../AuthRequestsDispatcher.cpp:65:16: note:   ‘std::vector<std::__cxx11::basic_string<char> >’ is not derived from ‘const std::istreambuf_iterator<_CharT, _Traits>’
+   if(tokens != NULL && tokens.size() == 2){
+                ^
+In file included from /usr/include/x86_64-linux-gnu/c++/5/bits/c++allocator.h:33:0,
+                 from /usr/include/c++/5/bits/allocator.h:46,
+                 from /usr/include/c++/5/bits/stl_tree.h:64,
+                 from /usr/include/c++/5/map:60,
+                 from ../TCPMessengerServer.h:5,
+                 from ../AuthRequestsDispatcher.cpp:11:
+/usr/include/c++/5/ext/new_allocator.h:144:5: note: candidate: template<class _Tp> bool __gnu_cxx::operator!=(const __gnu_cxx::new_allocator<_Tp>&, const __gnu_cxx::new_allocator<_Tp>&)
+     operator!=(const new_allocator<_Tp>&, const new_allocator<_Tp>&)
+     ^
+/usr/include/c++/5/ext/new_allocator.h:144:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/_G_config.h:15:0,
+                 from /usr/include/libio.h:31,
+                 from /usr/include/stdio.h:74,
+                 from ../TCPSocket.h:14,
+                 from ../TCPMessengerServer.h:8,
+                 from ../AuthRequestsDispatcher.cpp:11:
+../AuthRequestsDispatcher.cpp:65:16: note:   ‘std::vector<std::__cxx11::basic_string<char> >’ is not derived from ‘const __gnu_cxx::new_allocator<_Tp>’
+   if(tokens != NULL && tokens.size() == 2){
+                ^
+In file included from /usr/include/c++/5/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/5/bits/stl_tree.h:63,
+                 from /usr/include/c++/5/map:60,
+                 from ../TCPMessengerServer.h:5,
+                 from ../AuthRequestsDispatcher.cpp:11:
+/usr/include/c++/5/bits/stl_iterator.h:841:5: note: candidate: template<class _Iterator, class _Container> bool __gnu_cxx::operator!=(const __gnu_cxx::__normal_iterator<_Iterator, _Container>&, const __gnu_cxx::__normal_iterator<_Iterator, _Container>&)
+     operator!=(const __normal_iterator<_Iterator, _Container>& __lhs,
+     ^
+/usr/include/c++/5/bits/stl_iterator.h:841:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/_G_config.h:15:0,
+                 from /usr/include/libio.h:31,
+                 from /usr/include/stdio.h:74,
+                 from ../TCPSocket.h:14,
+                 from ../TCPMessengerServer.h:8,
+                 from ../AuthRequestsDispatcher.cpp:11:
+../AuthRequestsDispatcher.cpp:65:16: note:   ‘std::vector<std::__cxx11::basic_string<char> >’ is not derived from ‘const __gnu_cxx::__normal_iterator<_Iterator, _Container>’
+   if(tokens != NULL && tokens.size() == 2){
+                ^
+In file included from /usr/include/c++/5/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/5/bits/stl_tree.h:63,
+                 from /usr/include/c++/5/map:60,
+                 from ../TCPMessengerServer.h:5,
+                 from ../AuthRequestsDispatcher.cpp:11:
+/usr/include/c++/5/bits/stl_iterator.h:834:5: note: candidate: template<class _IteratorL, class _IteratorR, class _Container> bool __gnu_cxx::operator!=(const __gnu_cxx::__normal_iterator<_IteratorL, _Container>&, const __gnu_cxx::__normal_iterator<_IteratorR, _Container>&)
+     operator!=(const __normal_iterator<_IteratorL, _Container>& __lhs,
+     ^
+/usr/include/c++/5/bits/stl_iterator.h:834:5: note:   template argument deduction/substitution failed:
+In file included from /usr/include/_G_config.h:15:0,
+                 from /usr/include/libio.h:31,
+                 from /usr/include/stdio.h:74,
+                 from ../TCPSocket.h:14,
+                 from ../TCPMessengerServer.h:8,
+                 from ../AuthRequestsDispatcher.cpp:11:
+../AuthRequestsDispatcher.cpp:65:16: note:   ‘std::vector<std::__cxx11::basic_string<char> >’ is not derived from ‘const __gnu_cxx::__normal_iterator<_IteratorL, _Container>’
+   if(tokens != NULL && tokens.size() == 2){
+                ^
+make: *** [AuthRequestsDispatcher.o] Error 1
+14:43:34 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Building file: ../AuthRequestsDispatcher.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"AuthRequestsDispatcher.d" -MT"AuthRequestsDispatcher.o" -o "AuthRequestsDispatcher.o" "../AuthRequestsDispatcher.cpp"
+Finished building: ../AuthRequestsDispatcher.cpp
+ 
+Building target: lab10
+Invoking: GCC C++ Linker
+g++  -o "lab10"  ./AuthRequestsDispatcher.o ./MThread.o ./MultipleTCPSocketsListener.o ./PeersRequestsDispatcher.o ./TCPMessengerServer.o ./TCPSessionBroker.o ./TCPSocket.o ./User.o ./main.o   -lpthread
+Finished building target: lab10
+ 
+14:43:38 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+make: Nothing to be done for 'all'.
+14:44:01 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+make: Nothing to be done for 'all'.
+14:45:02 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+make: Nothing to be done for 'all'.
+14:45:14 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+make: Nothing to be done for 'all'.
+14:45:15 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+make: Nothing to be done for 'all'.
+14:45:25 **** Clean-only build of configuration Debug for project lab8 ****
+make clean 
+rm -rf  ./MThread.o ./TCPMessengerClient.o ./TCPSocket.o ./UDPGame.o ./main.o  ./MThread.d ./TCPMessengerClient.d ./TCPSocket.d ./UDPGame.d ./main.d  lab8
+ 
+14:45:34 **** Build of configuration Debug for project lab8 ****
+make all 
+Building file: ../MThread.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"MThread.d" -MT"MThread.o" -o "MThread.o" "../MThread.cpp"
+Finished building: ../MThread.cpp
+ 
+Building file: ../TCPMessengerClient.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPMessengerClient.d" -MT"TCPMessengerClient.o" -o "TCPMessengerClient.o" "../TCPMessengerClient.cpp"
+Finished building: ../TCPMessengerClient.cpp
+ 
+Building file: ../TCPSocket.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPSocket.d" -MT"TCPSocket.o" -o "TCPSocket.o" "../TCPSocket.cpp"
+Finished building: ../TCPSocket.cpp
+ 
+Building file: ../UDPGame.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"UDPGame.d" -MT"UDPGame.o" -o "UDPGame.o" "../UDPGame.cpp"
+Finished building: ../UDPGame.cpp
+ 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: lab8
+Invoking: GCC C++ Linker
+g++  -o "lab8"  ./MThread.o ./TCPMessengerClient.o ./TCPSocket.o ./UDPGame.o ./main.o   -lpthread
+Finished building target: lab8
+ 
+14:52:29 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+make: Nothing to be done for 'all'.
+14:53:49 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+make: Nothing to be done for 'all'.
