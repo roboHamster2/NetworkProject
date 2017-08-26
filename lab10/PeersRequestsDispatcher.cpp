@@ -29,33 +29,17 @@ void PeersRequestsDispatcher::HandleCommandFromPeer(TCPSocket* readyPeer){
 	switch (command) {
 	case OPEN_SESSION_WITH_PEER:
 		pName = messenger->readDataFromPeer(readyPeer);
-		cout << "got open session command:" << readyPeer->destIpAndPort()
-				<< "->" << pName << endl;
-		if (pName == TEST_PEER_NAME) {
-			cout << "open test session" << endl;
-			messenger->sendCommandToPeer(readyPeer, SESSION_ESTABLISHED);
+		scondPeer = messenger->getAvailablePeerByName(pName);
+		if (scondPeer != NULL) {
+			messenger->markPeerAsUnavailable(scondPeer);
 			messenger->markPeerAsUnavailable(readyPeer);
 			TCPSessionBroker* broker = new TCPSessionBroker(messenger,
-					readyPeer, NULL);
+					readyPeer, scondPeer);
 			broker->start();
 		} else {
-			scondPeer = messenger->getAvailablePeerByName(pName);
-			if (scondPeer != NULL) {
-				messenger->sendCommandToPeer(readyPeer,
-				SESSION_ESTABLISHED);
-				messenger->sendCommandToPeer(scondPeer,
-				OPEN_SESSION_WITH_PEER);
-				messenger->sendDataToPeer(scondPeer,
-						readyPeer->destIpAndPort());
-				messenger->markPeerAsUnavailable(scondPeer);
-				messenger->markPeerAsUnavailable(readyPeer);
-				TCPSessionBroker* broker = new TCPSessionBroker(messenger,
-						readyPeer, scondPeer);
-				broker->start();
-			} else {
-				cout << "FAIL: didnt find peer:" << pName << endl;
-				messenger->sendCommandToPeer(readyPeer, SESSION_REFUSED);
-			}
+			cout << "FAIL: didnt find peer:" << pName << endl;
+			messenger->sendCommandToPeer(readyPeer, REFUSE);
+			messenger->sendDataToPeer(readyPeer,"user not found");
 		}
 		break;
 	default:

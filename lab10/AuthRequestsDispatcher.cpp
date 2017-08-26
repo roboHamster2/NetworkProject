@@ -56,32 +56,38 @@ void AuthRequestsDispatcher::run() {
 void AuthRequestsDispatcher::HandleCommandFromPeer(TCPSocket* readyPeer){
 	int command = messenger->readCommandFromPeer(readyPeer);
 	string input;
-	string scondPeer;
+	string responseData;
 	vector<string> tokens;
 	switch (command) {
 	case REGISTER:
 		input = messenger->readDataFromPeer(readyPeer);
 		Tokenize(input, tokens, ";");
 		if(tokens.size() == 2){
-			scondPeer = messenger->registerUser(tokens[0],tokens[1]);
+			responseData = messenger->registerUser(tokens[0],tokens[1]);
+			if(responseData.compare("OK") == 0){
+				messenger->sendCommandToPeer(readyPeer,LOGIN_ACCEPT);
+			} else {
+				messenger->sendCommandToPeer(readyPeer,LOGIN_REFUSED);
+				messenger->sendDataToPeer(readyPeer,responseData);
+			}
+
 		}
-//		if (scondPeer != NULL) {
-//			messenger->sendCommandToPeer(readyPeer,
-//			SESSION_ESTABLISHED);
-//			messenger->sendCommandToPeer(scondPeer,
-//			OPEN_SESSION_WITH_PEER);
-//			messenger->sendDataToPeer(scondPeer,
-//					readyPeer->destIpAndPort());
-//			messenger->markPeerAsUnavailable(scondPeer);
-//			messenger->markPeerAsUnavailable(readyPeer);
-//			TCPSessionBroker* broker = new TCPSessionBroker(messenger,
-//					readyPeer, scondPeer);
-//			broker->start();
-//		} else {
-//			cout << "FAIL: didnt find peer:" << pName << endl;
-//			messenger->sendCommandToPeer(readyPeer, SESSION_REFUSED);
-//		}
 		break;
+	case LOGIN:
+			input = messenger->readDataFromPeer(readyPeer);
+			Tokenize(input, tokens, ";");
+			if(tokens.size() == 2){
+				responseData = messenger->loginUser(tokens[0],tokens[1]);
+				if(responseData.compare("OK") == 0){
+					messenger->markPeerAsAuthenticated(tokens[0],readyPeer);
+					messenger->sendCommandToPeer(readyPeer,LOGIN_ACCEPT);
+				} else {
+					messenger->sendCommandToPeer(readyPeer,LOGIN_REFUSED);
+					messenger->sendDataToPeer(readyPeer,responseData);
+				}
+
+			}
+			break;
 	default:
 		cout << "peer disconnected: " << readyPeer->destIpAndPort() << endl;
 		messenger->peerDisconnect(readyPeer);
