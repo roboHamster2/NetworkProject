@@ -66,7 +66,11 @@ void TCPSessionBroker::run() {
 		if (CreateP2PSession()) {
 			setupUsers();
 			startGame();
-		}else {messengerServer->sendCommandToPeer(peer1, REFUSE);}
+		}else {
+			string userName = messengerServer->getUserBySocket(peer2)->getUsername();
+			messengerServer->sendCommandToPeer(peer1, REFUSE);
+			messengerServer->sendDataToPeer(peer1, userName+" Refused your request");
+		}
 	} else {
 		int buffer = 10;
 		int i;
@@ -82,6 +86,7 @@ void TCPSessionBroker::run() {
 		}
 		if (i == buffer){
 			messengerServer->sendCommandToPeer(peer1, REFUSE);
+			messengerServer->sendDataToPeer(peer1, "Did't found players");
 		}
 	}
 	cout << "closing session:" << peer1->destIpAndPort() << " -> "

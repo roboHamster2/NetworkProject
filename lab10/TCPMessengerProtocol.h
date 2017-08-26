@@ -22,6 +22,8 @@
 #define REFUSE 						10
 #define LIST_USERS 					11
 #define OPEN_RANDOM_SESSION 		12
+#define LOGIN_ACCEPT        		13
+#define LOGIN_REFUSED        		14
 #define START_SESSION_WITH_PEER		15
 #define UPDATE_SCORE				16
 #define SESSION_ABOUT_TO_CLOSE		17
