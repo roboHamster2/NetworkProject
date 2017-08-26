@@ -309,3 +309,13 @@ void TCPMessengerServer::markPeerAsAuthenticated(string username,TCPSocket* sock
 		openedPeers[username] = socket;
 	}
 }
+
+string TCPMessengerServer::getAvailablePeers() {
+	map<string, TCPSocket*>::iterator item;
+	stringstream ss;
+	for (item = openedPeers.begin(); item != openedPeers.end() ; item++){
+		string user = (*item).first;
+		ss<< user << "\n";
+	}
+	return ss.str();
+}

@@ -31,8 +31,6 @@ void PeersRequestsDispatcher::HandleCommandFromPeer(TCPSocket* readyPeer){
 		pName = messenger->readDataFromPeer(readyPeer);
 		scondPeer = messenger->getAvailablePeerByName(pName);
 		if (scondPeer != NULL) {
-			messenger->markPeerAsUnavailable(scondPeer);
-			messenger->markPeerAsUnavailable(readyPeer);
 			TCPSessionBroker* broker = new TCPSessionBroker(messenger,
 					readyPeer, scondPeer);
 			broker->start();
@@ -40,6 +38,16 @@ void PeersRequestsDispatcher::HandleCommandFromPeer(TCPSocket* readyPeer){
 			cout << "FAIL: didnt find peer:" << pName << endl;
 			messenger->sendCommandToPeer(readyPeer, REFUSE);
 			messenger->sendDataToPeer(readyPeer,"user not found");
+		}
+		break;
+	case OPEN_RANDOM_SESSION:{
+			TCPSessionBroker* broker = new TCPSessionBroker(messenger,readyPeer,NULL);
+			broker->start();
+		}
+		break;
+	case LIST_USERS:{
+		messenger->sendCommandToPeer(readyPeer, LIST_USERS);
+		messenger->sendDataToPeer(readyPeer,messenger->getAvailablePeers());
 		}
 		break;
 	default:

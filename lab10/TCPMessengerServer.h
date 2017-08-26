@@ -155,6 +155,11 @@ private:
 	* mark Peer As Authenticated
 	*/
 	void markPeerAsAuthenticated(string username,TCPSocket* socket);
+
+	/**
+	* get Available Peers
+	*/
+	string getAvailablePeers();
 };
 
 #endif
