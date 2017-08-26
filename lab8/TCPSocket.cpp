@@ -49,7 +49,7 @@ TCPSocket::TCPSocket(int port){
 
 TCPSocket::TCPSocket(string peerIp, int port){
 	cout<<"openning new client socket"<<endl;
-
+	connected = false;
 	/**
 	 * int socket(int domain, int type, int protocol);
 	 * creates a TCP socket
@@ -69,9 +69,12 @@ TCPSocket::TCPSocket(string peerIp, int port){
 
 	if (connect(socket_fd, (struct sockaddr *)&peerAddr, sizeof(peerAddr)) < 0)
 	{
+		connected = false;
 		perror ("Error establishing communications");
 		close(socket_fd);
 	}
+	else
+		connected = true;
 }
 
 
@@ -105,6 +108,9 @@ void TCPSocket::cclose(){
 	close(socket_fd);
 }
 
+bool TCPSocket::isConnected(){
+	return connected;
+}
 
 string TCPSocket::fromAddr(){
 	return inet_ntoa(peerAddr.sin_addr);

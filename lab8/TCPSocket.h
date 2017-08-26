@@ -19,6 +19,7 @@ class TCPSocket{
 	struct sockaddr_in serverAddr;
 	struct sockaddr_in peerAddr;
 	int socket_fd;
+	bool connected;
 
 private:
 	/**
@@ -56,6 +57,8 @@ public:
 	 * close the socket and free all resources
 	 */
 	void cclose();
+
+	bool isConnected();
 
 	/**
 	 * return the address of the connected peer

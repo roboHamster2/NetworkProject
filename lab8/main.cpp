@@ -18,13 +18,8 @@
 using namespace std;
 
 TCPMessengerClient* messenger;
-UDPGame* game;
-bool run;
 
-void startGameWithPeer(){
-	cout<<"GameStarted"<<endl;
-	game->showGameMenu();
-}
+bool run;
 
 void handleConsoleCommand(){
 	string command;
@@ -34,12 +29,12 @@ void handleConsoleCommand(){
 			string userName;
 			cin >> userName;
 			if(messenger->open(userName))
-				startGameWithPeer();
+				messenger->startGameWithPeer(true);
 		}
 		else if (command == "or")
 		{
 			if(messenger->openRandom())
-				startGameWithPeer();
+				messenger->startGameWithPeer(true);
 		}
 		else if (command == "su")
 		{
@@ -69,9 +64,9 @@ void handleConsoleCommand(){
 		}
 }
 
-void startGameMainLoop(){
+void startMainLoop(){
 	messenger->showMenu();
-	game = NULL;
+
 	fd_set master;   // master file descriptor list
 	fd_set read_fds; // temp file descriptor list for select()
 
@@ -92,9 +87,9 @@ void startGameMainLoop(){
 		}
 		if(FD_ISSET(STDIN, &read_fds))
 		{
-			if(game != NULL){
-				//handleGameCommand();
-			}else
+//			if(messenger->game != NULL){
+//				messenger->game->handleGameCommand();
+//			}else
 				handleConsoleCommand();
 		}
 	}
@@ -105,11 +100,12 @@ int main(){
 	messenger = new TCPMessengerClient();
 	run = messenger->connectToServer();
 	if (run)
+	{
 		run = messenger->loginToServer();
-
-	startGameMainLoop();
-
-	messenger->disconnect();
+		if(run)
+			startMainLoop();
+		messenger->disconnect();
+	}
 	delete messenger;
 	return 0;
 }

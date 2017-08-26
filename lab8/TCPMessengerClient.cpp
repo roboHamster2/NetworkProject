@@ -1,7 +1,38 @@
 #include "TCPMessengerClient.h"
 #include "TCPMessengerProtocol.h"
 #include "TCPSocket.h"
+#include "UDPGame.h"
+#include "stdlib.h"
+#include "iostream"
+#include "sstream"
+#include "string"
 
+void Tokenize(const string& str, vector<string>& tokens, const string& delimiters = " ")
+{
+    // Skip delimiters at beginning.
+
+    string::size_type lastPos = str.find_first_not_of(delimiters, 0);
+
+    // Find first "non-delimiter".
+
+    string::size_type pos     = str.find_first_of(delimiters, lastPos);
+
+    while (string::npos != pos || string::npos != lastPos)
+
+    {
+        // Found a token, add it to the vector.
+
+        tokens.push_back(str.substr(lastPos, pos - lastPos));
+
+        // Skip delimiters.  Note the "not_of"
+
+        lastPos = str.find_first_not_of(delimiters, pos);
+
+        // Find next "non-delimiter"
+
+        pos = str.find_first_of(delimiters, lastPos);
+    }
+}
 
 TCPMessengerClient::TCPMessengerClient(){
 	socket = NULL;
@@ -52,8 +83,8 @@ void TCPMessengerClient::handleServerCommand()
 				if(comm!=START_SESSION_WITH_PEER)
 					cout<< "got invalid command from server"<<endl;
 				else{
-					string peerDetails = readCommandData();
-					//newUDPGAME
+					secPlayerData = readCommandData();
+					startGameWithPeer(false);
 				}
 			}else
 				sendCommand(REFUSE);
@@ -90,6 +121,20 @@ void TCPMessengerClient::handleServerCommand()
 	}
 }
 
+void TCPMessengerClient::startGameWithPeer(bool startedByMe){//change to UDPSOCKET
+	cout<<"GameStarted"<<endl;
+	vector<string> tokens;
+	Tokenize(secPlayerData, tokens, ";");
+	string ip = tokens[0];
+	int port;
+	std::stringstream s_str( tokens[1] );
+	s_str >> port;
+	UDPGame* game = new UDPGame(ip, port);
+	int score=game->start();
+
+	//close the game in server
+}
+
 bool TCPMessengerClient::loginToServer(){
 	showLoginMenu();
 	while(true){
@@ -102,7 +147,7 @@ bool TCPMessengerClient::loginToServer(){
 			cin >> user;
 			cin >> password;
 			if(authenticate(REGISTER ,user, password))
-				return true;
+				cout<< "register successfully"<<endl;
 			else
 				cout<<"failed to register"<<endl;
 		} else if(command == "l")
@@ -172,7 +217,7 @@ bool TCPMessengerClient::connectToServer(){
 bool TCPMessengerClient::connect(string ip){
 	if(connected) disconnect();
 	socket = new TCPSocket(ip,MSNGR_PORT); //port is located in TCPMessengerProtocol
-	if (socket == NULL) 
+	if (socket->isConnected() == false)
 	{
 		cout<<"failed to create socket"<<endl;
 		return false;
@@ -204,8 +249,8 @@ void TCPMessengerClient::disconnect(){
  * and close opened session
  */
 bool TCPMessengerClient::open(string userName){
-	if(sessionActive)//delete?
-		closeActiveSession();//delete?
+//	if(sessionActive)//delete?
+//		closeActiveSession();//delete?
 	cout<<"send play request to - "<<userName<<endl;
 	sendCommand(OPEN_SESSION_WITH_PEER);
 	sendCommandData(userName);
@@ -220,7 +265,8 @@ bool TCPMessengerClient::open(string userName){
 	}
 	else if (respond == REFUSE)
 	{
-		cout<<userName << " decline your request"<<endl;
+		string error = readCommandData();
+		cout<< error <<endl;
 
 	}else
 		cout<<"got unexpected command from server"<<endl;
@@ -276,6 +322,8 @@ void TCPMessengerClient::closeActiveSession(){
 //	sessionAddress = "";
 //	return true;
 }
+
+
 
 /**
  * send message

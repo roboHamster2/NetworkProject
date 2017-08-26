@@ -40,6 +40,7 @@ public:
 	 */
 	bool connect(string ip);
 
+	void startGameWithPeer(bool startedByMe);
 	/**
 	 * login/register
 	 */
