@@ -29,6 +29,9 @@ class TCPMessengerServer: public MThread {
 
 	map<string,User*> users;
 
+	map<string,TCPSocket*> userToSocket;
+	map<TCPSocket*,string> socketToUser;
+
 	vector<TCPSocket*> unauthenticatedPeers;
 
 	typedef map<string, TCPSocket*> tOpenedPeers;
@@ -142,6 +145,16 @@ private:
 	* register peer
 	*/
 	string registerUser(string name, string password);
+
+	/**
+	* register peer
+	*/
+	string loginUser(string name, string password);
+
+	/**
+	* mark Peer As Authenticated
+	*/
+	void markPeerAsAuthenticated(string username,TCPSocket* socket);
 };
 
 #endif

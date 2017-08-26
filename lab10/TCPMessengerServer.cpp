@@ -276,4 +276,36 @@ string TCPMessengerServer::registerUser(string name, string password){
 	ss << res;
 	string str = ss.str();
 	users[name] = new User(name,str,0);
+	return "OK";
+}
+
+//string TCPMessengerServer::tr1::loginUser(string name, string password){
+string TCPMessengerServer::loginUser(string name, string password){
+	if (name.length() < 4 && password.length() < 4){
+		return "password and user must be at least 4 characters";
+	}
+	if (users[name]==NULL){
+		return "user does not exist";
+	}
+	std::hash<string> hash_fn;
+	size_t str_hash = hash_fn(password);
+	int res = str_hash ;
+	stringstream ss;
+	ss << res;
+	string str = ss.str();
+	User* user = users[name];
+	if (user != NULL && str.compare(user->getPassword()) == 0){
+		return "OK";
+	} else {
+		return "Password is incorrect";
+	}
+}
+
+void TCPMessengerServer::markPeerAsAuthenticated(string username,TCPSocket* socket) {
+	if(socket != NULL){
+		unauthenticatedPeers.erase(std::remove(unauthenticatedPeers.begin(), unauthenticatedPeers.end(), socket), unauthenticatedPeers.end());
+		socketToUser[socket] = username;
+		userToSocket[username] = socket;
+		openedPeers[username] = socket;
+	}
 }
