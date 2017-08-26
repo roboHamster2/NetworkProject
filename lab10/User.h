@@ -30,6 +30,7 @@ public:
 	string getUsername();
 	string getPassword();
 	int getScore();
+	void setScore(int score);
 };
 
 

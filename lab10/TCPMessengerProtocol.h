@@ -23,6 +23,8 @@
 #define LIST_USERS 					11
 #define OPEN_RANDOM_SESSION 		12
 #define START_SESSION_WITH_PEER		15
+#define UPDATE_SCORE				16
+#define SESSION_ABOUT_TO_CLOSE		17
 
 #define TEST_PEER_NAME "test"
 #define SESSION_REFUSED_MSG "Connection to peer refused, peer might be busy or disconnected, try again later"

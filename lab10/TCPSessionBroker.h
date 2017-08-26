@@ -12,13 +12,17 @@ class TCPSessionBroker: public MThread {
 	TCPMessengerServer* messengerServer;
 	TCPSocket* peer1;
 	TCPSocket* peer2;
+	User* user1;
+	User* user2;
 public:
 	TCPSessionBroker(TCPMessengerServer* msgr, TCPSocket* p1, TCPSocket* p2);
 	bool CreateP2PSession();
 	void run();
 	TCPSocket* pickRandomPeer();
-private:
+private :
 	void startGame();
+	void setupUsers();
+	void updateScore();
 };
 
 

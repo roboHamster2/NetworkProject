@@ -54,6 +54,11 @@ public:
 	void showPeers();
 
 	/**
+	 * returning the User by a TCPSocket
+	 */
+	User* getUserBySocket(TCPSocket* socket);
+
+	/**
 	 * close the server
 	 */
 	void close();

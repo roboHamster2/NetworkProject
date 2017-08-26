@@ -12,6 +12,8 @@ TCPSessionBroker::TCPSessionBroker(TCPMessengerServer* msgr, TCPSocket* p1, TCPS
 	peer1 = p1;
 	peer2 = p2;
 	messengerServer = msgr;
+	user1 = NULL;
+	user2 = NULL;
 
 }
 
@@ -27,8 +29,8 @@ bool TCPSessionBroker::CreateP2PSession(){
 			<< receiver->destIpAndPort() << " " << endl;
 
 	messengerServer->sendCommandToPeer(receiver, SEND_REQUEST_TO_PEER);
-	//need to send to the receiver the username
-	messengerServer->sendDataToPeer(receiver, sender->destIpAndPort());
+	string userName = messengerServer->getUserBySocket(sender)->getUsername();
+	messengerServer->sendDataToPeer(receiver, userName);
 	response = messengerServer->readCommandFromPeer(receiver);
 	if (response == ACCEPT) {
 		//sending the peers their connection information
@@ -51,12 +53,18 @@ TCPSocket* TCPSessionBroker::pickRandomPeer(){
 	return (*item).second;
 }
 
+void TCPSessionBroker::setupUsers(){
+	user1 = messengerServer->getUserBySocket(peer1);
+	user2 = messengerServer->getUserBySocket(peer2);
+}
+
 
 void TCPSessionBroker::run() {
 	messengerServer->markPeerAsUnavailable(peer1);
 	if (peer2 != NULL) {
 		messengerServer->markPeerAsUnavailable(peer2);
 		if (CreateP2PSession()) {
+			setupUsers();
 			startGame();
 		}else {messengerServer->sendCommandToPeer(peer1, REFUSE);}
 	} else {
@@ -66,6 +74,7 @@ void TCPSessionBroker::run() {
 			peer2 = pickRandomPeer();
 			messengerServer->markPeerAsUnavailable(peer2);
 			if (CreateP2PSession()) {
+				setupUsers();
 				startGame();
 				break;
 			}else { messengerServer->markPeerAsAvailable(peer2);}
@@ -74,12 +83,20 @@ void TCPSessionBroker::run() {
 		if (i == buffer){
 			messengerServer->sendCommandToPeer(peer1, REFUSE);
 		}
-
 	}
 	cout << "closing session:" << peer1->destIpAndPort() << " -> "
 			<< peer1->destIpAndPort() << endl;
 	messengerServer->markPeerAsAvailable(peer1);
 	messengerServer->markPeerAsAvailable(peer2);
+}
+
+void TCPSessionBroker::updateScore(){
+	int score1;
+	int score2;
+	score1 = atoi(messengerServer->readDataFromPeer(peer1).c_str());
+	score2 = atoi(messengerServer->readDataFromPeer(peer2).c_str());
+	user1->setScore(score1);
+	user2->setScore(score2);
 }
 
 void TCPSessionBroker::startGame(){
@@ -96,6 +113,9 @@ void TCPSessionBroker::startGame(){
 		switch (command){
 		case CLOSE_SESSION_WITH_PEER:
 			cout << "closing session:" << peer1->destIpAndPort() << " -> " << peer1->destIpAndPort() << endl;
+			updateScore();
+			messengerServer->sendCommandToPeer(peer1, SESSION_ABOUT_TO_CLOSE);
+			messengerServer->sendCommandToPeer(peer2, SESSION_ABOUT_TO_CLOSE);
 			messengerServer->markPeerAsAvailable(peer1);
 			messengerServer->markPeerAsAvailable(peer2);
 			run = false;
@@ -103,44 +123,3 @@ void TCPSessionBroker::startGame(){
 		}
 	}
 }
-
-//void TCPSessionBroker::CreateP2PSession(){
-//
-//	cout << "Broker thread started" << endl;
-//	MultipleTCPSocketsListener multipleTCPSocketsListene;
-//	multipleTCPSocketsListene.addSocket(peer1);
-//	multipleTCPSocketsListene.addSocket(peer2);
-//	bool run = true;
-//	while (run) {
-//		vector<TCPSocket*> senders = multipleTCPSocketsListene.listenToSocket();
-//		TCPSocket* sender = senders.at(0);
-//		TCPSocket* receiver = peer1;
-//		if (receiver == sender)
-//			receiver = peer2;
-//		int command = messengerServer->readCommandFromPeer(sender);
-//		string msg;
-//		switch (command) {
-//		//Send message to peer
-//		case SEND_MSG_TO_PEER:
-//			cout << "sending msg form:" << sender->destIpAndPort()
-//					<< " to: " << receiver->destIpAndPort() << " " << msg
-//					<< endl;
-//			msg = messengerServer->readDataFromPeer(sender);
-//			messengerServer->sendCommandToPeer(receiver, SEND_MSG_TO_PEER);
-//			messengerServer->sendDataToPeer(receiver, msg);
-//			break;
-//			//Close a Connection between peers
-//		case CLOSE_SESSION_WITH_PEER:
-//			cout << "closing session between:" << sender->destIpAndPort()
-//					<< " and: " << receiver->destIpAndPort() << endl;
-//			messengerServer->sendCommandToPeer(receiver,
-//					CLOSE_SESSION_WITH_PEER);
-//			messengerServer->markPeerAsAvailable(sender);
-//			messengerServer->markPeerAsAvailable(receiver);
-//			run = false;
-//			break;
-//		}
-//	}
-//	cout << "closing broker:" << peer1->destIpAndPort() << "-"
-//			<< peer2->destIpAndPort() << endl;
-//}

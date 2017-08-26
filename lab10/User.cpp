@@ -24,6 +24,10 @@ int User::getScore(){
 	return this->score;
 }
 
+void User::setScore(int score){
+	this->score = score;
+}
+
 
 
 
