@@ -124,7 +124,7 @@ void TCPMessengerClient::handleServerCommand()
 void TCPMessengerClient::startGameWithPeer(bool startedByMe){//change to UDPSOCKET
 	cout<<"GameStarted"<<endl;
 	vector<string> tokens;
-	Tokenize(secPlayerData, tokens, ";");
+	Tokenize(secPlayerData, tokens, ":");
 	string ip = tokens[0];
 	int port;
 	std::stringstream s_str( tokens[1] );
