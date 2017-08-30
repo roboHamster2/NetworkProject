@@ -2,6 +2,7 @@
 #include "TCPMessengerProtocol.h"
 #include "TCPSessionBroker.h"
 #include <stdlib.h>
+#include <string>
 
 TCPSessionBroker::TCPSessionBroker(TCPMessengerServer* msgr, TCPSocket* p1, TCPSocket* p2) {
 	if (p2 == NULL)
@@ -16,6 +17,7 @@ TCPSessionBroker::TCPSessionBroker(TCPMessengerServer* msgr, TCPSocket* p1, TCPS
 	user2 = NULL;
 
 }
+
 
 bool TCPSessionBroker::CreateP2PSession(){
 
@@ -35,9 +37,13 @@ bool TCPSessionBroker::CreateP2PSession(){
 	if (response == ACCEPT) {
 		//sending the peers their connection information
 		messengerServer->sendCommandToPeer(sender, START_SESSION_WITH_PEER);
-		messengerServer->sendDataToPeer(sender, receiver->destIpAndPort());
+		cout << connectionDetails(receiver, 123123, 321321) << endl;
+		cout << receiver->destIpAndPort() << endl;
+		messengerServer->sendDataToPeer(sender, connectionDetails(receiver, 44444, 44445));
+//		messengerServer->sendDataToPeer(sender, receiver->destIpAndPort());
 		messengerServer->sendCommandToPeer(receiver, START_SESSION_WITH_PEER);
-		messengerServer->sendDataToPeer(receiver, sender->destIpAndPort());
+		messengerServer->sendDataToPeer(receiver, connectionDetails(sender, 44445, 44444));
+//		messengerServer->sendDataToPeer(receiver, sender->destIpAndPort());
 		return true;
 	} else if (response == REFUSE) {
 		return false;
@@ -50,7 +56,8 @@ TCPSocket* TCPSessionBroker::pickRandomPeer(){
 	int sizeOfOpenPeers = messengerServer->openedPeers.size();
 	map<string, TCPSocket*>::iterator item = messengerServer->openedPeers.begin();
 	std::advance(item, rand() % sizeOfOpenPeers);
-	return (*item).second;
+//	return (*item).second;
+	return (*item).second != peer1 ? (*item).second : NULL;
 }
 
 void TCPSessionBroker::setupUsers(){
@@ -58,10 +65,23 @@ void TCPSessionBroker::setupUsers(){
 	user2 = messengerServer->getUserBySocket(peer2);
 }
 
+string TCPSessionBroker::connectionDetails(TCPSocket* peer2Socket, int peer2Port, int peer1Port){
+	string peerData;
+	string ip = peer2Socket->fromAddr();
+	string peer1port = to_string(peer1Port);
+	string peer2port = to_string(peer2Port);
+	peerData.append(ip);
+	peerData.append(":");
+	peerData.append(peer1port);
+	peerData.append(":");
+	peerData.append(peer2port);
+	return peerData;
+}
 
 void TCPSessionBroker::run() {
 	messengerServer->markPeerAsUnavailable(peer1);
-	if (peer2 != NULL) {
+//	if (peer2 != NULL) {
+	if (peer2 != NULL && peer1 != peer2) {
 		messengerServer->markPeerAsUnavailable(peer2);
 		if (CreateP2PSession()) {
 			setupUsers();
@@ -76,6 +96,11 @@ void TCPSessionBroker::run() {
 		int i;
 		for (i=0 ; i < buffer; i++) {
 			peer2 = pickRandomPeer();
+
+			if (peer2 == NULL) {
+				break;
+			}
+
 			messengerServer->markPeerAsUnavailable(peer2);
 			if (CreateP2PSession()) {
 				setupUsers();

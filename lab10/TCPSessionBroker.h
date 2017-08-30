@@ -23,6 +23,7 @@ private :
 	void startGame();
 	void setupUsers();
 	void updateScore();
+	string connectionDetails(TCPSocket* peer2Socket, int peer2Port, int peer1Port);
 };
 
 

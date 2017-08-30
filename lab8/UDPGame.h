@@ -14,7 +14,7 @@ class UDPGame {
 	int peer2Port;
 	UDPSocket* udpSocket;
 public:
-	UDPGame(string ip,int port);
+	UDPGame(string peerIP,int peerPort, int myPort);
 	void showGameMenu();
 	virtual ~UDPGame();
 	int start();

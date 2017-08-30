@@ -9,10 +9,10 @@
 #include "UDPSocket.h"
 #include "string.h"
 
-UDPGame::UDPGame(string ip,int port) {
-	this->peer2IP = ip;
-	this->peer2Port=port;
-	udpSocket = new UDPSocket(port);
+UDPGame::UDPGame(string peerIP,int peerPort, int myPort) {
+	this->peer2IP = peerIP;
+	this->peer2Port=peerPort;
+	udpSocket = new UDPSocket(myPort);
 	start();
 }
 
@@ -46,7 +46,8 @@ int UDPGame::start(){
 		buff[rc] = 0;
 		cout<<"the opponent chose:"<<buff<<"\""<<endl;
 	}
-
+	cout << "zv vshura vzot " << myCommand << endl;
+	cout << "zv vshura vzot " << buff << endl;
 	if(strcmp(myCommand.c_str(),"r"))
 	{
 		if(strcmp(buff,"r")){
