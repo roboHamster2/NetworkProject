@@ -160,6 +160,16 @@ private:
 	* get Available Peers
 	*/
 	string getAvailablePeers();
+
+	/**
+	* get Available Peers
+	*/
+	string getAvailablePeers(TCPSocket* user);
+
+	/**
+	* write user to file
+	*/
+	void writeUserToFile(string path,User* user);
 };
 
 #endif

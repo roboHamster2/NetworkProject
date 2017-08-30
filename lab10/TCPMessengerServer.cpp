@@ -100,7 +100,7 @@ void TCPMessengerServer::close() {
 		usersToSave.push_back(it->second);
 	}
 
-	writeUsersToFile(USERS_FILE, usersToSave);
+//	writeUsersToFile(USERS_FILE, usersToSave);
 	cout << "server closed" << endl;
 }
 
@@ -137,12 +137,20 @@ vector<TCPSocket*> TCPMessengerServer::getUnathenticatedPeersVec() {
 
 
 void TCPMessengerServer::peerDisconnect(TCPSocket* peer) {
-	openedPeers.erase(peer->destIpAndPort());
-	busyPeers.erase(peer->destIpAndPort());
 	unauthenticatedPeers.erase(std::remove(unauthenticatedPeers.begin(), unauthenticatedPeers.end(), peer), unauthenticatedPeers.end());
+	map<TCPSocket*,string>::iterator it = socketToUser.find(peer);
+	if(it != socketToUser.end())
+	{
+	   //element found;
+		string userName = it->second;
+		userToSocket.erase(userName);
+		socketToUser.erase(peer);
+		openedPeers.erase(userName);
+		busyPeers.erase(userName);
 
-	peer->cclose();
-	delete peer;
+		peer->cclose();
+		delete peer;
+	}
 }
 
 void TCPMessengerServer::markPeerAsUnavailable(TCPSocket* peer) {
@@ -275,7 +283,9 @@ string TCPMessengerServer::registerUser(string name, string password){
 	stringstream ss;
 	ss << res;
 	string str = ss.str();
-	users[name] = new User(name,str,0);
+	User* user = new User(name,str,0);
+	users[name] = user;
+	writeUserToFile(USERS_FILE,user);
 	return "OK";
 }
 
@@ -286,6 +296,9 @@ string TCPMessengerServer::loginUser(string name, string password){
 	}
 	if (users[name]==NULL){
 		return "user does not exist";
+	}
+	if (userToSocket[name]){
+			return "user already logged in";
 	}
 	std::hash<string> hash_fn;
 	size_t str_hash = hash_fn(password);
@@ -318,4 +331,25 @@ string TCPMessengerServer::getAvailablePeers() {
 		ss<< user << "\n";
 	}
 	return ss.str();
+}
+string TCPMessengerServer::getAvailablePeers(TCPSocket* user) {
+	map<string, TCPSocket*>::iterator item;
+	stringstream ss;
+	ss<<"\n";
+	for (item = openedPeers.begin(); item != openedPeers.end() ; item++){
+		if( (*item).second != user){
+			string user = (*item).first;
+			ss<< user << "\n";
+		}
+	}
+	return ss.str();
+}
+
+void TCPMessengerServer::writeUserToFile(string path,User* user){
+	std::ofstream outfile;
+
+	outfile.open(path, std::ios_base::app);
+	outfile << user->getUsername() << "," << user->getPassword() << ","
+			<< user->getScore() << "\n";
+	outfile.close();
 }

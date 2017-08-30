@@ -79,6 +79,7 @@ void AuthRequestsDispatcher::HandleCommandFromPeer(TCPSocket* readyPeer){
 			if(tokens.size() == 2){
 				responseData = messenger->loginUser(tokens[0],tokens[1]);
 				if(responseData.compare("OK") == 0){
+					messenger->userToSocket[tokens[0]] = readyPeer;
 					messenger->markPeerAsAuthenticated(tokens[0],readyPeer);
 					messenger->sendCommandToPeer(readyPeer,LOGIN_ACCEPT);
 				} else {
