@@ -19,6 +19,7 @@ class TCPSocket{
 	struct sockaddr_in serverAddr;
 	struct sockaddr_in peerAddr;
 	int socket_fd;
+	int yes = 1;
 
 private:
 	/**
