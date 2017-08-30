@@ -40,6 +40,8 @@ TCPSocket::TCPSocket(int port){
 
 	//bind the socket on the specified address
 	printf("TCP server binding...\n");
+	 // lose the pesky "address already in use" error message
+	setsockopt(socket_fd, SOL_SOCKET, SO_REUSEADDR, &yes, sizeof(int));
 	if (bind(socket_fd, (struct sockaddr *)&serverAddr, sizeof(serverAddr)) < 0)
 	{
 		perror ("Error naming channel");
