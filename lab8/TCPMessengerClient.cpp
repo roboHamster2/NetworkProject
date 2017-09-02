@@ -92,6 +92,26 @@ void TCPMessengerClient::handleServerCommand()
 
 					break;
 				}
+				case DISCONNECT :
+				{
+					cout << "Client has been disconnected from the server" << endl;
+					if (loginToServer()){
+						showMenu();
+					}
+					break;
+				}
+				case DISCONNECT_FROM_SERVER :
+				{
+					cout << "Client has been disconnected from the server" << endl;
+					socket->cclose();
+					if (connectToServer()) {
+						connected = true;
+						if (loginToServer()) {
+							showMenu();
+						}
+					}
+					break;
+				}
 				default:
 				{
 					cout<<"communication with server was interrupted - connection closed"<<endl;
@@ -315,7 +335,11 @@ void TCPMessengerClient::closeActiveSession(){
 //	return true;
 }
 
-
+void TCPMessengerClient::disconnectFromServer(){
+	sendCommand(DISCONNECT_FROM_SERVER);
+	sessionActive = false;
+	connected = false;
+}
 
 /**
  * send message

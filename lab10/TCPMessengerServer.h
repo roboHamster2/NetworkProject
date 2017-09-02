@@ -91,6 +91,11 @@ private:
 	void markPeerAsUnavailable(TCPSocket* peer);
 
 	/**
+	 * mark the given peer from the authenticated to unAuthenticated
+	 */
+	void markPeerAsUnauthenticated(TCPSocket* peer);
+
+	/**
 	 * move the given peer from the busy to the open peers list
 	 */
 	void markPeerAsAvailable(TCPSocket* peer);
@@ -165,6 +170,11 @@ private:
 	* get Available Peers
 	*/
 	string getAvailablePeers(TCPSocket* user);
+
+	/**
+	* has Available Peers
+	*/
+	bool hasAvailablePeers(TCPSocket* user);
 
 	/**
 	* write user to file

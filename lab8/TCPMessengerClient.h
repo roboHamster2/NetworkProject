@@ -59,6 +59,8 @@ public:
 	 */
 	void disconnect();
 
+	void disconnectFromServer();
+
 	/**
 	 * open new session with address (ip:port)
 	 * and close opened session

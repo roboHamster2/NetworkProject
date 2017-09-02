@@ -33,23 +33,6 @@ User* TCPMessengerServer::getUserBySocket(TCPSocket* socket){
 void TCPMessengerServer::run() {
 
 	this->users = loadUsersFromFile(USERS_FILE);
-//	User * u1 = new User("etr","ert",1);
-//	User * u2 = new User("etr2","ert2",2);
-//	User * u3 = new User("etr3","ert3",3);
-
-//	vector<User*> users;
-//	users.push_back(new User("etr","ert",1));
-//	users.push_back(new User("etr2","ert2",2));
-//	users.push_back(new User("etr3","ert3",3));
-
-//	vector <User*> usersToSave;
-//
-//	for (std::map<string,User*>::iterator it = this->users.begin(); it != this->users.end(); ++it) {
-//		usersToSave.push_back(it->second);
-//	}
-//
-//	writeUsersToFile(USERS_FILE, usersToSave);
-
 	running = true;
 	dispatcher = new PeersRequestsDispatcher(this);
 	dispatcher->start();
@@ -284,7 +267,7 @@ map<string,User*> TCPMessengerServer::loadUsersFromFile(string path){
 	}
 	return users;
 }
-//string TCPMessengerServer::tr1::registerUser(string name, string password){
+
 string TCPMessengerServer::registerUser(string name, string password){
 	if (name.length() < 4 && password.length() < 4){
 		return "password and user must be at least 4 characters";
@@ -304,7 +287,7 @@ string TCPMessengerServer::registerUser(string name, string password){
 	return "OK";
 }
 
-//string TCPMessengerServer::tr1::loginUser(string name, string password){
+
 string TCPMessengerServer::loginUser(string name, string password){
 	if (name.length() < 4 && password.length() < 4){
 		return "password and user must be at least 4 characters";
@@ -358,6 +341,32 @@ string TCPMessengerServer::getAvailablePeers(TCPSocket* user) {
 		}
 	}
 	return ss.str();
+}
+
+void TCPMessengerServer::markPeerAsUnauthenticated(TCPSocket* peer){
+	if (peer != NULL) {
+		map<TCPSocket*,string>::iterator it = socketToUser.find(peer);
+		if(it != socketToUser.end())
+		{
+		   //element found;
+			string userName = it->second;
+			userToSocket.erase(userName);
+			socketToUser.erase(peer);
+			openedPeers.erase(userName);
+			busyPeers.erase(userName);
+		}
+		unauthenticatedPeers.push_back(peer);
+	}
+}
+
+bool TCPMessengerServer::hasAvailablePeers(TCPSocket* user) {
+	map<string, TCPSocket*>::iterator item;
+	for (item = openedPeers.begin(); item != openedPeers.end() ; item++){
+		if( (*item).second != user){
+			return true;
+		}
+	}
+	return false;
 }
 
 void TCPMessengerServer::writeUserToFile(string path,User* user){

@@ -31,7 +31,7 @@ bool TCPSessionBroker::CreateP2PSession(){
 			<< receiver->destIpAndPort() << " " << endl;
 
 	messengerServer->sendCommandToPeer(receiver, SEND_REQUEST_TO_PEER);
-	string userName = messengerServer->socketToUser[receiver];
+	string userName = messengerServer->socketToUser[sender];
 	messengerServer->sendDataToPeer(receiver, userName);
 	response = messengerServer->readCommandFromPeer(receiver);
 	if (response == ACCEPT) {
