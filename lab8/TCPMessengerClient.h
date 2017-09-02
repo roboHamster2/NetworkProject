@@ -68,6 +68,9 @@ public:
 	bool openRandom();
 
 	void showAvailableUsers();
+
+	void showPosiotionAndScore();
+
 	/**
 	 * return session status
 	 */

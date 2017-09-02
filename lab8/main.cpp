@@ -48,6 +48,10 @@ void handleConsoleCommand(){
 //				cout<<"Error: not connected to peer"<<endl;
 			messenger->showAvailableUsers();
 		}
+		else if (command == "ss")
+		{
+			messenger->showPosiotionAndScore();
+		}
 		else if (command == "du")
 		{
 			messenger->closeActiveSession();

@@ -353,3 +353,28 @@ void TCPMessengerServer::writeUserToFile(string path,User* user){
 			<< user->getScore() << "\n";
 	outfile.close();
 }
+
+bool myfunction (User* i,User* j) { return (i->getScore()<j->getScore()); }
+
+string TCPMessengerServer::getPositionAndScore(User* user){
+	vector<User*> usersToSave;
+	stringstream ss;
+	for (std::map<string, User*>::iterator it = this->users.begin();it != this->users.end(); ++it) {
+		usersToSave.push_back(it->second);
+	}
+	int i = 1;
+	int curPos = 0;
+	std::sort (usersToSave.begin(), usersToSave.end(), myfunction);
+	for (std::vector<User*>::iterator it = usersToSave.begin();it != usersToSave.end(); ++it) {
+		if(user == (*it)){
+			curPos = i;
+		}
+		ss<<i<<". "<< (*it)->getUsername() << " " << (*it)->getScore() <<"\n";
+		i++;
+
+	}
+	ss<< "current position is: " << curPos << "\n";
+	return ss.str();
+}
+
+
