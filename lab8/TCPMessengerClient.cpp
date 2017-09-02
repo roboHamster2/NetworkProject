@@ -299,8 +299,7 @@ bool TCPMessengerClient::openRandom(){
 	}
 	else if (respond == REFUSE)
 	{
-		cout<<"server failed to find peer"<<endl;
-
+		cout << readCommandData() << endl;
 	}else
 		cout<<"got unexpected command from server"<<endl;
 	return false;

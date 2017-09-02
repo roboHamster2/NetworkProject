@@ -38,10 +38,8 @@ bool TCPSessionBroker::CreateP2PSession(){
 		//sending the peers their connection information
 		messengerServer->sendCommandToPeer(sender, START_SESSION_WITH_PEER);
 		messengerServer->sendDataToPeer(sender, connectionDetails(receiver, 44444, 44445));
-//		messengerServer->sendDataToPeer(sender, receiver->destIpAndPort());
 		messengerServer->sendCommandToPeer(receiver, START_SESSION_WITH_PEER);
 		messengerServer->sendDataToPeer(receiver, connectionDetails(sender, 44445, 44444));
-//		messengerServer->sendDataToPeer(receiver, sender->destIpAndPort());
 		return true;
 	} else if (response == REFUSE) {
 		return false;
@@ -83,8 +81,9 @@ void TCPSessionBroker::run() {
 			messengerServer->sendCommandToPeer(peer1, REFUSE);
 			messengerServer->sendDataToPeer(peer1, userName+" Refused your request");
 		}
+		messengerServer->markPeerAsAvailable(peer2);
 	} else {
-		int buffer = 10;
+		int buffer = 2;
 		int i;
 		for (i=0 ; i < buffer; i++) {
 			peer2 = pickRandomPeer();
@@ -96,9 +95,9 @@ void TCPSessionBroker::run() {
 			messengerServer->markPeerAsUnavailable(peer2);
 			if (CreateP2PSession()) {
 				startGame();
+				messengerServer->markPeerAsAvailable(peer2);
 				break;
 			}else { messengerServer->markPeerAsAvailable(peer2);}
-
 		}
 		if (i == buffer){
 			messengerServer->sendCommandToPeer(peer1, REFUSE);
@@ -107,7 +106,7 @@ void TCPSessionBroker::run() {
 	}
 	cout << "mark peer as available" << endl;
 	messengerServer->markPeerAsAvailable(peer1);
-	messengerServer->markPeerAsAvailable(peer2);
+
 }
 
 void TCPSessionBroker::updateScore(TCPSocket* peer){
