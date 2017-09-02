@@ -1,5 +1,5 @@
 main.o: ../main.cpp ../TCPMessengerClient.h ../MThread.h ../TCPSocket.h \
-  ../TCPMessengerProtocol.h ../UDPGame.h
+  ../TCPMessengerProtocol.h ../UDPGame.h ../UDPSocket.h
 
 ../TCPMessengerClient.h:
 
@@ -10,3 +10,5 @@ main.o: ../main.cpp ../TCPMessengerClient.h ../MThread.h ../TCPSocket.h \
 ../TCPMessengerProtocol.h:
 
 ../UDPGame.h:
+
+../UDPSocket.h:

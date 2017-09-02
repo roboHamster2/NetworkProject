@@ -15,6 +15,7 @@ void MultipleTCPSocketsListener::addSockets(tSocketsContainer socketVec){
 }
 
 vector<TCPSocket*> MultipleTCPSocketsListener::listenToSocket(int timeout){
+	cout<< "Listen to socket has started " << endl;
 	struct timeval tv = {timeout, 0};
 	tSocketsContainer::iterator iter = sockets.begin();
 	tSocketsContainer::iterator endIter = sockets.end();
@@ -26,13 +27,14 @@ vector<TCPSocket*> MultipleTCPSocketsListener::listenToSocket(int timeout){
 		highfd++;
 		FD_SET((*iter)->getSocketFid(), &fdset);
 	}
-
 	//perform the select
 	int returned;
 	if (timeout>0){
 		returned = select(sizeof(fdset)*8, &fdset, NULL, NULL, &tv);
 	}else{
+		cout<< "mmm " << highfd << endl;
 		returned = select(sizeof(fdset)*8, &fdset, NULL, NULL, NULL);
+		cout<< "The timeout is 0 : " << highfd << endl;
 	}
 	vector<TCPSocket*> availableSockets;
 	if (returned) {

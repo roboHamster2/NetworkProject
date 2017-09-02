@@ -129,9 +129,16 @@ void TCPMessengerClient::startGameWithPeer(bool startedByMe){//change to UDPSOCK
 	int destPort = atoi(tokens[1].c_str());
 	int myPort = atoi(tokens[2].c_str());
 	UDPGame* game = new UDPGame(destIP,destPort, myPort);
-	int score=game->start();
-
+	int score=game->startGame();
+	cout << "the score is : " << score << endl;
+	//Updating the server
+	string resultToServer = to_string(score);
+	sendCommand(CLOSE_SESSION_WITH_PEER);
+	sendCommandData("400");
+	cout<<"ffff "<<endl;
+//	closeActiveSession();
 	//close the game in server
+
 }
 
 bool TCPMessengerClient::loginToServer(){
@@ -155,9 +162,10 @@ bool TCPMessengerClient::loginToServer(){
 			string password;
 			cin >> user;
 			cin >> password;
-			if(authenticate(LOGIN,user, password))
+			if(authenticate(LOGIN,user, password)){
+				firstPlayerUserName = user;
 				return true;
-			else
+			}else
 				cout<<"failed to login"<<endl;
 		} else if (command == "x")
 		{

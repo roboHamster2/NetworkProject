@@ -188,3 +188,2171 @@ Invoking: GCC C++ Linker
 g++  -o "lab8"  ./MThread.o ./TCPMessengerClient.o ./TCPSocket.o ./UDPGame.o ./main.o   -lpthread
 Finished building target: lab8
  
+20:36:50 **** Clean-only build of configuration Debug for project lab10 ****
+make clean 
+rm -rf  ./AuthRequestsDispatcher.o ./MThread.o ./MultipleTCPSocketsListener.o ./PeersRequestsDispatcher.o ./TCPMessengerServer.o ./TCPSessionBroker.o ./TCPSocket.o ./User.o ./main.o  ./AuthRequestsDispatcher.d ./MThread.d ./MultipleTCPSocketsListener.d ./PeersRequestsDispatcher.d ./TCPMessengerServer.d ./TCPSessionBroker.d ./TCPSocket.d ./User.d ./main.d  lab10
+ 
+20:36:50 **** Clean-only build of configuration Debug for project lab8 ****
+make clean 
+rm -rf  ./MThread.o ./TCPMessengerClient.o ./TCPSocket.o ./UDPGame.o ./main.o  ./MThread.d ./TCPMessengerClient.d ./TCPSocket.d ./UDPGame.d ./main.d  lab8
+ 
+20:37:07 **** Build of configuration Debug for project lab10 ****
+make all 
+Building file: ../AuthRequestsDispatcher.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"AuthRequestsDispatcher.d" -MT"AuthRequestsDispatcher.o" -o "AuthRequestsDispatcher.o" "../AuthRequestsDispatcher.cpp"
+In file included from ../AuthRequestsDispatcher.cpp:11:
+In file included from ../TCPMessengerServer.h:8:
+../TCPSocket.h:22:10: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+        int yes = 1;
+                ^
+1 warning generated.
+Finished building: ../AuthRequestsDispatcher.cpp
+ 
+Building file: ../MThread.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"MThread.d" -MT"MThread.o" -o "MThread.o" "../MThread.cpp"
+Finished building: ../MThread.cpp
+ 
+Building file: ../MultipleTCPSocketsListener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"MultipleTCPSocketsListener.d" -MT"MultipleTCPSocketsListener.o" -o "MultipleTCPSocketsListener.o" "../MultipleTCPSocketsListener.cpp"
+In file included from ../MultipleTCPSocketsListener.cpp:3:
+In file included from ../MultipleTCPSocketsListener.h:7:
+../TCPSocket.h:22:10: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+        int yes = 1;
+                ^
+1 warning generated.
+Finished building: ../MultipleTCPSocketsListener.cpp
+ 
+Building file: ../PeersRequestsDispatcher.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"PeersRequestsDispatcher.d" -MT"PeersRequestsDispatcher.o" -o "PeersRequestsDispatcher.o" "../PeersRequestsDispatcher.cpp"
+In file included from ../PeersRequestsDispatcher.cpp:1:
+In file included from ../TCPMessengerServer.h:8:
+../TCPSocket.h:22:10: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+        int yes = 1;
+                ^
+1 warning generated.
+Finished building: ../PeersRequestsDispatcher.cpp
+ 
+Building file: ../TCPMessengerServer.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPMessengerServer.d" -MT"TCPMessengerServer.o" -o "TCPMessengerServer.o" "../TCPMessengerServer.cpp"
+In file included from ../TCPMessengerServer.cpp:1:
+In file included from ../TCPMessengerServer.h:8:
+../TCPSocket.h:22:10: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+        int yes = 1;
+                ^
+1 warning generated.
+Finished building: ../TCPMessengerServer.cpp
+ 
+Building file: ../TCPSessionBroker.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPSessionBroker.d" -MT"TCPSessionBroker.o" -o "TCPSessionBroker.o" "../TCPSessionBroker.cpp"
+In file included from ../TCPSessionBroker.cpp:1:
+../TCPSocket.h:22:10: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+        int yes = 1;
+                ^
+1 warning generated.
+Finished building: ../TCPSessionBroker.cpp
+ 
+Building file: ../TCPSocket.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPSocket.d" -MT"TCPSocket.o" -o "TCPSocket.o" "../TCPSocket.cpp"
+In file included from ../TCPSocket.cpp:13:
+../TCPSocket.h:22:10: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+        int yes = 1;
+                ^
+1 warning generated.
+Finished building: ../TCPSocket.cpp
+ 
+Building file: ../User.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"User.d" -MT"User.o" -o "User.o" "../User.cpp"
+Finished building: ../User.cpp
+ 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.cpp"
+In file included from ../main.cpp:13:
+In file included from ../TCPMessengerServer.h:8:
+../TCPSocket.h:22:10: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+        int yes = 1;
+                ^
+1 warning generated.
+Finished building: ../main.cpp
+ 
+Building target: lab10
+Invoking: GCC C++ Linker
+g++  -o "lab10"  ./AuthRequestsDispatcher.o ./MThread.o ./MultipleTCPSocketsListener.o ./PeersRequestsDispatcher.o ./TCPMessengerServer.o ./TCPSessionBroker.o ./TCPSocket.o ./User.o ./main.o   -lpthread
+Finished building target: lab10
+ 
+20:37:13 **** Build of configuration Debug for project lab8 ****
+make all 
+Building file: ../MThread.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"MThread.d" -MT"MThread.o" -o "MThread.o" "../MThread.cpp"
+Finished building: ../MThread.cpp
+ 
+Building file: ../TCPMessengerClient.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPMessengerClient.d" -MT"TCPMessengerClient.o" -o "TCPMessengerClient.o" "../TCPMessengerClient.cpp"
+../TCPMessengerClient.cpp:132:6: warning: unused variable 'score' [-Wunused-variable]
+        int score=game->start();
+            ^
+1 warning generated.
+Finished building: ../TCPMessengerClient.cpp
+ 
+Building file: ../TCPSocket.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPSocket.d" -MT"TCPSocket.o" -o "TCPSocket.o" "../TCPSocket.cpp"
+Finished building: ../TCPSocket.cpp
+ 
+Building file: ../UDPGame.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"UDPGame.d" -MT"UDPGame.o" -o "UDPGame.o" "../UDPGame.cpp"
+Finished building: ../UDPGame.cpp
+ 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: lab8
+Invoking: GCC C++ Linker
+g++  -o "lab8"  ./MThread.o ./TCPMessengerClient.o ./TCPSocket.o ./UDPGame.o ./UDPSocket.o ./main.o   -lpthread
+Finished building target: lab8
+ 
+11:32:32 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+make: Nothing to be done for `all'.
+11:32:32 **** Clean-only build of configuration Debug for project lab8 ****
+make clean 
+rm -rf  ./MThread.o ./TCPMessengerClient.o ./TCPSocket.o ./UDPGame.o ./UDPSocket.o ./main.o  ./MThread.d ./TCPMessengerClient.d ./TCPSocket.d ./UDPGame.d ./UDPSocket.d ./main.d  lab8
+ 
+11:32:32 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+Building file: ../MThread.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"MThread.d" -MT"MThread.o" -o "MThread.o" "../MThread.cpp"
+Finished building: ../MThread.cpp
+ 
+Building file: ../TCPMessengerClient.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPMessengerClient.d" -MT"TCPMessengerClient.o" -o "TCPMessengerClient.o" "../TCPMessengerClient.cpp"
+../TCPMessengerClient.cpp:132:6: warning: unused variable 'score' [-Wunused-variable]
+        int score=game->start();
+            ^
+1 warning generated.
+Finished building: ../TCPMessengerClient.cpp
+ 
+Building file: ../TCPSocket.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPSocket.d" -MT"TCPSocket.o" -o "TCPSocket.o" "../TCPSocket.cpp"
+Finished building: ../TCPSocket.cpp
+ 
+Building file: ../UDPGame.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"UDPGame.d" -MT"UDPGame.o" -o "UDPGame.o" "../UDPGame.cpp"
+Finished building: ../UDPGame.cpp
+ 
+Building file: ../UDPSocket.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"UDPSocket.d" -MT"UDPSocket.o" -o "UDPSocket.o" "../UDPSocket.cpp"
+Finished building: ../UDPSocket.cpp
+ 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: lab8
+Invoking: GCC C++ Linker
+g++  -o "lab8"  ./MThread.o ./TCPMessengerClient.o ./TCPSocket.o ./UDPGame.o ./UDPSocket.o ./main.o   -lpthread
+Finished building target: lab8
+ 
+11:35:51 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+make: Nothing to be done for `all'.
+11:35:51 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+Building file: ../UDPGame.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"UDPGame.d" -MT"UDPGame.o" -o "UDPGame.o" "../UDPGame.cpp"
+Finished building: ../UDPGame.cpp
+ 
+Building target: lab8
+Invoking: GCC C++ Linker
+g++  -o "lab8"  ./MThread.o ./TCPMessengerClient.o ./TCPSocket.o ./UDPGame.o ./UDPSocket.o ./main.o   -lpthread
+Finished building target: lab8
+ 
+11:37:34 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+make: Nothing to be done for `all'.
+11:37:34 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+Building file: ../UDPGame.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"UDPGame.d" -MT"UDPGame.o" -o "UDPGame.o" "../UDPGame.cpp"
+Finished building: ../UDPGame.cpp
+ 
+Building target: lab8
+Invoking: GCC C++ Linker
+g++  -o "lab8"  ./MThread.o ./TCPMessengerClient.o ./TCPSocket.o ./UDPGame.o ./UDPSocket.o ./main.o   -lpthread
+Finished building target: lab8
+ 
+11:55:21 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+make: Nothing to be done for `all'.
+11:57:29 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+make: Nothing to be done for `all'.
+11:58:45 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+make: Nothing to be done for `all'.
+12:04:26 **** Clean-only build of configuration Debug for project lab10 ****
+make clean 
+rm -rf  ./AuthRequestsDispatcher.o ./MThread.o ./MultipleTCPSocketsListener.o ./PeersRequestsDispatcher.o ./TCPMessengerServer.o ./TCPSessionBroker.o ./TCPSocket.o ./User.o ./main.o  ./AuthRequestsDispatcher.d ./MThread.d ./MultipleTCPSocketsListener.d ./PeersRequestsDispatcher.d ./TCPMessengerServer.d ./TCPSessionBroker.d ./TCPSocket.d ./User.d ./main.d  lab10
+ 
+12:04:26 **** Clean-only build of configuration Debug for project lab8 ****
+make clean 
+rm -rf  ./MThread.o ./TCPMessengerClient.o ./TCPSocket.o ./UDPGame.o ./UDPSocket.o ./main.o  ./MThread.d ./TCPMessengerClient.d ./TCPSocket.d ./UDPGame.d ./UDPSocket.d ./main.d  lab8
+ 
+12:04:28 **** Build of configuration Debug for project lab10 ****
+make all 
+Building file: ../AuthRequestsDispatcher.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"AuthRequestsDispatcher.d" -MT"AuthRequestsDispatcher.o" -o "AuthRequestsDispatcher.o" "../AuthRequestsDispatcher.cpp"
+In file included from ../AuthRequestsDispatcher.cpp:11:
+In file included from ../TCPMessengerServer.h:8:
+../TCPSocket.h:22:10: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+        int yes = 1;
+                ^
+1 warning generated.
+Finished building: ../AuthRequestsDispatcher.cpp
+ 
+Building file: ../MThread.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"MThread.d" -MT"MThread.o" -o "MThread.o" "../MThread.cpp"
+Finished building: ../MThread.cpp
+ 
+Building file: ../MultipleTCPSocketsListener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"MultipleTCPSocketsListener.d" -MT"MultipleTCPSocketsListener.o" -o "MultipleTCPSocketsListener.o" "../MultipleTCPSocketsListener.cpp"
+In file included from ../MultipleTCPSocketsListener.cpp:3:
+In file included from ../MultipleTCPSocketsListener.h:7:
+../TCPSocket.h:22:10: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+        int yes = 1;
+                ^
+1 warning generated.
+Finished building: ../MultipleTCPSocketsListener.cpp
+ 
+Building file: ../PeersRequestsDispatcher.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"PeersRequestsDispatcher.d" -MT"PeersRequestsDispatcher.o" -o "PeersRequestsDispatcher.o" "../PeersRequestsDispatcher.cpp"
+In file included from ../PeersRequestsDispatcher.cpp:1:
+In file included from ../TCPMessengerServer.h:8:
+../TCPSocket.h:22:10: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+        int yes = 1;
+                ^
+1 warning generated.
+Finished building: ../PeersRequestsDispatcher.cpp
+ 
+Building file: ../TCPMessengerServer.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPMessengerServer.d" -MT"TCPMessengerServer.o" -o "TCPMessengerServer.o" "../TCPMessengerServer.cpp"
+In file included from ../TCPMessengerServer.cpp:1:
+In file included from ../TCPMessengerServer.h:8:
+../TCPSocket.h:22:10: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+        int yes = 1;
+                ^
+1 warning generated.
+Finished building: ../TCPMessengerServer.cpp
+ 
+Building file: ../TCPSessionBroker.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPSessionBroker.d" -MT"TCPSessionBroker.o" -o "TCPSessionBroker.o" "../TCPSessionBroker.cpp"
+In file included from ../TCPSessionBroker.cpp:1:
+../TCPSocket.h:22:10: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+        int yes = 1;
+                ^
+1 warning generated.
+Finished building: ../TCPSessionBroker.cpp
+ 
+Building file: ../TCPSocket.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPSocket.d" -MT"TCPSocket.o" -o "TCPSocket.o" "../TCPSocket.cpp"
+In file included from ../TCPSocket.cpp:13:
+../TCPSocket.h:22:10: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+        int yes = 1;
+                ^
+1 warning generated.
+Finished building: ../TCPSocket.cpp
+ 
+Building file: ../User.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"User.d" -MT"User.o" -o "User.o" "../User.cpp"
+Finished building: ../User.cpp
+ 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.cpp"
+In file included from ../main.cpp:13:
+In file included from ../TCPMessengerServer.h:8:
+../TCPSocket.h:22:10: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+        int yes = 1;
+                ^
+1 warning generated.
+Finished building: ../main.cpp
+ 
+Building target: lab10
+Invoking: GCC C++ Linker
+g++  -o "lab10"  ./AuthRequestsDispatcher.o ./MThread.o ./MultipleTCPSocketsListener.o ./PeersRequestsDispatcher.o ./TCPMessengerServer.o ./TCPSessionBroker.o ./TCPSocket.o ./User.o ./main.o   -lpthread
+Finished building target: lab10
+ 
+12:04:38 **** Build of configuration Debug for project lab8 ****
+make all 
+Building file: ../MThread.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"MThread.d" -MT"MThread.o" -o "MThread.o" "../MThread.cpp"
+Finished building: ../MThread.cpp
+ 
+Building file: ../TCPMessengerClient.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPMessengerClient.d" -MT"TCPMessengerClient.o" -o "TCPMessengerClient.o" "../TCPMessengerClient.cpp"
+../TCPMessengerClient.cpp:132:6: warning: unused variable 'score' [-Wunused-variable]
+        int score=game->start();
+            ^
+1 warning generated.
+Finished building: ../TCPMessengerClient.cpp
+ 
+Building file: ../TCPSocket.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPSocket.d" -MT"TCPSocket.o" -o "TCPSocket.o" "../TCPSocket.cpp"
+Finished building: ../TCPSocket.cpp
+ 
+Building file: ../UDPGame.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"UDPGame.d" -MT"UDPGame.o" -o "UDPGame.o" "../UDPGame.cpp"
+Finished building: ../UDPGame.cpp
+ 
+Building file: ../UDPSocket.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"UDPSocket.d" -MT"UDPSocket.o" -o "UDPSocket.o" "../UDPSocket.cpp"
+Finished building: ../UDPSocket.cpp
+ 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: lab8
+Invoking: GCC C++ Linker
+g++  -o "lab8"  ./MThread.o ./TCPMessengerClient.o ./TCPSocket.o ./UDPGame.o ./UDPSocket.o ./main.o   -lpthread
+Finished building target: lab8
+ 
+12:27:37 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+Building file: ../UDPGame.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"UDPGame.d" -MT"UDPGame.o" -o "UDPGame.o" "../UDPGame.cpp"
+Finished building: ../UDPGame.cpp
+ 
+Building target: lab8
+Invoking: GCC C++ Linker
+g++  -o "lab8"  ./MThread.o ./TCPMessengerClient.o ./TCPSocket.o ./UDPGame.o ./UDPSocket.o ./main.o   -lpthread
+Finished building target: lab8
+ 
+12:31:34 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+make: Nothing to be done for `all'.
+12:35:18 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+make: Nothing to be done for `all'.
+12:35:19 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+Building file: ../UDPGame.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"UDPGame.d" -MT"UDPGame.o" -o "UDPGame.o" "../UDPGame.cpp"
+Finished building: ../UDPGame.cpp
+ 
+Building target: lab8
+Invoking: GCC C++ Linker
+g++  -o "lab8"  ./MThread.o ./TCPMessengerClient.o ./TCPSocket.o ./UDPGame.o ./UDPSocket.o ./main.o   -lpthread
+Finished building target: lab8
+ 
+12:35:41 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+make: Nothing to be done for `all'.
+12:38:51 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+make: Nothing to be done for `all'.
+12:38:51 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+Building file: ../UDPGame.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"UDPGame.d" -MT"UDPGame.o" -o "UDPGame.o" "../UDPGame.cpp"
+Finished building: ../UDPGame.cpp
+ 
+Building target: lab8
+Invoking: GCC C++ Linker
+g++  -o "lab8"  ./MThread.o ./TCPMessengerClient.o ./TCPSocket.o ./UDPGame.o ./UDPSocket.o ./main.o   -lpthread
+Finished building target: lab8
+ 
+12:41:26 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+make: Nothing to be done for `all'.
+12:42:07 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+make: Nothing to be done for `all'.
+12:42:35 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+make: Nothing to be done for `all'.
+12:43:11 **** Clean-only build of configuration Debug for project lab10 ****
+make clean 
+rm -rf  ./AuthRequestsDispatcher.o ./MThread.o ./MultipleTCPSocketsListener.o ./PeersRequestsDispatcher.o ./TCPMessengerServer.o ./TCPSessionBroker.o ./TCPSocket.o ./User.o ./main.o  ./AuthRequestsDispatcher.d ./MThread.d ./MultipleTCPSocketsListener.d ./PeersRequestsDispatcher.d ./TCPMessengerServer.d ./TCPSessionBroker.d ./TCPSocket.d ./User.d ./main.d  lab10
+ 
+12:43:11 **** Clean-only build of configuration Debug for project lab8 ****
+make clean 
+rm -rf  ./MThread.o ./TCPMessengerClient.o ./TCPSocket.o ./UDPGame.o ./UDPSocket.o ./main.o  ./MThread.d ./TCPMessengerClient.d ./TCPSocket.d ./UDPGame.d ./UDPSocket.d ./main.d  lab8
+ 
+12:43:14 **** Build of configuration Debug for project lab10 ****
+make all 
+Building file: ../AuthRequestsDispatcher.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"AuthRequestsDispatcher.d" -MT"AuthRequestsDispatcher.o" -o "AuthRequestsDispatcher.o" "../AuthRequestsDispatcher.cpp"
+In file included from ../AuthRequestsDispatcher.cpp:11:
+In file included from ../TCPMessengerServer.h:8:
+../TCPSocket.h:22:10: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+        int yes = 1;
+                ^
+1 warning generated.
+Finished building: ../AuthRequestsDispatcher.cpp
+ 
+Building file: ../MThread.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"MThread.d" -MT"MThread.o" -o "MThread.o" "../MThread.cpp"
+Finished building: ../MThread.cpp
+ 
+Building file: ../MultipleTCPSocketsListener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"MultipleTCPSocketsListener.d" -MT"MultipleTCPSocketsListener.o" -o "MultipleTCPSocketsListener.o" "../MultipleTCPSocketsListener.cpp"
+In file included from ../MultipleTCPSocketsListener.cpp:3:
+In file included from ../MultipleTCPSocketsListener.h:7:
+../TCPSocket.h:22:10: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+        int yes = 1;
+                ^
+1 warning generated.
+Finished building: ../MultipleTCPSocketsListener.cpp
+ 
+Building file: ../PeersRequestsDispatcher.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"PeersRequestsDispatcher.d" -MT"PeersRequestsDispatcher.o" -o "PeersRequestsDispatcher.o" "../PeersRequestsDispatcher.cpp"
+In file included from ../PeersRequestsDispatcher.cpp:1:
+In file included from ../TCPMessengerServer.h:8:
+../TCPSocket.h:22:10: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+        int yes = 1;
+                ^
+1 warning generated.
+Finished building: ../PeersRequestsDispatcher.cpp
+ 
+Building file: ../TCPMessengerServer.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPMessengerServer.d" -MT"TCPMessengerServer.o" -o "TCPMessengerServer.o" "../TCPMessengerServer.cpp"
+In file included from ../TCPMessengerServer.cpp:1:
+In file included from ../TCPMessengerServer.h:8:
+../TCPSocket.h:22:10: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+        int yes = 1;
+                ^
+1 warning generated.
+Finished building: ../TCPMessengerServer.cpp
+ 
+Building file: ../TCPSessionBroker.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPSessionBroker.d" -MT"TCPSessionBroker.o" -o "TCPSessionBroker.o" "../TCPSessionBroker.cpp"
+In file included from ../TCPSessionBroker.cpp:1:
+../TCPSocket.h:22:10: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+        int yes = 1;
+                ^
+1 warning generated.
+Finished building: ../TCPSessionBroker.cpp
+ 
+Building file: ../TCPSocket.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPSocket.d" -MT"TCPSocket.o" -o "TCPSocket.o" "../TCPSocket.cpp"
+In file included from ../TCPSocket.cpp:13:
+../TCPSocket.h:22:10: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+        int yes = 1;
+                ^
+1 warning generated.
+Finished building: ../TCPSocket.cpp
+ 
+Building file: ../User.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"User.d" -MT"User.o" -o "User.o" "../User.cpp"
+Finished building: ../User.cpp
+ 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.cpp"
+In file included from ../main.cpp:13:
+In file included from ../TCPMessengerServer.h:8:
+../TCPSocket.h:22:10: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+        int yes = 1;
+                ^
+1 warning generated.
+Finished building: ../main.cpp
+ 
+Building target: lab10
+Invoking: GCC C++ Linker
+g++  -o "lab10"  ./AuthRequestsDispatcher.o ./MThread.o ./MultipleTCPSocketsListener.o ./PeersRequestsDispatcher.o ./TCPMessengerServer.o ./TCPSessionBroker.o ./TCPSocket.o ./User.o ./main.o   -lpthread
+Finished building target: lab10
+ 
+12:43:20 **** Build of configuration Debug for project lab8 ****
+make all 
+Building file: ../MThread.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"MThread.d" -MT"MThread.o" -o "MThread.o" "../MThread.cpp"
+Finished building: ../MThread.cpp
+ 
+Building file: ../TCPMessengerClient.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPMessengerClient.d" -MT"TCPMessengerClient.o" -o "TCPMessengerClient.o" "../TCPMessengerClient.cpp"
+../TCPMessengerClient.cpp:132:6: warning: unused variable 'score' [-Wunused-variable]
+        int score=game->start();
+            ^
+1 warning generated.
+Finished building: ../TCPMessengerClient.cpp
+ 
+Building file: ../TCPSocket.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPSocket.d" -MT"TCPSocket.o" -o "TCPSocket.o" "../TCPSocket.cpp"
+Finished building: ../TCPSocket.cpp
+ 
+Building file: ../UDPGame.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"UDPGame.d" -MT"UDPGame.o" -o "UDPGame.o" "../UDPGame.cpp"
+Finished building: ../UDPGame.cpp
+ 
+Building file: ../UDPSocket.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"UDPSocket.d" -MT"UDPSocket.o" -o "UDPSocket.o" "../UDPSocket.cpp"
+Finished building: ../UDPSocket.cpp
+ 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: lab8
+Invoking: GCC C++ Linker
+g++  -o "lab8"  ./MThread.o ./TCPMessengerClient.o ./TCPSocket.o ./UDPGame.o ./UDPSocket.o ./main.o   -lpthread
+Finished building target: lab8
+ 
+12:43:40 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+make: Nothing to be done for `all'.
+12:45:06 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+make: Nothing to be done for `all'.
+12:45:07 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+make: Nothing to be done for `all'.
+12:45:09 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+make: Nothing to be done for `all'.
+12:45:09 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+Building file: ../UDPGame.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"UDPGame.d" -MT"UDPGame.o" -o "UDPGame.o" "../UDPGame.cpp"
+Finished building: ../UDPGame.cpp
+ 
+Building target: lab8
+Invoking: GCC C++ Linker
+g++  -o "lab8"  ./MThread.o ./TCPMessengerClient.o ./TCPSocket.o ./UDPGame.o ./UDPSocket.o ./main.o   -lpthread
+Finished building target: lab8
+ 
+13:34:15 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+Building file: ../TCPMessengerClient.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPMessengerClient.d" -MT"TCPMessengerClient.o" -o "TCPMessengerClient.o" "../TCPMessengerClient.cpp"
+../TCPMessengerClient.cpp:135:2: error: use of undeclared identifier 'messenger'; did you mean 'messages'?
+        messenger-disconnect();
+        ^~~~~~~~~
+        messages
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/locale:3635:29: note: 'messages' declared here
+class _LIBCPP_TYPE_VIS_ONLY messages
+                            ^
+../TCPMessengerClient.cpp:135:2: error: use of undeclared identifier 'messenger'; did you mean 'messages'?
+        messenger-disconnect();
+        ^~~~~~~~~
+        messages
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/locale:3635:29: note: 'messages' declared here
+class _LIBCPP_TYPE_VIS_ONLY messages
+                            ^
+../TCPMessengerClient.cpp:135:2: error: unknown type name 'messenger'
+        messenger-disconnect();
+        ^
+../TCPMessengerClient.cpp:135:11: error: expected unqualified-id
+        messenger-disconnect();
+                 ^
+4 errors generated.
+make: *** [TCPMessengerClient.o] Error 1
+13:34:43 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+make: Nothing to be done for `all'.
+13:34:43 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+Building file: ../TCPMessengerClient.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPMessengerClient.d" -MT"TCPMessengerClient.o" -o "TCPMessengerClient.o" "../TCPMessengerClient.cpp"
+../TCPMessengerClient.cpp:135:2: error: use of undeclared identifier 'messenger'; did you mean 'messages'?
+        messenger-disconnect();
+        ^~~~~~~~~
+        messages
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/locale:3635:29: note: 'messages' declared here
+class _LIBCPP_TYPE_VIS_ONLY messages
+                            ^
+../TCPMessengerClient.cpp:135:2: error: use of undeclared identifier 'messenger'; did you mean 'messages'?
+        messenger-disconnect();
+        ^~~~~~~~~
+        messages
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/locale:3635:29: note: 'messages' declared here
+class _LIBCPP_TYPE_VIS_ONLY messages
+                            ^
+../TCPMessengerClient.cpp:135:2: error: unknown type name 'messenger'
+        messenger-disconnect();
+        ^
+../TCPMessengerClient.cpp:135:11: error: expected unqualified-id
+        messenger-disconnect();
+                 ^
+4 errors generated.
+make: *** [TCPMessengerClient.o] Error 1
+13:35:26 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+Building file: ../TCPMessengerClient.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPMessengerClient.d" -MT"TCPMessengerClient.o" -o "TCPMessengerClient.o" "../TCPMessengerClient.cpp"
+../TCPMessengerClient.cpp:132:6: warning: unused variable 'score' [-Wunused-variable]
+        int score=game->start();
+            ^
+1 warning generated.
+Finished building: ../TCPMessengerClient.cpp
+ 
+Building file: ../UDPGame.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"UDPGame.d" -MT"UDPGame.o" -o "UDPGame.o" "../UDPGame.cpp"
+Finished building: ../UDPGame.cpp
+ 
+Building target: lab8
+Invoking: GCC C++ Linker
+g++  -o "lab8"  ./MThread.o ./TCPMessengerClient.o ./TCPSocket.o ./UDPGame.o ./UDPSocket.o ./main.o   -lpthread
+Finished building target: lab8
+ 
+13:36:50 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+make: Nothing to be done for `all'.
+14:17:20 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Building file: ../TCPSessionBroker.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPSessionBroker.d" -MT"TCPSessionBroker.o" -o "TCPSessionBroker.o" "../TCPSessionBroker.cpp"
+In file included from ../TCPSessionBroker.cpp:1:
+../TCPSocket.h:22:10: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+        int yes = 1;
+                ^
+1 warning generated.
+Finished building: ../TCPSessionBroker.cpp
+ 
+Building target: lab10
+Invoking: GCC C++ Linker
+g++  -o "lab10"  ./AuthRequestsDispatcher.o ./MThread.o ./MultipleTCPSocketsListener.o ./PeersRequestsDispatcher.o ./TCPMessengerServer.o ./TCPSessionBroker.o ./TCPSocket.o ./User.o ./main.o   -lpthread
+Finished building target: lab10
+ 
+14:17:21 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+Building file: ../TCPMessengerClient.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPMessengerClient.d" -MT"TCPMessengerClient.o" -o "TCPMessengerClient.o" "../TCPMessengerClient.cpp"
+Finished building: ../TCPMessengerClient.cpp
+ 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: lab8
+Invoking: GCC C++ Linker
+g++  -o "lab8"  ./MThread.o ./TCPMessengerClient.o ./TCPSocket.o ./UDPGame.o ./UDPSocket.o ./main.o   -lpthread
+Finished building target: lab8
+ 
+14:29:12 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+make: Nothing to be done for `all'.
+14:29:12 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+Building file: ../TCPMessengerClient.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPMessengerClient.d" -MT"TCPMessengerClient.o" -o "TCPMessengerClient.o" "../TCPMessengerClient.cpp"
+Finished building: ../TCPMessengerClient.cpp
+ 
+Building file: ../UDPGame.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"UDPGame.d" -MT"UDPGame.o" -o "UDPGame.o" "../UDPGame.cpp"
+Finished building: ../UDPGame.cpp
+ 
+Building target: lab8
+Invoking: GCC C++ Linker
+g++  -o "lab8"  ./MThread.o ./TCPMessengerClient.o ./TCPSocket.o ./UDPGame.o ./UDPSocket.o ./main.o   -lpthread
+Finished building target: lab8
+ 
+14:33:48 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+make: Nothing to be done for `all'.
+14:33:48 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+Building file: ../UDPGame.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"UDPGame.d" -MT"UDPGame.o" -o "UDPGame.o" "../UDPGame.cpp"
+Finished building: ../UDPGame.cpp
+ 
+Building target: lab8
+Invoking: GCC C++ Linker
+g++  -o "lab8"  ./MThread.o ./TCPMessengerClient.o ./TCPSocket.o ./UDPGame.o ./UDPSocket.o ./main.o   -lpthread
+Finished building target: lab8
+ 
+14:35:19 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+make: Nothing to be done for `all'.
+14:35:19 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+Building file: ../UDPGame.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"UDPGame.d" -MT"UDPGame.o" -o "UDPGame.o" "../UDPGame.cpp"
+Finished building: ../UDPGame.cpp
+ 
+Building target: lab8
+Invoking: GCC C++ Linker
+g++  -o "lab8"  ./MThread.o ./TCPMessengerClient.o ./TCPSocket.o ./UDPGame.o ./UDPSocket.o ./main.o   -lpthread
+Finished building target: lab8
+ 
+14:36:56 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+make: Nothing to be done for `all'.
+14:36:56 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+Building file: ../TCPMessengerClient.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPMessengerClient.d" -MT"TCPMessengerClient.o" -o "TCPMessengerClient.o" "../TCPMessengerClient.cpp"
+Finished building: ../TCPMessengerClient.cpp
+ 
+Building file: ../UDPGame.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"UDPGame.d" -MT"UDPGame.o" -o "UDPGame.o" "../UDPGame.cpp"
+../UDPGame.cpp:16:2: error: use of undeclared identifier 'start'
+        start();
+        ^
+1 error generated.
+make: *** [UDPGame.o] Error 1
+14:38:02 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+make: Nothing to be done for `all'.
+14:38:02 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+Building file: ../UDPGame.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"UDPGame.d" -MT"UDPGame.o" -o "UDPGame.o" "../UDPGame.cpp"
+Finished building: ../UDPGame.cpp
+ 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: lab8
+Invoking: GCC C++ Linker
+g++  -o "lab8"  ./MThread.o ./TCPMessengerClient.o ./TCPSocket.o ./UDPGame.o ./UDPSocket.o ./main.o   -lpthread
+Finished building target: lab8
+ 
+14:39:30 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+make: Nothing to be done for `all'.
+14:39:30 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+make: Nothing to be done for `all'.
+14:39:33 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+make: Nothing to be done for `all'.
+14:39:33 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+make: Nothing to be done for `all'.
+14:48:41 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+make: Nothing to be done for `all'.
+14:48:41 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+Building file: ../TCPMessengerClient.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPMessengerClient.d" -MT"TCPMessengerClient.o" -o "TCPMessengerClient.o" "../TCPMessengerClient.cpp"
+Finished building: ../TCPMessengerClient.cpp
+ 
+Building file: ../UDPGame.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"UDPGame.d" -MT"UDPGame.o" -o "UDPGame.o" "../UDPGame.cpp"
+Finished building: ../UDPGame.cpp
+ 
+Building target: lab8
+Invoking: GCC C++ Linker
+g++  -o "lab8"  ./MThread.o ./TCPMessengerClient.o ./TCPSocket.o ./UDPGame.o ./UDPSocket.o ./main.o   -lpthread
+Finished building target: lab8
+ 
+14:54:53 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Building file: ../TCPSessionBroker.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPSessionBroker.d" -MT"TCPSessionBroker.o" -o "TCPSessionBroker.o" "../TCPSessionBroker.cpp"
+In file included from ../TCPSessionBroker.cpp:1:
+../TCPSocket.h:22:10: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+        int yes = 1;
+                ^
+../TCPSessionBroker.cpp:144:37: error: invalid operands to binary expression ('basic_ostream<char, std::__1::char_traits<char> >' and 'vector<TCPSocket *>')
+                cout << "Senders Vector contains" << senders << endl;
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^  ~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream:207:20: note: candidate function not viable: no known conversion from 'vector<TCPSocket *>' to 'const void *' for 1st argument; take the address of the argument with &
+    basic_ostream& operator<<(const void* __p);
+                   ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream:191:20: note: candidate function not viable: no known conversion from 'vector<TCPSocket *>' to 'std::__1::basic_ostream<char> &(*)(std::__1::basic_ostream<char> &)' for 1st argument
+    basic_ostream& operator<<(basic_ostream& (*__pf)(basic_ostream&));
+                   ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream:192:20: note: candidate function not viable: no known conversion from 'vector<TCPSocket *>' to 'basic_ios<char_type, traits_type> &(*)(basic_ios<char_type, traits_type> &)' (aka 'basic_ios<char, std::__1::char_traits<char> > &(*)(basic_ios<char, std::__1::char_traits<char> > &)') for 1st argument
+    basic_ostream& operator<<(basic_ios<char_type, traits_type>&
+                   ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream:194:20: note: candidate function not viable: no known conversion from 'vector<TCPSocket *>' to 'std::__1::ios_base &(*)(std::__1::ios_base &)' for 1st argument
+    basic_ostream& operator<<(ios_base& (*__pf)(ios_base&));
+                   ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream:195:20: note: candidate function not viable: no known conversion from 'vector<TCPSocket *>' to 'bool' for 1st argument
+    basic_ostream& operator<<(bool __n);
+                   ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream:196:20: note: candidate function not viable: no known conversion from 'vector<TCPSocket *>' to 'short' for 1st argument
+    basic_ostream& operator<<(short __n);
+                   ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream:197:20: note: candidate function not viable: no known conversion from 'vector<TCPSocket *>' to 'unsigned short' for 1st argument
+    basic_ostream& operator<<(unsigned short __n);
+                   ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream:198:20: note: candidate function not viable: no known conversion from 'vector<TCPSocket *>' to 'int' for 1st argument
+    basic_ostream& operator<<(int __n);
+                   ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream:199:20: note: candidate function not viable: no known conversion from 'vector<TCPSocket *>' to 'unsigned int' for 1st argument
+    basic_ostream& operator<<(unsigned int __n);
+                   ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream:200:20: note: candidate function not viable: no known conversion from 'vector<TCPSocket *>' to 'long' for 1st argument
+    basic_ostream& operator<<(long __n);
+                   ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream:201:20: note: candidate function not viable: no known conversion from 'vector<TCPSocket *>' to 'unsigned long' for 1st argument
+    basic_ostream& operator<<(unsigned long __n);
+                   ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream:202:20: note: candidate function not viable: no known conversion from 'vector<TCPSocket *>' to 'long long' for 1st argument
+    basic_ostream& operator<<(long long __n);
+                   ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream:203:20: note: candidate function not viable: no known conversion from 'vector<TCPSocket *>' to 'unsigned long long' for 1st argument
+    basic_ostream& operator<<(unsigned long long __n);
+                   ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream:204:20: note: candidate function not viable: no known conversion from 'vector<TCPSocket *>' to 'float' for 1st argument
+    basic_ostream& operator<<(float __f);
+                   ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream:205:20: note: candidate function not viable: no known conversion from 'vector<TCPSocket *>' to 'double' for 1st argument
+    basic_ostream& operator<<(double __f);
+                   ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream:206:20: note: candidate function not viable: no known conversion from 'vector<TCPSocket *>' to 'long double' for 1st argument
+    basic_ostream& operator<<(long double __f);
+                   ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream:208:20: note: candidate function not viable: no known conversion from 'vector<TCPSocket *>' to 'basic_streambuf<char_type, traits_type> *' (aka 'basic_streambuf<char, std::__1::char_traits<char> > *') for 1st argument
+    basic_ostream& operator<<(basic_streambuf<char_type, traits_type>* __sb);
+                   ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream:785:1: note: candidate function [with _CharT = char, _Traits = std::__1::char_traits<char>] not viable: no known conversion from 'vector<TCPSocket *>' to 'char' for 2nd argument
+operator<<(basic_ostream<_CharT, _Traits>& __os, char __cn)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream:818:1: note: candidate function [with _Traits = std::__1::char_traits<char>] not viable: no known conversion from 'vector<TCPSocket *>' to 'char' for 2nd argument
+operator<<(basic_ostream<char, _Traits>& __os, char __c)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream:825:1: note: candidate function [with _Traits = std::__1::char_traits<char>] not viable: no known conversion from 'vector<TCPSocket *>' to 'signed char' for 2nd argument
+operator<<(basic_ostream<char, _Traits>& __os, signed char __c)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream:832:1: note: candidate function [with _Traits = std::__1::char_traits<char>] not viable: no known conversion from 'vector<TCPSocket *>' to 'unsigned char' for 2nd argument
+operator<<(basic_ostream<char, _Traits>& __os, unsigned char __c)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream:846:1: note: candidate function [with _CharT = char, _Traits = std::__1::char_traits<char>] not viable: no known conversion from 'vector<TCPSocket *>' to 'const char *' for 2nd argument
+operator<<(basic_ostream<_CharT, _Traits>& __os, const char* __strn)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream:892:1: note: candidate function [with _Traits = std::__1::char_traits<char>] not viable: no known conversion from 'vector<TCPSocket *>' to 'const char *' for 2nd argument
+operator<<(basic_ostream<char, _Traits>& __os, const char* __str)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream:899:1: note: candidate function [with _Traits = std::__1::char_traits<char>] not viable: no known conversion from 'vector<TCPSocket *>' to 'const signed char *' for 2nd argument
+operator<<(basic_ostream<char, _Traits>& __os, const signed char* __str)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream:907:1: note: candidate function [with _Traits = std::__1::char_traits<char>] not viable: no known conversion from 'vector<TCPSocket *>' to 'const unsigned char *' for 2nd argument
+operator<<(basic_ostream<char, _Traits>& __os, const unsigned char* __str)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream:1086:1: note: candidate function [with _CharT = char, _Traits = std::__1::char_traits<char>] not viable: no known conversion from 'vector<TCPSocket *>' to 'const std::__1::error_code' for 2nd argument
+operator<<(basic_ostream<_CharT, _Traits>& __os, const error_code& __ec)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream:778:1: note: candidate template ignored: deduced conflicting types for parameter '_CharT' ('char' vs. 'std::__1::vector<TCPSocket *, std::__1::allocator<TCPSocket *> >')
+operator<<(basic_ostream<_CharT, _Traits>& __os, _CharT __c)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream:839:1: note: candidate template ignored: could not match 'const _CharT *' against 'vector<TCPSocket *>'
+operator<<(basic_ostream<_CharT, _Traits>& __os, const _CharT* __str)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream:1077:1: note: candidate template ignored: could not match 'basic_string' against 'vector'
+operator<<(basic_ostream<_CharT, _Traits>& __os,
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream:1094:1: note: candidate template ignored: could not match 'shared_ptr' against 'vector'
+operator<<(basic_ostream<_CharT, _Traits>& __os, shared_ptr<_Yp> const& __p)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream:1101:1: note: candidate template ignored: could not match 'bitset' against 'vector'
+operator<<(basic_ostream<_CharT, _Traits>& __os, const bitset<_Size>& __x)
+^
+1 warning and 1 error generated.
+make: *** [TCPSessionBroker.o] Error 1
+14:54:53 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+Building file: ../TCPMessengerClient.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPMessengerClient.d" -MT"TCPMessengerClient.o" -o "TCPMessengerClient.o" "../TCPMessengerClient.cpp"
+Finished building: ../TCPMessengerClient.cpp
+ 
+Building target: lab8
+Invoking: GCC C++ Linker
+g++  -o "lab8"  ./MThread.o ./TCPMessengerClient.o ./TCPSocket.o ./UDPGame.o ./UDPSocket.o ./main.o   -lpthread
+Finished building target: lab8
+ 
+14:55:09 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Building file: ../TCPSessionBroker.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPSessionBroker.d" -MT"TCPSessionBroker.o" -o "TCPSessionBroker.o" "../TCPSessionBroker.cpp"
+In file included from ../TCPSessionBroker.cpp:1:
+../TCPSocket.h:22:10: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+        int yes = 1;
+                ^
+../TCPSessionBroker.cpp:144:37: error: invalid operands to binary expression ('basic_ostream<char, std::__1::char_traits<char> >' and 'vector<TCPSocket *>')
+                cout << "Senders Vector contains" << senders << endl;
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^  ~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream:207:20: note: candidate function not viable: no known conversion from 'vector<TCPSocket *>' to 'const void *' for 1st argument; take the address of the argument with &
+    basic_ostream& operator<<(const void* __p);
+                   ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream:191:20: note: candidate function not viable: no known conversion from 'vector<TCPSocket *>' to 'std::__1::basic_ostream<char> &(*)(std::__1::basic_ostream<char> &)' for 1st argument
+    basic_ostream& operator<<(basic_ostream& (*__pf)(basic_ostream&));
+                   ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream:192:20: note: candidate function not viable: no known conversion from 'vector<TCPSocket *>' to 'basic_ios<char_type, traits_type> &(*)(basic_ios<char_type, traits_type> &)' (aka 'basic_ios<char, std::__1::char_traits<char> > &(*)(basic_ios<char, std::__1::char_traits<char> > &)') for 1st argument
+    basic_ostream& operator<<(basic_ios<char_type, traits_type>&
+                   ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream:194:20: note: candidate function not viable: no known conversion from 'vector<TCPSocket *>' to 'std::__1::ios_base &(*)(std::__1::ios_base &)' for 1st argument
+    basic_ostream& operator<<(ios_base& (*__pf)(ios_base&));
+                   ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream:195:20: note: candidate function not viable: no known conversion from 'vector<TCPSocket *>' to 'bool' for 1st argument
+    basic_ostream& operator<<(bool __n);
+                   ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream:196:20: note: candidate function not viable: no known conversion from 'vector<TCPSocket *>' to 'short' for 1st argument
+    basic_ostream& operator<<(short __n);
+                   ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream:197:20: note: candidate function not viable: no known conversion from 'vector<TCPSocket *>' to 'unsigned short' for 1st argument
+    basic_ostream& operator<<(unsigned short __n);
+                   ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream:198:20: note: candidate function not viable: no known conversion from 'vector<TCPSocket *>' to 'int' for 1st argument
+    basic_ostream& operator<<(int __n);
+                   ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream:199:20: note: candidate function not viable: no known conversion from 'vector<TCPSocket *>' to 'unsigned int' for 1st argument
+    basic_ostream& operator<<(unsigned int __n);
+                   ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream:200:20: note: candidate function not viable: no known conversion from 'vector<TCPSocket *>' to 'long' for 1st argument
+    basic_ostream& operator<<(long __n);
+                   ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream:201:20: note: candidate function not viable: no known conversion from 'vector<TCPSocket *>' to 'unsigned long' for 1st argument
+    basic_ostream& operator<<(unsigned long __n);
+                   ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream:202:20: note: candidate function not viable: no known conversion from 'vector<TCPSocket *>' to 'long long' for 1st argument
+    basic_ostream& operator<<(long long __n);
+                   ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream:203:20: note: candidate function not viable: no known conversion from 'vector<TCPSocket *>' to 'unsigned long long' for 1st argument
+    basic_ostream& operator<<(unsigned long long __n);
+                   ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream:204:20: note: candidate function not viable: no known conversion from 'vector<TCPSocket *>' to 'float' for 1st argument
+    basic_ostream& operator<<(float __f);
+                   ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream:205:20: note: candidate function not viable: no known conversion from 'vector<TCPSocket *>' to 'double' for 1st argument
+    basic_ostream& operator<<(double __f);
+                   ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream:206:20: note: candidate function not viable: no known conversion from 'vector<TCPSocket *>' to 'long double' for 1st argument
+    basic_ostream& operator<<(long double __f);
+                   ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream:208:20: note: candidate function not viable: no known conversion from 'vector<TCPSocket *>' to 'basic_streambuf<char_type, traits_type> *' (aka 'basic_streambuf<char, std::__1::char_traits<char> > *') for 1st argument
+    basic_ostream& operator<<(basic_streambuf<char_type, traits_type>* __sb);
+                   ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream:785:1: note: candidate function [with _CharT = char, _Traits = std::__1::char_traits<char>] not viable: no known conversion from 'vector<TCPSocket *>' to 'char' for 2nd argument
+operator<<(basic_ostream<_CharT, _Traits>& __os, char __cn)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream:818:1: note: candidate function [with _Traits = std::__1::char_traits<char>] not viable: no known conversion from 'vector<TCPSocket *>' to 'char' for 2nd argument
+operator<<(basic_ostream<char, _Traits>& __os, char __c)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream:825:1: note: candidate function [with _Traits = std::__1::char_traits<char>] not viable: no known conversion from 'vector<TCPSocket *>' to 'signed char' for 2nd argument
+operator<<(basic_ostream<char, _Traits>& __os, signed char __c)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream:832:1: note: candidate function [with _Traits = std::__1::char_traits<char>] not viable: no known conversion from 'vector<TCPSocket *>' to 'unsigned char' for 2nd argument
+operator<<(basic_ostream<char, _Traits>& __os, unsigned char __c)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream:846:1: note: candidate function [with _CharT = char, _Traits = std::__1::char_traits<char>] not viable: no known conversion from 'vector<TCPSocket *>' to 'const char *' for 2nd argument
+operator<<(basic_ostream<_CharT, _Traits>& __os, const char* __strn)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream:892:1: note: candidate function [with _Traits = std::__1::char_traits<char>] not viable: no known conversion from 'vector<TCPSocket *>' to 'const char *' for 2nd argument
+operator<<(basic_ostream<char, _Traits>& __os, const char* __str)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream:899:1: note: candidate function [with _Traits = std::__1::char_traits<char>] not viable: no known conversion from 'vector<TCPSocket *>' to 'const signed char *' for 2nd argument
+operator<<(basic_ostream<char, _Traits>& __os, const signed char* __str)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream:907:1: note: candidate function [with _Traits = std::__1::char_traits<char>] not viable: no known conversion from 'vector<TCPSocket *>' to 'const unsigned char *' for 2nd argument
+operator<<(basic_ostream<char, _Traits>& __os, const unsigned char* __str)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream:1086:1: note: candidate function [with _CharT = char, _Traits = std::__1::char_traits<char>] not viable: no known conversion from 'vector<TCPSocket *>' to 'const std::__1::error_code' for 2nd argument
+operator<<(basic_ostream<_CharT, _Traits>& __os, const error_code& __ec)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream:778:1: note: candidate template ignored: deduced conflicting types for parameter '_CharT' ('char' vs. 'std::__1::vector<TCPSocket *, std::__1::allocator<TCPSocket *> >')
+operator<<(basic_ostream<_CharT, _Traits>& __os, _CharT __c)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream:839:1: note: candidate template ignored: could not match 'const _CharT *' against 'vector<TCPSocket *>'
+operator<<(basic_ostream<_CharT, _Traits>& __os, const _CharT* __str)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream:1077:1: note: candidate template ignored: could not match 'basic_string' against 'vector'
+operator<<(basic_ostream<_CharT, _Traits>& __os,
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream:1094:1: note: candidate template ignored: could not match 'shared_ptr' against 'vector'
+operator<<(basic_ostream<_CharT, _Traits>& __os, shared_ptr<_Yp> const& __p)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream:1101:1: note: candidate template ignored: could not match 'bitset' against 'vector'
+operator<<(basic_ostream<_CharT, _Traits>& __os, const bitset<_Size>& __x)
+^
+1 warning and 1 error generated.
+make: *** [TCPSessionBroker.o] Error 1
+14:55:09 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+make: Nothing to be done for `all'.
+14:55:21 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+make: Nothing to be done for `all'.
+14:56:26 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Building file: ../TCPSessionBroker.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPSessionBroker.d" -MT"TCPSessionBroker.o" -o "TCPSessionBroker.o" "../TCPSessionBroker.cpp"
+In file included from ../TCPSessionBroker.cpp:1:
+../TCPSocket.h:22:10: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+        int yes = 1;
+                ^
+../TCPSessionBroker.cpp:144:40: error: no matching function for call to 'to_string'
+                cout << "Senders Vector contains" << to_string(senders.at(1)) << endl;
+                                                     ^~~~~~~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/string:4115:25: note: candidate function not viable: no known conversion from 'value_type' (aka 'TCPSocket *') to 'int' for 1st argument
+_LIBCPP_FUNC_VIS string to_string(int __val);
+                        ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/string:4116:25: note: candidate function not viable: no known conversion from 'value_type' (aka 'TCPSocket *') to 'unsigned int' for 1st argument
+_LIBCPP_FUNC_VIS string to_string(unsigned __val);
+                        ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/string:4117:25: note: candidate function not viable: no known conversion from 'value_type' (aka 'TCPSocket *') to 'long' for 1st argument
+_LIBCPP_FUNC_VIS string to_string(long __val);
+                        ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/string:4118:25: note: candidate function not viable: no known conversion from 'value_type' (aka 'TCPSocket *') to 'unsigned long' for 1st argument
+_LIBCPP_FUNC_VIS string to_string(unsigned long __val);
+                        ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/string:4119:25: note: candidate function not viable: no known conversion from 'value_type' (aka 'TCPSocket *') to 'long long' for 1st argument
+_LIBCPP_FUNC_VIS string to_string(long long __val);
+                        ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/string:4120:25: note: candidate function not viable: no known conversion from 'value_type' (aka 'TCPSocket *') to 'unsigned long long' for 1st argument
+_LIBCPP_FUNC_VIS string to_string(unsigned long long __val);
+                        ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/string:4121:25: note: candidate function not viable: no known conversion from 'value_type' (aka 'TCPSocket *') to 'float' for 1st argument
+_LIBCPP_FUNC_VIS string to_string(float __val);
+                        ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/string:4122:25: note: candidate function not viable: no known conversion from 'value_type' (aka 'TCPSocket *') to 'double' for 1st argument
+_LIBCPP_FUNC_VIS string to_string(double __val);
+                        ^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/string:4123:25: note: candidate function not viable: no known conversion from 'value_type' (aka 'TCPSocket *') to 'long double' for 1st argument
+_LIBCPP_FUNC_VIS string to_string(long double __val);
+                        ^
+1 warning and 1 error generated.
+make: *** [TCPSessionBroker.o] Error 1
+14:56:27 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+make: Nothing to be done for `all'.
+14:58:16 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Building file: ../TCPSessionBroker.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPSessionBroker.d" -MT"TCPSessionBroker.o" -o "TCPSessionBroker.o" "../TCPSessionBroker.cpp"
+In file included from ../TCPSessionBroker.cpp:1:
+../TCPSocket.h:22:10: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+        int yes = 1;
+                ^
+1 warning generated.
+Finished building: ../TCPSessionBroker.cpp
+ 
+Building target: lab10
+Invoking: GCC C++ Linker
+g++  -o "lab10"  ./AuthRequestsDispatcher.o ./MThread.o ./MultipleTCPSocketsListener.o ./PeersRequestsDispatcher.o ./TCPMessengerServer.o ./TCPSessionBroker.o ./TCPSocket.o ./User.o ./main.o   -lpthread
+Finished building target: lab10
+ 
+14:58:17 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+make: Nothing to be done for `all'.
+15:01:48 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+make: Nothing to be done for `all'.
+15:01:48 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+Building file: ../TCPMessengerClient.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPMessengerClient.d" -MT"TCPMessengerClient.o" -o "TCPMessengerClient.o" "../TCPMessengerClient.cpp"
+Finished building: ../TCPMessengerClient.cpp
+ 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: lab8
+Invoking: GCC C++ Linker
+g++  -o "lab8"  ./MThread.o ./TCPMessengerClient.o ./TCPSocket.o ./UDPGame.o ./UDPSocket.o ./main.o   -lpthread
+Finished building target: lab8
+ 
+15:14:20 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Building file: ../TCPSessionBroker.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPSessionBroker.d" -MT"TCPSessionBroker.o" -o "TCPSessionBroker.o" "../TCPSessionBroker.cpp"
+In file included from ../TCPSessionBroker.cpp:1:
+../TCPSocket.h:22:10: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+        int yes = 1;
+                ^
+1 warning generated.
+Finished building: ../TCPSessionBroker.cpp
+ 
+Building target: lab10
+Invoking: GCC C++ Linker
+g++  -o "lab10"  ./AuthRequestsDispatcher.o ./MThread.o ./MultipleTCPSocketsListener.o ./PeersRequestsDispatcher.o ./TCPMessengerServer.o ./TCPSessionBroker.o ./TCPSocket.o ./User.o ./main.o   -lpthread
+Finished building target: lab10
+ 
+15:14:20 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+Building file: ../UDPGame.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"UDPGame.d" -MT"UDPGame.o" -o "UDPGame.o" "../UDPGame.cpp"
+Finished building: ../UDPGame.cpp
+ 
+Building target: lab8
+Invoking: GCC C++ Linker
+g++  -o "lab8"  ./MThread.o ./TCPMessengerClient.o ./TCPSocket.o ./UDPGame.o ./UDPSocket.o ./main.o   -lpthread
+Finished building target: lab8
+ 
+16:07:11 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+Building file: ../TCPMessengerClient.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPMessengerClient.d" -MT"TCPMessengerClient.o" -o "TCPMessengerClient.o" "../TCPMessengerClient.cpp"
+Finished building: ../TCPMessengerClient.cpp
+ 
+Building target: lab8
+Invoking: GCC C++ Linker
+g++  -o "lab8"  ./MThread.o ./TCPMessengerClient.o ./TCPSocket.o ./UDPGame.o ./UDPSocket.o ./main.o   -lpthread
+Finished building target: lab8
+ 
+16:13:04 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+make: Nothing to be done for `all'.
+16:17:03 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+make: Nothing to be done for `all'.
+16:21:03 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+make: Nothing to be done for `all'.
+16:22:31 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+make: Nothing to be done for `all'.
+16:22:31 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+Building file: ../TCPMessengerClient.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPMessengerClient.d" -MT"TCPMessengerClient.o" -o "TCPMessengerClient.o" "../TCPMessengerClient.cpp"
+Finished building: ../TCPMessengerClient.cpp
+ 
+Building target: lab8
+Invoking: GCC C++ Linker
+g++  -o "lab8"  ./MThread.o ./TCPMessengerClient.o ./TCPSocket.o ./UDPGame.o ./UDPSocket.o ./main.o   -lpthread
+Finished building target: lab8
+ 
+16:22:50 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+make: Nothing to be done for `all'.
+16:24:36 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+make: Nothing to be done for `all'.
+16:24:37 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+Building file: ../TCPMessengerClient.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPMessengerClient.d" -MT"TCPMessengerClient.o" -o "TCPMessengerClient.o" "../TCPMessengerClient.cpp"
+Finished building: ../TCPMessengerClient.cpp
+ 
+Building target: lab8
+Invoking: GCC C++ Linker
+g++  -o "lab8"  ./MThread.o ./TCPMessengerClient.o ./TCPSocket.o ./UDPGame.o ./UDPSocket.o ./main.o   -lpthread
+Finished building target: lab8
+ 
+16:24:55 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+make: Nothing to be done for `all'.
+16:27:49 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+make: Nothing to be done for `all'.
+16:28:43 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+make: Nothing to be done for `all'.
+16:28:54 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+make: Nothing to be done for `all'.
+16:29:01 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+make: Nothing to be done for `all'.
+16:29:17 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+make: Nothing to be done for `all'.
+16:29:48 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+make: Nothing to be done for `all'.
+16:30:20 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+make: Nothing to be done for `all'.
+18:30:25 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+make: Nothing to be done for `all'.
+18:30:26 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+make: Nothing to be done for `all'.
+10:27:48 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Building file: ../TCPSessionBroker.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPSessionBroker.d" -MT"TCPSessionBroker.o" -o "TCPSessionBroker.o" "../TCPSessionBroker.cpp"
+In file included from ../TCPSessionBroker.cpp:1:
+../TCPSocket.h:22:10: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+        int yes = 1;
+                ^
+1 warning generated.
+Finished building: ../TCPSessionBroker.cpp
+ 
+Building target: lab10
+Invoking: GCC C++ Linker
+g++  -o "lab10"  ./AuthRequestsDispatcher.o ./MThread.o ./MultipleTCPSocketsListener.o ./PeersRequestsDispatcher.o ./TCPMessengerServer.o ./TCPSessionBroker.o ./TCPSocket.o ./User.o ./main.o   -lpthread
+Finished building target: lab10
+ 
+10:27:52 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+make: Nothing to be done for `all'.
+10:55:16 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Building file: ../TCPSessionBroker.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPSessionBroker.d" -MT"TCPSessionBroker.o" -o "TCPSessionBroker.o" "../TCPSessionBroker.cpp"
+In file included from ../TCPSessionBroker.cpp:1:
+../TCPSocket.h:22:10: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+        int yes = 1;
+                ^
+1 warning generated.
+Finished building: ../TCPSessionBroker.cpp
+ 
+Building target: lab10
+Invoking: GCC C++ Linker
+g++  -o "lab10"  ./AuthRequestsDispatcher.o ./MThread.o ./MultipleTCPSocketsListener.o ./PeersRequestsDispatcher.o ./TCPMessengerServer.o ./TCPSessionBroker.o ./TCPSocket.o ./User.o ./main.o   -lpthread
+Finished building target: lab10
+ 
+10:55:17 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+make: Nothing to be done for `all'.
+10:58:53 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Building file: ../TCPSessionBroker.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPSessionBroker.d" -MT"TCPSessionBroker.o" -o "TCPSessionBroker.o" "../TCPSessionBroker.cpp"
+In file included from ../TCPSessionBroker.cpp:1:
+../TCPSocket.h:22:10: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+        int yes = 1;
+                ^
+1 warning generated.
+Finished building: ../TCPSessionBroker.cpp
+ 
+Building target: lab10
+Invoking: GCC C++ Linker
+g++  -o "lab10"  ./AuthRequestsDispatcher.o ./MThread.o ./MultipleTCPSocketsListener.o ./PeersRequestsDispatcher.o ./TCPMessengerServer.o ./TCPSessionBroker.o ./TCPSocket.o ./User.o ./main.o   -lpthread
+Finished building target: lab10
+ 
+10:58:54 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+make: Nothing to be done for `all'.
+12:20:00 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Building file: ../AuthRequestsDispatcher.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"AuthRequestsDispatcher.d" -MT"AuthRequestsDispatcher.o" -o "AuthRequestsDispatcher.o" "../AuthRequestsDispatcher.cpp"
+In file included from ../AuthRequestsDispatcher.cpp:11:
+In file included from ../TCPMessengerServer.h:8:
+../TCPSocket.h:22:10: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+        int yes = 1;
+                ^
+1 warning generated.
+Finished building: ../AuthRequestsDispatcher.cpp
+ 
+Building file: ../PeersRequestsDispatcher.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"PeersRequestsDispatcher.d" -MT"PeersRequestsDispatcher.o" -o "PeersRequestsDispatcher.o" "../PeersRequestsDispatcher.cpp"
+In file included from ../PeersRequestsDispatcher.cpp:1:
+In file included from ../TCPMessengerServer.h:8:
+../TCPSocket.h:22:10: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+        int yes = 1;
+                ^
+1 warning generated.
+Finished building: ../PeersRequestsDispatcher.cpp
+ 
+Building file: ../TCPSessionBroker.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPSessionBroker.d" -MT"TCPSessionBroker.o" -o "TCPSessionBroker.o" "../TCPSessionBroker.cpp"
+In file included from ../TCPSessionBroker.cpp:1:
+../TCPSocket.h:22:10: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+        int yes = 1;
+                ^
+1 warning generated.
+Finished building: ../TCPSessionBroker.cpp
+ 
+Building target: lab10
+Invoking: GCC C++ Linker
+g++  -o "lab10"  ./AuthRequestsDispatcher.o ./MThread.o ./MultipleTCPSocketsListener.o ./PeersRequestsDispatcher.o ./TCPMessengerServer.o ./TCPSessionBroker.o ./TCPSocket.o ./User.o ./main.o   -lpthread
+Finished building target: lab10
+ 
+12:20:03 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+Building file: ../UDPGame.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"UDPGame.d" -MT"UDPGame.o" -o "UDPGame.o" "../UDPGame.cpp"
+../UDPGame.cpp:58:6: warning: variable 'score' is used uninitialized whenever 'if' condition is false [-Wsometimes-uninitialized]
+                if(runGame)
+                   ^~~~~~~
+../UDPGame.cpp:101:9: note: uninitialized use occurs here
+        return score;
+               ^~~~~
+../UDPGame.cpp:58:3: note: remove the 'if' if its condition is always true
+                if(runGame)
+                ^~~~~~~~~~~
+../UDPGame.cpp:46:6: warning: variable 'score' is used uninitialized whenever 'if' condition is false [-Wsometimes-uninitialized]
+        if (rc == 1) {
+            ^~~~~~~
+../UDPGame.cpp:101:9: note: uninitialized use occurs here
+        return score;
+               ^~~~~
+../UDPGame.cpp:46:2: note: remove the 'if' if its condition is always true
+        if (rc == 1) {
+        ^~~~~~~~~~~~~
+../UDPGame.cpp:26:11: note: initialize the variable 'score' to silence this warning
+        int score;
+                 ^
+                  = 0
+2 warnings generated.
+Finished building: ../UDPGame.cpp
+ 
+Building target: lab8
+Invoking: GCC C++ Linker
+g++  -o "lab8"  ./MThread.o ./TCPMessengerClient.o ./TCPSocket.o ./UDPGame.o ./UDPSocket.o ./main.o   -lpthread
+Finished building target: lab8
+ 
+12:24:51 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+make: Nothing to be done for `all'.
+12:24:51 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+make: Nothing to be done for `all'.
+12:31:25 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Building file: ../TCPSessionBroker.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPSessionBroker.d" -MT"TCPSessionBroker.o" -o "TCPSessionBroker.o" "../TCPSessionBroker.cpp"
+In file included from ../TCPSessionBroker.cpp:1:
+../TCPSocket.h:22:10: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+        int yes = 1;
+                ^
+1 warning generated.
+Finished building: ../TCPSessionBroker.cpp
+ 
+Building target: lab10
+Invoking: GCC C++ Linker
+g++  -o "lab10"  ./AuthRequestsDispatcher.o ./MThread.o ./MultipleTCPSocketsListener.o ./PeersRequestsDispatcher.o ./TCPMessengerServer.o ./TCPSessionBroker.o ./TCPSocket.o ./User.o ./main.o   -lpthread
+Finished building target: lab10
+ 
+12:31:58 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+make: Nothing to be done for `all'.
+12:32:18 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+make: Nothing to be done for `all'.
+12:33:30 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+make: Nothing to be done for `all'.
+12:36:02 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Building file: ../TCPSessionBroker.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPSessionBroker.d" -MT"TCPSessionBroker.o" -o "TCPSessionBroker.o" "../TCPSessionBroker.cpp"
+In file included from ../TCPSessionBroker.cpp:1:
+../TCPSocket.h:22:10: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+        int yes = 1;
+                ^
+1 warning generated.
+Finished building: ../TCPSessionBroker.cpp
+ 
+Building target: lab10
+Invoking: GCC C++ Linker
+g++  -o "lab10"  ./AuthRequestsDispatcher.o ./MThread.o ./MultipleTCPSocketsListener.o ./PeersRequestsDispatcher.o ./TCPMessengerServer.o ./TCPSessionBroker.o ./TCPSocket.o ./User.o ./main.o   -lpthread
+Finished building target: lab10
+ 
+12:37:47 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Building file: ../AuthRequestsDispatcher.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"AuthRequestsDispatcher.d" -MT"AuthRequestsDispatcher.o" -o "AuthRequestsDispatcher.o" "../AuthRequestsDispatcher.cpp"
+In file included from ../AuthRequestsDispatcher.cpp:11:
+In file included from ../TCPMessengerServer.h:8:
+../TCPSocket.h:22:10: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+        int yes = 1;
+                ^
+1 warning generated.
+Finished building: ../AuthRequestsDispatcher.cpp
+ 
+Building file: ../PeersRequestsDispatcher.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"PeersRequestsDispatcher.d" -MT"PeersRequestsDispatcher.o" -o "PeersRequestsDispatcher.o" "../PeersRequestsDispatcher.cpp"
+In file included from ../PeersRequestsDispatcher.cpp:1:
+In file included from ../TCPMessengerServer.h:8:
+../TCPSocket.h:22:10: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+        int yes = 1;
+                ^
+1 warning generated.
+Finished building: ../PeersRequestsDispatcher.cpp
+ 
+Building file: ../TCPMessengerServer.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPMessengerServer.d" -MT"TCPMessengerServer.o" -o "TCPMessengerServer.o" "../TCPMessengerServer.cpp"
+In file included from ../TCPMessengerServer.cpp:1:
+In file included from ../TCPMessengerServer.h:8:
+../TCPSocket.h:22:10: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+        int yes = 1;
+                ^
+1 warning generated.
+Finished building: ../TCPMessengerServer.cpp
+ 
+Building file: ../TCPSessionBroker.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPSessionBroker.d" -MT"TCPSessionBroker.o" -o "TCPSessionBroker.o" "../TCPSessionBroker.cpp"
+In file included from ../TCPSessionBroker.cpp:1:
+../TCPSocket.h:22:10: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+        int yes = 1;
+                ^
+1 warning generated.
+Finished building: ../TCPSessionBroker.cpp
+ 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.cpp"
+In file included from ../main.cpp:13:
+In file included from ../TCPMessengerServer.h:8:
+../TCPSocket.h:22:10: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+        int yes = 1;
+                ^
+1 warning generated.
+Finished building: ../main.cpp
+ 
+Building target: lab10
+Invoking: GCC C++ Linker
+g++  -o "lab10"  ./AuthRequestsDispatcher.o ./MThread.o ./MultipleTCPSocketsListener.o ./PeersRequestsDispatcher.o ./TCPMessengerServer.o ./TCPSessionBroker.o ./TCPSocket.o ./User.o ./main.o   -lpthread
+Finished building target: lab10
+ 
+12:37:51 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+Building file: ../TCPMessengerClient.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPMessengerClient.d" -MT"TCPMessengerClient.o" -o "TCPMessengerClient.o" "../TCPMessengerClient.cpp"
+Finished building: ../TCPMessengerClient.cpp
+ 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: lab8
+Invoking: GCC C++ Linker
+g++  -o "lab8"  ./MThread.o ./TCPMessengerClient.o ./TCPSocket.o ./UDPGame.o ./UDPSocket.o ./main.o   -lpthread
+Finished building target: lab8
+ 
+12:43:15 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Building file: ../TCPSessionBroker.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPSessionBroker.d" -MT"TCPSessionBroker.o" -o "TCPSessionBroker.o" "../TCPSessionBroker.cpp"
+In file included from ../TCPSessionBroker.cpp:1:
+../TCPSocket.h:22:10: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+        int yes = 1;
+                ^
+1 warning generated.
+Finished building: ../TCPSessionBroker.cpp
+ 
+Building target: lab10
+Invoking: GCC C++ Linker
+g++  -o "lab10"  ./AuthRequestsDispatcher.o ./MThread.o ./MultipleTCPSocketsListener.o ./PeersRequestsDispatcher.o ./TCPMessengerServer.o ./TCPSessionBroker.o ./TCPSocket.o ./User.o ./main.o   -lpthread
+Finished building target: lab10
+ 
+12:43:16 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+make: Nothing to be done for `all'.
+12:52:04 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+make: Nothing to be done for `all'.
+12:55:35 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Building file: ../TCPSessionBroker.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPSessionBroker.d" -MT"TCPSessionBroker.o" -o "TCPSessionBroker.o" "../TCPSessionBroker.cpp"
+In file included from ../TCPSessionBroker.cpp:1:
+../TCPSocket.h:22:10: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+        int yes = 1;
+                ^
+1 warning generated.
+Finished building: ../TCPSessionBroker.cpp
+ 
+Building target: lab10
+Invoking: GCC C++ Linker
+g++  -o "lab10"  ./AuthRequestsDispatcher.o ./MThread.o ./MultipleTCPSocketsListener.o ./PeersRequestsDispatcher.o ./TCPMessengerServer.o ./TCPSessionBroker.o ./TCPSocket.o ./User.o ./main.o   -lpthread
+Finished building target: lab10
+ 
+12:55:36 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+Building file: ../UDPGame.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"UDPGame.d" -MT"UDPGame.o" -o "UDPGame.o" "../UDPGame.cpp"
+../UDPGame.cpp:58:6: warning: variable 'score' is used uninitialized whenever 'if' condition is false [-Wsometimes-uninitialized]
+                if(runGame)
+                   ^~~~~~~
+../UDPGame.cpp:101:9: note: uninitialized use occurs here
+        return score;
+               ^~~~~
+../UDPGame.cpp:58:3: note: remove the 'if' if its condition is always true
+                if(runGame)
+                ^~~~~~~~~~~
+../UDPGame.cpp:46:6: warning: variable 'score' is used uninitialized whenever 'if' condition is false [-Wsometimes-uninitialized]
+        if (rc == 1) {
+            ^~~~~~~
+../UDPGame.cpp:101:9: note: uninitialized use occurs here
+        return score;
+               ^~~~~
+../UDPGame.cpp:46:2: note: remove the 'if' if its condition is always true
+        if (rc == 1) {
+        ^~~~~~~~~~~~~
+../UDPGame.cpp:26:11: note: initialize the variable 'score' to silence this warning
+        int score;
+                 ^
+                  = 0
+2 warnings generated.
+Finished building: ../UDPGame.cpp
+ 
+Building target: lab8
+Invoking: GCC C++ Linker
+g++  -o "lab8"  ./MThread.o ./TCPMessengerClient.o ./TCPSocket.o ./UDPGame.o ./UDPSocket.o ./main.o   -lpthread
+Finished building target: lab8
+ 
+12:57:22 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Building file: ../TCPSessionBroker.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPSessionBroker.d" -MT"TCPSessionBroker.o" -o "TCPSessionBroker.o" "../TCPSessionBroker.cpp"
+In file included from ../TCPSessionBroker.cpp:1:
+../TCPSocket.h:22:10: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+        int yes = 1;
+                ^
+1 warning generated.
+Finished building: ../TCPSessionBroker.cpp
+ 
+Building target: lab10
+Invoking: GCC C++ Linker
+g++  -o "lab10"  ./AuthRequestsDispatcher.o ./MThread.o ./MultipleTCPSocketsListener.o ./PeersRequestsDispatcher.o ./TCPMessengerServer.o ./TCPSessionBroker.o ./TCPSocket.o ./User.o ./main.o   -lpthread
+Finished building target: lab10
+ 
+12:57:23 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+make: Nothing to be done for `all'.
+13:15:59 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Building file: ../TCPSessionBroker.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPSessionBroker.d" -MT"TCPSessionBroker.o" -o "TCPSessionBroker.o" "../TCPSessionBroker.cpp"
+In file included from ../TCPSessionBroker.cpp:1:
+../TCPSocket.h:22:10: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+        int yes = 1;
+                ^
+1 warning generated.
+Finished building: ../TCPSessionBroker.cpp
+ 
+Building target: lab10
+Invoking: GCC C++ Linker
+g++  -o "lab10"  ./AuthRequestsDispatcher.o ./MThread.o ./MultipleTCPSocketsListener.o ./PeersRequestsDispatcher.o ./TCPMessengerServer.o ./TCPSessionBroker.o ./TCPSocket.o ./User.o ./main.o   -lpthread
+Finished building target: lab10
+ 
+13:16:00 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+make: Nothing to be done for `all'.
+13:19:33 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Building file: ../TCPSessionBroker.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPSessionBroker.d" -MT"TCPSessionBroker.o" -o "TCPSessionBroker.o" "../TCPSessionBroker.cpp"
+In file included from ../TCPSessionBroker.cpp:1:
+../TCPSocket.h:22:10: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+        int yes = 1;
+                ^
+../TCPSessionBroker.cpp:147:26: warning: overloaded operator << has higher precedence than comparison operator [-Woverloaded-shift-op-parentheses]
+                cout<< "d6 "<< command <endl;
+                ~~~~~~~~~~~~~~~~~~~~~~ ^~~~~
+../TCPSessionBroker.cpp:147:15: note: place parentheses around the '<<' expression to silence this warning
+                cout<< "d6 "<< command <endl;
+                            ^
+                (                     )
+../TCPSessionBroker.cpp:147:26: note: place parentheses around comparison expression to evaluate it first
+                cout<< "d6 "<< command <endl;
+                                       ^
+                               (            )
+../TCPSessionBroker.cpp:147:27: error: reference to overloaded function could not be resolved; did you mean to call it?
+                cout<< "d6 "<< command <endl;
+                                        ^~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream:1032:1: note: possible target for call
+endl(basic_ostream<_CharT, _Traits>& __os)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/system_error:473:1: note: candidate function not viable: no known conversion from 'std::__1::basic_ostream<char>' to 'const std::__1::error_condition' for 1st argument
+operator<(const error_condition& __x, const error_condition& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/system_error:550:1: note: candidate function not viable: no known conversion from 'std::__1::basic_ostream<char>' to 'const std::__1::error_code' for 1st argument
+operator<(const error_code& __x, const error_code& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory:3062:1: note: candidate template ignored: couldn't infer template argument '_T1'
+operator<(nullptr_t, const unique_ptr<_T1, _D1>& __x)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory:4962:1: note: candidate template ignored: couldn't infer template argument '_Tp'
+operator<(nullptr_t, const shared_ptr<_Tp>& __x) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/utility:430:1: note: candidate template ignored: could not match 'pair' against 'basic_ostream'
+operator< (const pair<_T1,_T2>& __x, const pair<_T1,_T2>& __y)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/iterator:592:1: note: candidate template ignored: could not match 'reverse_iterator' against 'basic_ostream'
+operator<(const reverse_iterator<_Iter1>& __x, const reverse_iterator<_Iter2>& __y)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/iterator:996:1: note: candidate template ignored: could not match 'move_iterator' against 'basic_ostream'
+operator<(const move_iterator<_Iter1>& __x, const move_iterator<_Iter2>& __y)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/iterator:1312:1: note: candidate template ignored: could not match '__wrap_iter' against 'basic_ostream'
+operator<(const __wrap_iter<_Iter1>& __x, const __wrap_iter<_Iter2>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory:2995:1: note: candidate template ignored: could not match 'unique_ptr' against 'basic_ostream'
+operator< (const unique_ptr<_T1, _D1>& __x, const unique_ptr<_T2, _D2>& __y)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory:3053:1: note: candidate template ignored: could not match 'unique_ptr' against 'basic_ostream'
+operator<(const unique_ptr<_T1, _D1>& __x, nullptr_t)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory:4889:1: note: candidate template ignored: could not match 'shared_ptr' against 'basic_ostream'
+operator<(const shared_ptr<_Tp>& __x, const shared_ptr<_Up>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory:4954:1: note: candidate template ignored: could not match 'shared_ptr' against 'basic_ostream'
+operator<(const shared_ptr<_Tp>& __x, nullptr_t) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/string:3852:1: note: candidate template ignored: could not match 'basic_string' against 'basic_ostream'
+operator< (const basic_string<_CharT, _Traits, _Allocator>& __lhs,
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/string:3861:1: note: candidate template ignored: could not match 'basic_string' against 'basic_ostream'
+operator< (const basic_string<_CharT, _Traits, _Allocator>& __lhs,
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/string:3870:1: note: candidate template ignored: could not match 'const _CharT *' against 'std::__1::basic_ostream<char>'
+operator< (const _CharT* __lhs,
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:1477:1: note: candidate template ignored: could not match 'map' against 'basic_ostream'
+operator< (const map<_Key, _Tp, _Compare, _Allocator>& __x,
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:1950:1: note: candidate template ignored: could not match 'multimap' against 'basic_ostream'
+operator< (const multimap<_Key, _Tp, _Compare, _Allocator>& __x,
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/vector:3282:1: note: candidate template ignored: could not match 'vector' against 'basic_ostream'
+operator< (const vector<_Tp, _Allocator>& __x, const vector<_Tp, _Allocator>& __y)
+^
+../TCPSessionBroker.cpp:154:17: error: use of undeclared identifier 'eSndl'; did you mean 'endl'?
+                        cout<< "d8"<<eSndl;
+                                     ^~~~~
+                                     endl
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream:1032:1: note: 'endl' declared here
+endl(basic_ostream<_CharT, _Traits>& __os)
+^
+2 warnings and 2 errors generated.
+make: *** [TCPSessionBroker.o] Error 1
+13:19:34 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+make: Nothing to be done for `all'.
+13:19:56 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Building file: ../TCPSessionBroker.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPSessionBroker.d" -MT"TCPSessionBroker.o" -o "TCPSessionBroker.o" "../TCPSessionBroker.cpp"
+In file included from ../TCPSessionBroker.cpp:1:
+../TCPSocket.h:22:10: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+        int yes = 1;
+                ^
+1 warning generated.
+Finished building: ../TCPSessionBroker.cpp
+ 
+Building target: lab10
+Invoking: GCC C++ Linker
+g++  -o "lab10"  ./AuthRequestsDispatcher.o ./MThread.o ./MultipleTCPSocketsListener.o ./PeersRequestsDispatcher.o ./TCPMessengerServer.o ./TCPSessionBroker.o ./TCPSocket.o ./User.o ./main.o   -lpthread
+Finished building target: lab10
+ 
+13:19:57 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+make: Nothing to be done for `all'.
+13:25:12 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+make: Nothing to be done for `all'.
+13:25:12 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+make: Nothing to be done for `all'.
+13:25:14 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Building file: ../TCPSessionBroker.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPSessionBroker.d" -MT"TCPSessionBroker.o" -o "TCPSessionBroker.o" "../TCPSessionBroker.cpp"
+In file included from ../TCPSessionBroker.cpp:1:
+../TCPSocket.h:22:10: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+        int yes = 1;
+                ^
+1 warning generated.
+Finished building: ../TCPSessionBroker.cpp
+ 
+Building target: lab10
+Invoking: GCC C++ Linker
+g++  -o "lab10"  ./AuthRequestsDispatcher.o ./MThread.o ./MultipleTCPSocketsListener.o ./PeersRequestsDispatcher.o ./TCPMessengerServer.o ./TCPSessionBroker.o ./TCPSocket.o ./User.o ./main.o   -lpthread
+Finished building target: lab10
+ 
+13:25:15 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+make: Nothing to be done for `all'.
+13:25:20 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+make: Nothing to be done for `all'.
+13:25:20 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+make: Nothing to be done for `all'.
+13:36:53 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Building file: ../TCPSessionBroker.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPSessionBroker.d" -MT"TCPSessionBroker.o" -o "TCPSessionBroker.o" "../TCPSessionBroker.cpp"
+In file included from ../TCPSessionBroker.cpp:1:
+../TCPSocket.h:22:10: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+        int yes = 1;
+                ^
+1 warning generated.
+Finished building: ../TCPSessionBroker.cpp
+ 
+Building target: lab10
+Invoking: GCC C++ Linker
+g++  -o "lab10"  ./AuthRequestsDispatcher.o ./MThread.o ./MultipleTCPSocketsListener.o ./PeersRequestsDispatcher.o ./TCPMessengerServer.o ./TCPSessionBroker.o ./TCPSocket.o ./User.o ./main.o   -lpthread
+Finished building target: lab10
+ 
+13:36:54 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+make: Nothing to be done for `all'.
+13:38:35 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Building file: ../TCPSessionBroker.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPSessionBroker.d" -MT"TCPSessionBroker.o" -o "TCPSessionBroker.o" "../TCPSessionBroker.cpp"
+In file included from ../TCPSessionBroker.cpp:1:
+../TCPSocket.h:22:10: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+        int yes = 1;
+                ^
+1 warning generated.
+Finished building: ../TCPSessionBroker.cpp
+ 
+Building target: lab10
+Invoking: GCC C++ Linker
+g++  -o "lab10"  ./AuthRequestsDispatcher.o ./MThread.o ./MultipleTCPSocketsListener.o ./PeersRequestsDispatcher.o ./TCPMessengerServer.o ./TCPSessionBroker.o ./TCPSocket.o ./User.o ./main.o   -lpthread
+Finished building target: lab10
+ 
+13:38:36 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+make: Nothing to be done for `all'.
+13:40:14 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Building file: ../TCPSessionBroker.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPSessionBroker.d" -MT"TCPSessionBroker.o" -o "TCPSessionBroker.o" "../TCPSessionBroker.cpp"
+In file included from ../TCPSessionBroker.cpp:1:
+../TCPSocket.h:22:10: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+        int yes = 1;
+                ^
+1 warning generated.
+Finished building: ../TCPSessionBroker.cpp
+ 
+Building target: lab10
+Invoking: GCC C++ Linker
+g++  -o "lab10"  ./AuthRequestsDispatcher.o ./MThread.o ./MultipleTCPSocketsListener.o ./PeersRequestsDispatcher.o ./TCPMessengerServer.o ./TCPSessionBroker.o ./TCPSocket.o ./User.o ./main.o   -lpthread
+Finished building target: lab10
+ 
+13:40:15 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+make: Nothing to be done for `all'.
+14:02:22 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Building file: ../MultipleTCPSocketsListener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"MultipleTCPSocketsListener.d" -MT"MultipleTCPSocketsListener.o" -o "MultipleTCPSocketsListener.o" "../MultipleTCPSocketsListener.cpp"
+In file included from ../MultipleTCPSocketsListener.cpp:3:
+In file included from ../MultipleTCPSocketsListener.h:7:
+../TCPSocket.h:22:10: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+        int yes = 1;
+                ^
+1 warning generated.
+Finished building: ../MultipleTCPSocketsListener.cpp
+ 
+Building file: ../TCPSessionBroker.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPSessionBroker.d" -MT"TCPSessionBroker.o" -o "TCPSessionBroker.o" "../TCPSessionBroker.cpp"
+In file included from ../TCPSessionBroker.cpp:1:
+../TCPSocket.h:22:10: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+        int yes = 1;
+                ^
+1 warning generated.
+Finished building: ../TCPSessionBroker.cpp
+ 
+Building target: lab10
+Invoking: GCC C++ Linker
+g++  -o "lab10"  ./AuthRequestsDispatcher.o ./MThread.o ./MultipleTCPSocketsListener.o ./PeersRequestsDispatcher.o ./TCPMessengerServer.o ./TCPSessionBroker.o ./TCPSocket.o ./User.o ./main.o   -lpthread
+Finished building target: lab10
+ 
+14:02:23 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+make: Nothing to be done for `all'.
+14:04:57 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Building file: ../MultipleTCPSocketsListener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"MultipleTCPSocketsListener.d" -MT"MultipleTCPSocketsListener.o" -o "MultipleTCPSocketsListener.o" "../MultipleTCPSocketsListener.cpp"
+In file included from ../MultipleTCPSocketsListener.cpp:3:
+In file included from ../MultipleTCPSocketsListener.h:7:
+../TCPSocket.h:22:10: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+        int yes = 1;
+                ^
+1 warning generated.
+Finished building: ../MultipleTCPSocketsListener.cpp
+ 
+Building target: lab10
+Invoking: GCC C++ Linker
+g++  -o "lab10"  ./AuthRequestsDispatcher.o ./MThread.o ./MultipleTCPSocketsListener.o ./PeersRequestsDispatcher.o ./TCPMessengerServer.o ./TCPSessionBroker.o ./TCPSocket.o ./User.o ./main.o   -lpthread
+Finished building target: lab10
+ 
+14:04:58 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+make: Nothing to be done for `all'.
+14:06:26 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Building file: ../MultipleTCPSocketsListener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"MultipleTCPSocketsListener.d" -MT"MultipleTCPSocketsListener.o" -o "MultipleTCPSocketsListener.o" "../MultipleTCPSocketsListener.cpp"
+In file included from ../MultipleTCPSocketsListener.cpp:3:
+In file included from ../MultipleTCPSocketsListener.h:7:
+../TCPSocket.h:22:10: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+        int yes = 1;
+                ^
+1 warning generated.
+Finished building: ../MultipleTCPSocketsListener.cpp
+ 
+Building target: lab10
+Invoking: GCC C++ Linker
+g++  -o "lab10"  ./AuthRequestsDispatcher.o ./MThread.o ./MultipleTCPSocketsListener.o ./PeersRequestsDispatcher.o ./TCPMessengerServer.o ./TCPSessionBroker.o ./TCPSocket.o ./User.o ./main.o   -lpthread
+Finished building target: lab10
+ 
+14:06:27 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+make: Nothing to be done for `all'.
+14:09:35 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Building file: ../MultipleTCPSocketsListener.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"MultipleTCPSocketsListener.d" -MT"MultipleTCPSocketsListener.o" -o "MultipleTCPSocketsListener.o" "../MultipleTCPSocketsListener.cpp"
+In file included from ../MultipleTCPSocketsListener.cpp:3:
+In file included from ../MultipleTCPSocketsListener.h:7:
+../TCPSocket.h:22:10: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+        int yes = 1;
+                ^
+1 warning generated.
+Finished building: ../MultipleTCPSocketsListener.cpp
+ 
+Building target: lab10
+Invoking: GCC C++ Linker
+g++  -o "lab10"  ./AuthRequestsDispatcher.o ./MThread.o ./MultipleTCPSocketsListener.o ./PeersRequestsDispatcher.o ./TCPMessengerServer.o ./TCPSessionBroker.o ./TCPSocket.o ./User.o ./main.o   -lpthread
+Finished building target: lab10
+ 
+14:09:36 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+make: Nothing to be done for `all'.
+14:12:53 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Building file: ../TCPSessionBroker.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPSessionBroker.d" -MT"TCPSessionBroker.o" -o "TCPSessionBroker.o" "../TCPSessionBroker.cpp"
+In file included from ../TCPSessionBroker.cpp:1:
+../TCPSocket.h:22:10: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+        int yes = 1;
+                ^
+1 warning generated.
+Finished building: ../TCPSessionBroker.cpp
+ 
+Building target: lab10
+Invoking: GCC C++ Linker
+g++  -o "lab10"  ./AuthRequestsDispatcher.o ./MThread.o ./MultipleTCPSocketsListener.o ./PeersRequestsDispatcher.o ./TCPMessengerServer.o ./TCPSessionBroker.o ./TCPSocket.o ./User.o ./main.o   -lpthread
+Finished building target: lab10
+ 
+14:12:54 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+make: Nothing to be done for `all'.
+14:43:48 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Building file: ../TCPSessionBroker.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPSessionBroker.d" -MT"TCPSessionBroker.o" -o "TCPSessionBroker.o" "../TCPSessionBroker.cpp"
+In file included from ../TCPSessionBroker.cpp:1:
+../TCPSocket.h:22:10: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+        int yes = 1;
+                ^
+../TCPSessionBroker.cpp:166:2: error: cannot delete expression of type 'MultipleTCPSocketsListener'
+        delete(multipleTCPSocketsListener);
+        ^     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../TCPSessionBroker.cpp:168:1: error: unknown type name 's'
+s
+^
+../TCPSessionBroker.cpp:168:2: error: expected unqualified-id
+s
+ ^
+1 warning and 3 errors generated.
+make: *** [TCPSessionBroker.o] Error 1
+14:43:49 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+Building file: ../TCPMessengerClient.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPMessengerClient.d" -MT"TCPMessengerClient.o" -o "TCPMessengerClient.o" "../TCPMessengerClient.cpp"
+Finished building: ../TCPMessengerClient.cpp
+ 
+Building target: lab8
+Invoking: GCC C++ Linker
+g++  -o "lab8"  ./MThread.o ./TCPMessengerClient.o ./TCPSocket.o ./UDPGame.o ./UDPSocket.o ./main.o   -lpthread
+Finished building target: lab8
+ 
+14:44:01 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Building file: ../TCPSessionBroker.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPSessionBroker.d" -MT"TCPSessionBroker.o" -o "TCPSessionBroker.o" "../TCPSessionBroker.cpp"
+In file included from ../TCPSessionBroker.cpp:1:
+../TCPSocket.h:22:10: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+        int yes = 1;
+                ^
+../TCPSessionBroker.cpp:166:2: error: cannot delete expression of type 'MultipleTCPSocketsListener'
+        delete(multipleTCPSocketsListener);
+        ^     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../TCPSessionBroker.cpp:168:1: error: unknown type name 's'
+s
+^
+../TCPSessionBroker.cpp:168:2: error: expected unqualified-id
+s
+ ^
+1 warning and 3 errors generated.
+make: *** [TCPSessionBroker.o] Error 1
+14:44:02 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+make: Nothing to be done for `all'.
+14:44:24 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Building file: ../TCPSessionBroker.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPSessionBroker.d" -MT"TCPSessionBroker.o" -o "TCPSessionBroker.o" "../TCPSessionBroker.cpp"
+In file included from ../TCPSessionBroker.cpp:1:
+../TCPSocket.h:22:10: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+        int yes = 1;
+                ^
+../TCPSessionBroker.cpp:166:2: error: cannot delete expression of type 'MultipleTCPSocketsListener'
+        delete(multipleTCPSocketsListener);
+        ^     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../TCPSessionBroker.cpp:168:1: error: unknown type name 's'
+s
+^
+../TCPSessionBroker.cpp:168:2: error: expected unqualified-id
+s
+ ^
+1 warning and 3 errors generated.
+make: *** [TCPSessionBroker.o] Error 1
+14:44:24 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+make: Nothing to be done for `all'.
+14:45:16 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+Building file: ../TCPSessionBroker.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TCPSessionBroker.d" -MT"TCPSessionBroker.o" -o "TCPSessionBroker.o" "../TCPSessionBroker.cpp"
+In file included from ../TCPSessionBroker.cpp:1:
+../TCPSocket.h:22:10: warning: in-class initialization of non-static data member is a C++11 extension [-Wc++11-extensions]
+        int yes = 1;
+                ^
+1 warning generated.
+Finished building: ../TCPSessionBroker.cpp
+ 
+Building target: lab10
+Invoking: GCC C++ Linker
+g++  -o "lab10"  ./AuthRequestsDispatcher.o ./MThread.o ./MultipleTCPSocketsListener.o ./PeersRequestsDispatcher.o ./TCPMessengerServer.o ./TCPSessionBroker.o ./TCPSocket.o ./User.o ./main.o   -lpthread
+Finished building target: lab10
+ 
+14:45:17 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+make: Nothing to be done for `all'.
+14:51:17 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+make: Nothing to be done for `all'.
+14:51:18 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: lab8
+Invoking: GCC C++ Linker
+g++  -o "lab8"  ./MThread.o ./TCPMessengerClient.o ./TCPSocket.o ./UDPGame.o ./UDPSocket.o ./main.o   -lpthread
+Finished building target: lab8
+ 
+14:54:19 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+make: Nothing to be done for `all'.
+14:54:20 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: lab8
+Invoking: GCC C++ Linker
+g++  -o "lab8"  ./MThread.o ./TCPMessengerClient.o ./TCPSocket.o ./UDPGame.o ./UDPSocket.o ./main.o   -lpthread
+Finished building target: lab8
+ 
+14:58:24 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+make: Nothing to be done for `all'.
+14:58:24 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.cpp"
+../main.cpp:86:17: warning: overloaded operator << has higher precedence than comparison operator [-Woverloaded-shift-op-parentheses]
+                cout<<"fgfgf "<endl;
+                ~~~~~~~~~~~~~~^~~~~
+../main.cpp:86:7: note: place parentheses around the '<<' expression to silence this warning
+                cout<<"fgfgf "<endl;
+                    ^
+                (             )
+../main.cpp:86:17: note: place parentheses around comparison expression to evaluate it first
+                cout<<"fgfgf "<endl;
+                              ^
+                      (            )
+../main.cpp:86:18: error: reference to overloaded function could not be resolved; did you mean to call it?
+                cout<<"fgfgf "<endl;
+                               ^~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/ostream:1032:1: note: possible target for call
+endl(basic_ostream<_CharT, _Traits>& __os)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/system_error:473:1: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::__1::char_traits<char> >' to 'const std::__1::error_condition' for 1st argument
+operator<(const error_condition& __x, const error_condition& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/system_error:550:1: note: candidate function not viable: no known conversion from 'basic_ostream<char, std::__1::char_traits<char> >' to 'const std::__1::error_code' for 1st argument
+operator<(const error_code& __x, const error_code& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory:3062:1: note: candidate template ignored: couldn't infer template argument '_T1'
+operator<(nullptr_t, const unique_ptr<_T1, _D1>& __x)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory:4962:1: note: candidate template ignored: couldn't infer template argument '_Tp'
+operator<(nullptr_t, const shared_ptr<_Tp>& __x) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/utility:430:1: note: candidate template ignored: could not match 'pair' against 'basic_ostream'
+operator< (const pair<_T1,_T2>& __x, const pair<_T1,_T2>& __y)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/iterator:592:1: note: candidate template ignored: could not match 'reverse_iterator' against 'basic_ostream'
+operator<(const reverse_iterator<_Iter1>& __x, const reverse_iterator<_Iter2>& __y)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/iterator:996:1: note: candidate template ignored: could not match 'move_iterator' against 'basic_ostream'
+operator<(const move_iterator<_Iter1>& __x, const move_iterator<_Iter2>& __y)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/iterator:1312:1: note: candidate template ignored: could not match '__wrap_iter' against 'basic_ostream'
+operator<(const __wrap_iter<_Iter1>& __x, const __wrap_iter<_Iter2>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory:2995:1: note: candidate template ignored: could not match 'unique_ptr' against 'basic_ostream'
+operator< (const unique_ptr<_T1, _D1>& __x, const unique_ptr<_T2, _D2>& __y)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory:3053:1: note: candidate template ignored: could not match 'unique_ptr' against 'basic_ostream'
+operator<(const unique_ptr<_T1, _D1>& __x, nullptr_t)
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory:4889:1: note: candidate template ignored: could not match 'shared_ptr' against 'basic_ostream'
+operator<(const shared_ptr<_Tp>& __x, const shared_ptr<_Up>& __y) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/memory:4954:1: note: candidate template ignored: could not match 'shared_ptr' against 'basic_ostream'
+operator<(const shared_ptr<_Tp>& __x, nullptr_t) _NOEXCEPT
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/string:3852:1: note: candidate template ignored: could not match 'basic_string' against 'basic_ostream'
+operator< (const basic_string<_CharT, _Traits, _Allocator>& __lhs,
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/string:3861:1: note: candidate template ignored: could not match 'basic_string' against 'basic_ostream'
+operator< (const basic_string<_CharT, _Traits, _Allocator>& __lhs,
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/string:3870:1: note: candidate template ignored: could not match 'const _CharT *' against 'basic_ostream<char, std::__1::char_traits<char> >'
+operator< (const _CharT* __lhs,
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:1477:1: note: candidate template ignored: could not match 'map' against 'basic_ostream'
+operator< (const map<_Key, _Tp, _Compare, _Allocator>& __x,
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/map:1950:1: note: candidate template ignored: could not match 'multimap' against 'basic_ostream'
+operator< (const multimap<_Key, _Tp, _Compare, _Allocator>& __x,
+^
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1/vector:3282:1: note: candidate template ignored: could not match 'vector' against 'basic_ostream'
+operator< (const vector<_Tp, _Allocator>& __x, const vector<_Tp, _Allocator>& __y)
+^
+1 warning and 1 error generated.
+make: *** [main.o] Error 1
+14:58:56 **** Incremental Build of configuration Debug for project lab10 ****
+make all 
+make: Nothing to be done for `all'.
+14:58:57 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: lab8
+Invoking: GCC C++ Linker
+g++  -o "lab8"  ./MThread.o ./TCPMessengerClient.o ./TCPSocket.o ./UDPGame.o ./UDPSocket.o ./main.o   -lpthread
+Finished building target: lab8
+ 

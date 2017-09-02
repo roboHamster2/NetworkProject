@@ -1,5 +1,5 @@
-UDPGame.o: ../UDPGame.cpp ../UDPGame.h ../TCPSocket.h
+UDPGame.o: ../UDPGame.cpp ../UDPGame.h ../UDPSocket.h
 
 ../UDPGame.h:
 
-../TCPSocket.h:
+../UDPSocket.h:

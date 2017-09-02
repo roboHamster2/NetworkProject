@@ -1,0 +1,15 @@
+14:58:57 **** Incremental Build of configuration Debug for project lab8 ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: lab8
+Invoking: GCC C++ Linker
+g++  -o "lab8"  ./MThread.o ./TCPMessengerClient.o ./TCPSocket.o ./UDPGame.o ./UDPSocket.o ./main.o   -lpthread
+Finished building target: lab8
+ 
+
+14:58:57 Build Finished (took 632ms)
+

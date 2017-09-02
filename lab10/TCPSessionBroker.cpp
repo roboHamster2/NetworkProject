@@ -37,8 +37,6 @@ bool TCPSessionBroker::CreateP2PSession(){
 	if (response == ACCEPT) {
 		//sending the peers their connection information
 		messengerServer->sendCommandToPeer(sender, START_SESSION_WITH_PEER);
-		cout << connectionDetails(receiver, 123123, 321321) << endl;
-		cout << receiver->destIpAndPort() << endl;
 		messengerServer->sendDataToPeer(sender, connectionDetails(receiver, 44444, 44445));
 //		messengerServer->sendDataToPeer(sender, receiver->destIpAndPort());
 		messengerServer->sendCommandToPeer(receiver, START_SESSION_WITH_PEER);
@@ -120,36 +118,50 @@ void TCPSessionBroker::run() {
 	messengerServer->markPeerAsAvailable(peer2);
 }
 
-void TCPSessionBroker::updateScore(){
-	int score1;
-	int score2;
-	score1 = atoi(messengerServer->readDataFromPeer(peer1).c_str());
-	score2 = atoi(messengerServer->readDataFromPeer(peer2).c_str());
-	user1->setScore(score1);
-	user2->setScore(score2);
+void TCPSessionBroker::updateScore(TCPSocket* peer){
+	int score;
+	score = atoi(messengerServer->readDataFromPeer(peer).c_str());
+	string userName = messengerServer->socketToUser[peer];
+	User* user = messengerServer->users[userName];
+//	User * user = messengerServer->getUserBySocket(peer);
+	user->setScore(score);
+	cout << user->getUsername() <<" got : " << user->getScore() << endl;
 }
 
 void TCPSessionBroker::startGame(){
 	bool run = true;
+	bool user1Active = true;
+	bool user2Active = true;
+	cout<< "d1"<<endl;
+	MultipleTCPSocketsListener multipleTCPSocketsListener;
+	multipleTCPSocketsListener.addSocket(peer1);
+	multipleTCPSocketsListener.addSocket(peer2);
 	while (run) {
-		MultipleTCPSocketsListener multipleTCPSocketsListener;
-		multipleTCPSocketsListener.addSocket(peer1);
-		multipleTCPSocketsListener.addSocket(peer2);
-
+		cout<< "d3"<<endl;
 		vector<TCPSocket*> senders = multipleTCPSocketsListener.listenToSocket();
-		TCPSocket* sender = senders.at(0);
-
+		cout<< "d4 "<< senders.size() <<endl;
+		TCPSocket* sender = senders[0];
+		cout<< "d5"<<endl;
 		int command = messengerServer->readCommandFromPeer(sender);
+		cout<< "d6 "<< command <<endl;
+//		cout <<"the command received from  "<< messengerServer->getUserBySocket(sender)->getUsername() << "is : " << command << endl;
+		cout <<"the command received from  "<< messengerServer->socketToUser[sender] << "is : " << command << endl;
 		switch (command){
 		case CLOSE_SESSION_WITH_PEER:
+			cout<< "d7"<<endl;
 			cout << "closing session:" << peer1->destIpAndPort() << " -> " << peer1->destIpAndPort() << endl;
-			updateScore();
-			messengerServer->sendCommandToPeer(peer1, SESSION_ABOUT_TO_CLOSE);
-			messengerServer->sendCommandToPeer(peer2, SESSION_ABOUT_TO_CLOSE);
-			messengerServer->markPeerAsAvailable(peer1);
-			messengerServer->markPeerAsAvailable(peer2);
-			run = false;
-			break;
+			updateScore(sender);
+			cout<< "d8"<<endl;
+			messengerServer->markPeerAsAvailable(sender);
+			cout<< "d9"<<endl;
+			if(peer1 == sender)
+				user1Active = false;
+			else if(peer2 == sender)
+				user2Active = false;
+
+			if(!user1Active && !user2Active)
+				run = false;
 		}
 	}
 }
+

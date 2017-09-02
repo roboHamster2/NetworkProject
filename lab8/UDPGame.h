@@ -17,7 +17,7 @@ public:
 	UDPGame(string peerIP,int peerPort, int myPort);
 	void showGameMenu();
 	virtual ~UDPGame();
-	int start();
+	int startGame();
 	void sendTo(string msg,string ip,int port);
 
 	/**

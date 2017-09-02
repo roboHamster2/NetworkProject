@@ -22,8 +22,11 @@
 #define OPEN_RANDOM_SESSION 		12
 #define LOGIN_ACCEPT        		13
 #define LOGIN_REFUSED        		14
-#define START_SESSION_WITH_PEER     15
-#define DISCONNECT				    16
+#define START_SESSION_WITH_PEER		15
+#define DISCONNECT  				16
+#define DISCONNECT_FROM_SERVER  	17
+#define SESSION_ABOUT_TO_CLOSE		18
+#define UPDATE_SCORE				19
 
 
 #define TEST_PEER_NAME "test"

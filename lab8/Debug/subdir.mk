@@ -8,6 +8,7 @@ CPP_SRCS += \
 ../TCPMessengerClient.cpp \
 ../TCPSocket.cpp \
 ../UDPGame.cpp \
+../UDPSocket.cpp \
 ../main.cpp 
 
 OBJS += \
@@ -15,6 +16,7 @@ OBJS += \
 ./TCPMessengerClient.o \
 ./TCPSocket.o \
 ./UDPGame.o \
+./UDPSocket.o \
 ./main.o 
 
 CPP_DEPS += \
@@ -22,6 +24,7 @@ CPP_DEPS += \
 ./TCPMessengerClient.d \
 ./TCPSocket.d \
 ./UDPGame.d \
+./UDPSocket.d \
 ./main.d 
 
 

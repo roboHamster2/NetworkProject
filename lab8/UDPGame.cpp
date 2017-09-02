@@ -13,7 +13,7 @@ UDPGame::UDPGame(string peerIP,int peerPort, int myPort) {
 	this->peer2IP = peerIP;
 	this->peer2Port=peerPort;
 	udpSocket = new UDPSocket(myPort);
-	start();
+//	startGame();
 }
 
 void UDPGame::showGameMenu(){
@@ -22,76 +22,82 @@ void UDPGame::showGameMenu(){
 	cout<<"To exit type: x"<<endl;
 }
 
-int UDPGame::start(){
+int UDPGame::startGame() {
 	int score;
-	cout<<"Welcome to UDP game area"<<endl;
+	cout << "Welcome to UDP game area" << endl;
 	showGameMenu();
 	bool invalidInput = true;
 
 	string myCommand;
-	while(invalidInput)
-	{
+	while (invalidInput) {
 		cin >> myCommand;
-		if(strcmp(myCommand.c_str(),"s") || strcmp(myCommand.c_str(),"p")||strcmp(myCommand.c_str(),"r"))
+		if (!strcmp(myCommand.c_str(), "s") || !strcmp(myCommand.c_str(), "p") || !strcmp(myCommand.c_str(), "r") || !strcmp(myCommand.c_str(), "x"))
 			invalidInput = false;
 		else
-			cout<< "invalid input" << endl;
+			cout << "invalid input" << endl;
 	}
-	sendTo(myCommand,peer2IP,peer2Port);
+
+	sendTo(myCommand, peer2IP, peer2Port);
 
 	char buff[2];
-	cout<< "waiting for opponent to choose"<<endl;
-	int rc = udpSocket->recv(buff,2);
-	if (rc>0 && rc<2){
+	cout << "waiting for opponent to choose" << endl;
+	int rc = udpSocket->recv(buff, 2);
+
+	if (rc == 1) {
 		buff[rc] = 0;
-		cout<<"the opponent chose:"<<buff<<"\""<<endl;
-	}
-	cout << "zv vshura vzot " << myCommand << endl;
-	cout << "zv vshura vzot " << buff << endl;
-	if(strcmp(myCommand.c_str(),"r"))
-	{
-		if(strcmp(buff,"r")){
-			cout<<"draw"<<endl;
-		    score=1;
+
+		bool runGame = true;
+		if (!strcmp(myCommand.c_str(), "x"))
+			runGame = false;
+
+		if (runGame && !strcmp(buff, "x")){
+			cout << "Your opponent quit Unexpectedly" << endl;
+			runGame = false;
 		}
-		else if (strcmp(buff,"s")){
-			cout<<"you won" <<endl;
-			score=3;
-		}
-		else{
-			cout<< "you lose" <<endl;
-			score=0;
-		}
-	} else if(strcmp(myCommand.c_str(),"s")){
-		if(strcmp(buff,"s")){
-			cout<<"draw"<<endl;
-			score=1;
-		}
-		else if (strcmp(buff,"p")){
-			cout<<"you won" <<endl;
-			score=3;
-		}
-		else{
-			cout<< "you lose" <<endl;
-			score=0;
-		}
-	} else {
-		if(strcmp(buff,"p")){
-			cout<<"draw"<<endl;
-			score=1;
-		}
-		else if (strcmp(buff,"r")){
-			cout<<"you won" <<endl;
-			score=3;
-		}
-		else{
-			cout<< "you lose" <<endl;
-			score=0;
+
+		if(runGame)
+		{
+			cout << "the opponent chose:" << buff << "\"" << endl;
+			cout << "You chose : " << myCommand << endl;
+			if (!strcmp(myCommand.c_str(), "r")) {
+				if (!strcmp(buff, "r")) {
+					cout << "draw" << endl;
+					score = 1;
+				} else if (!strcmp(buff, "s")) {
+					cout << "you won" << endl;
+					score = 3;
+				} else {
+					cout << "you lose" << endl;
+					score = 0;
+				}
+			} else if (!strcmp(myCommand.c_str(), "s")) {
+				if (!strcmp(buff, "s")) {
+					cout << "draw" << endl;
+					score = 1;
+				} else if (!strcmp(buff, "p")) {
+					cout << "you won" << endl;
+					score = 3;
+				} else {
+					cout << "you lose" << endl;
+					score = 0;
+				}
+			} else {
+				if (!strcmp(buff, "p")) {
+					cout << "draw" << endl;
+					score = 1;
+				} else if (!strcmp(buff, "r")) {
+					cout << "you won" << endl;
+					score = 3;
+				} else {
+					cout << "you lose" << endl;
+					score = 0;
+				}
+			}
 		}
 	}
 
 	close();
-	cout<<"game has ended"<<endl;
+	cout << "game has ended" << endl;
 	return score;
 }
 
@@ -105,7 +111,6 @@ void UDPGame::reply(string msg){
 
 void UDPGame::close(){
 	udpSocket->close();
-	delete udpSocket;
 }
 
 

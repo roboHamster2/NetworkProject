@@ -17,7 +17,9 @@ class TCPMessengerClient{
 	bool connected;
 	bool sessionActive;
 //		string sessionAddress;
+	string firstPlayerUserName;
 	string secPlayerData;
+
 
 public:
 	TCPSocket* socket;
