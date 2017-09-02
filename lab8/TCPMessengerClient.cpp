@@ -57,6 +57,7 @@ void TCPMessengerClient::showMenu(){
 	cout<<"ou <userName> - open new session"<<endl;
 	cout<<"or - open random session"<<endl;
 	cout<<"su - show available users"<<endl;
+	cout<<"ss - show score and position"<<endl;
 	cout<<"du - disconnect user"<<endl;
 	cout<<"ds - disconnect from server"<<endl;
 	cout<<"x - exit"<<endl;
@@ -311,6 +312,17 @@ void TCPMessengerClient::showAvailableUsers(){
 	sendCommand(LIST_USERS);
 	int respond = readCommand();
 	if(respond == LIST_USERS)
+	{
+		string data = readCommandData();
+		cout << data << endl;
+	}
+}
+
+void TCPMessengerClient::showPosiotionAndScore(){
+	cout<<"Scores:"<<endl;
+	sendCommand(SHOW_SCORE);
+	int respond = readCommand();
+	if(respond == SHOW_SCORE)
 	{
 		string data = readCommandData();
 		cout << data << endl;

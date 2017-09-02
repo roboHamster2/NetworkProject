@@ -55,11 +55,22 @@ void PeersRequestsDispatcher::HandleCommandFromPeer(TCPSocket* readyPeer) {
 
 		}
 			break;
-		case LIST_USERS: {
-			messenger->sendCommandToPeer(readyPeer, LIST_USERS);
-			messenger->sendDataToPeer(readyPeer,
-					messenger->getAvailablePeers(readyPeer));
-		}
+		case LIST_USERS:{
+				messenger->sendCommandToPeer(readyPeer, LIST_USERS);
+				messenger->sendDataToPeer(readyPeer,messenger->getAvailablePeers(readyPeer));
+			}
+			break;
+		case SHOW_SCORE:{
+				messenger->sendCommandToPeer(readyPeer, SHOW_SCORE);
+				map<TCPSocket*,string>::iterator it = messenger->socketToUser.find(readyPeer);
+					if(it != messenger->socketToUser.end())
+					{
+					   //element found;
+						string userName = it->second;
+						messenger->sendDataToPeer(readyPeer,messenger->getPositionAndScore(messenger->users[userName]));
+					}
+
+			}
 			break;
 		case DISCONNECT: {
 			cout << "peer disconnected " << readyPeer->destIpAndPort() << endl;

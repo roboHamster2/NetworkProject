@@ -40,6 +40,10 @@ void handleConsoleCommand(){
 		{
 			messenger->showAvailableUsers();
 		}
+		else if (command == "ss")
+		{
+			messenger->showPosiotionAndScore();
+		}
 		else if (command == "du")
 		{
 			messenger->closeActiveSession();

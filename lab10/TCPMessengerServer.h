@@ -182,6 +182,11 @@ private:
 	* write user to file
 	*/
 	void writeUserToFile(string path,User* user);
+
+	/**
+	* get Position And Score
+	*/
+	string getPositionAndScore(User* user);
 };
 
 #endif
