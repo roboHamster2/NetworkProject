@@ -271,8 +271,12 @@ map<string,User*> TCPMessengerServer::loadUsersFromFile(string path){
 }
 //string TCPMessengerServer::tr1::registerUser(string name, string password){
 string TCPMessengerServer::registerUser(string name, string password){
-	if (name.length() < 4 && password.length() < 4){
-		return "password and user must be at least 4 characters";
+	cout<<"name L: "<<name.length()<<" password L: "<<password.length()<<"\n";
+	if (name.length() < 2 ){
+		return "user must be at least 2 characters";
+	}
+	if (password.length() < 4){
+		return "password  must be at least 4 characters";
 	}
 	if (users[name]!=NULL){
 		return "user already taken";
@@ -291,14 +295,11 @@ string TCPMessengerServer::registerUser(string name, string password){
 
 //string TCPMessengerServer::tr1::loginUser(string name, string password){
 string TCPMessengerServer::loginUser(string name, string password){
-	if (name.length() < 4 && password.length() < 4){
-		return "password and user must be at least 4 characters";
-	}
 	if (users[name]==NULL){
 		return "user does not exist";
 	}
 	if (userToSocket[name]){
-			return "user already logged in";
+		return "user already logged in";
 	}
 	std::hash<string> hash_fn;
 	size_t str_hash = hash_fn(password);
