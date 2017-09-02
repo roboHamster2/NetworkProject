@@ -43,7 +43,6 @@ void TCPMessengerServer::run() {
 		if (peerSocket != NULL) {
 			cout << "new peer connected: " << peerSocket->destIpAndPort()
 					<< endl;
-			//openedPeers[peerSocket->destIpAndPort()] = peerSocket;
 			unauthenticatedPeers.push_back(peerSocket);
 		}
 	}
@@ -83,7 +82,6 @@ void TCPMessengerServer::close() {
 		usersToSave.push_back(it->second);
 	}
 
-//	writeUsersToFile(USERS_FILE, usersToSave);
 	cout << "server closed" << endl;
 }
 
@@ -105,6 +103,7 @@ TCPSocket* TCPMessengerServer::getAvailablePeerByName(string peerName) {
 }
 
 vector<TCPSocket*> TCPMessengerServer::getPeersVec() {
+	std::lock_guard<mutex> lock(g_i_mutex);
 	vector<TCPSocket*> vec;
 	tOpenedPeers::iterator iter = openedPeers.begin();
 	tOpenedPeers::iterator endIter = openedPeers.end();
@@ -130,18 +129,21 @@ void TCPMessengerServer::peerDisconnect(TCPSocket* peer) {
 		socketToUser.erase(peer);
 		openedPeers.erase(userName);
 		busyPeers.erase(userName);
+		cout << "peer Disconnected from TCPMessengerServer" << endl;
 		peer->cclose();
 		delete peer;
 	}
 }
 
 void TCPMessengerServer::markPeerAsUnavailable(TCPSocket* peer) {
+	cout << "unAvailable from TCP Server" << socketToUser[peer] << endl;
 	map<TCPSocket*,string>::iterator it = socketToUser.find(peer);
 		if(it != socketToUser.end())
 		{
 		   //element found;
 			string userName = it->second;
 			markPeerAsUnavailable(userName);
+
 		}
 }
 
@@ -172,14 +174,17 @@ void TCPMessengerServer::peerDisconnect(string peerName) {
 }
 
 void TCPMessengerServer::markPeerAsUnavailable(string peerName) {
+	std::lock_guard<mutex> lock(g_i_mutex);
 	TCPSocket* sok = openedPeers[peerName];
 	if(sok != NULL){
 		busyPeers[peerName] = sok;
 		openedPeers.erase(peerName);
+		sleep(2);
 	}
 }
 
 void TCPMessengerServer::markPeerAsAvailable(string peerName) {
+	std::lock_guard<mutex> lock(g_i_mutex);
 	TCPSocket* sok = busyPeers[peerName];
 		if(sok != NULL){
 			openedPeers[peerName] = sok;

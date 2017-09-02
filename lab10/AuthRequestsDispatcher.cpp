@@ -43,7 +43,7 @@ void AuthRequestsDispatcher::run() {
 	while (messenger->running) {
 		MultipleTCPSocketsListener msp;
 		msp.addSockets(messenger->getUnathenticatedPeersVec());
-		vector<TCPSocket*> readyPeers = msp.listenToSocket(2);
+		vector<TCPSocket*> readyPeers = msp.listenToSocket(1);
 		vector<TCPSocket*>::iterator iter = readyPeers.begin();
 		for (;iter != readyPeers.end();iter++) {
 			TCPSocket* readyPeer = *iter;
@@ -90,7 +90,7 @@ void AuthRequestsDispatcher::HandleCommandFromPeer(TCPSocket* readyPeer){
 			}
 			break;
 	default:
-		cout << "peer disconnected: " << readyPeer->destIpAndPort() << endl;
+		cout << "peer disconnected from authRequestDispatcher : " << messenger->socketToUser[readyPeer] << endl;
 		messenger->peerDisconnect(readyPeer);
 		break;
 	}

@@ -260,8 +260,6 @@ void TCPMessengerClient::disconnect(){
  * and close opened session
  */
 bool TCPMessengerClient::open(string userName){
-//	if(sessionActive)//delete?
-//		closeActiveSession();//delete?
 	cout<<"send play request to - "<<userName<<endl;
 	sendCommand(OPEN_SESSION_WITH_PEER);
 	sendCommandData(userName);

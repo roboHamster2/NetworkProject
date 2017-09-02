@@ -28,7 +28,6 @@
 #define SESSION_ABOUT_TO_CLOSE		18
 #define UPDATE_SCORE				19
 
-
 #define TEST_PEER_NAME "test"
 #define SESSION_REFUSED_MSG "Connection to peer refused, peer might be busy or disconnected, try again later"
 

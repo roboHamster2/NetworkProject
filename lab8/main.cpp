@@ -38,14 +38,6 @@ void handleConsoleCommand(){
 		}
 		else if (command == "su")
 		{
-//			string msg;
-//			getline(std::cin,msg);
-//			if(msg.size()>0 && msg[0] == ' ')
-//				msg.erase(0,1);
-//			if (messenger->isActiveClientSession())
-//				messenger->send(msg);
-//			else
-//				cout<<"Error: not connected to peer"<<endl;
 			messenger->showAvailableUsers();
 		}
 		else if (command == "du")
@@ -54,10 +46,11 @@ void handleConsoleCommand(){
 		}
 		else if (command == "ds")
 		{
-			messenger->disconnect();
+			messenger->disconnectFromServer();
 		}
 		else if (command == "x")
 		{
+			messenger->disconnectFromServer();
 			run = false;
 		} else {
 			cout<<"invalid command"<<endl;
@@ -87,10 +80,7 @@ void startMainLoop(){
 		}
 		if(FD_ISSET(STDIN, &read_fds))
 		{
-//			if(messenger->game != NULL){
-//				messenger->game->handleGameCommand();
-//			}else
-				handleConsoleCommand();
+			handleConsoleCommand();
 		}
 	}
 }
@@ -104,7 +94,7 @@ int main(){
 		run = messenger->loginToServer();
 		if(run)
 			startMainLoop();
-		messenger->disconnect();
+		messenger->disconnectFromServer();
 	}
 	delete messenger;
 	return 0;

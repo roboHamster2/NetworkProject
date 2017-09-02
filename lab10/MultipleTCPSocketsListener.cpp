@@ -31,7 +31,6 @@ vector<TCPSocket*> MultipleTCPSocketsListener::listenToSocket(int timeout){
 	if (timeout>0){
 		returned = select(sizeof(fdset)*8, &fdset, NULL, NULL, &tv);
 	}else{
-		cout<< "mmm " << highfd << endl;
 		returned = select(sizeof(fdset)*8, &fdset, NULL, NULL, NULL);
 		cout<< "The timeout is 0 : " << highfd << endl;
 	}

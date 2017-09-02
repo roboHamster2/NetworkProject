@@ -4,6 +4,7 @@
 #include <strings.h>
 #include <map>
 #include <vector>
+#include <mutex>
 #include "MThread.h"
 #include "TCPSocket.h"
 #include "MultipleTCPSocketsListener.h"
@@ -26,6 +27,7 @@ class TCPMessengerServer: public MThread {
 	AuthRequestsDispatcher* authDispatcher;
 	TCPSocket* tcpServerSocket;
 	bool running;
+	std::mutex g_i_mutex;
 
 	map<string,User*> users;
 

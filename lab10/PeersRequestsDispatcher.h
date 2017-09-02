@@ -10,12 +10,13 @@ class TCPMessengerServer;
  */
 class PeersRequestsDispatcher: public MThread {
 	TCPMessengerServer* messenger;
+
 public:
 	/**
 	 * constructor that receive a reference to the parent messenger server
 	 */
 	PeersRequestsDispatcher(TCPMessengerServer* mesgr);
-
+	bool stopIteration = false;
 	/**
 	 * The Dispatcher main loop
 	 */

@@ -23,7 +23,7 @@ void PeersRequestsDispatcher::run() {
 
 void PeersRequestsDispatcher::HandleCommandFromPeer(TCPSocket* readyPeer) {
 	int command = messenger->readCommandFromPeer(readyPeer);
-	if (command > 0 && command <= 19) {
+	if (command > 0 && command <= 20) {
 		string pName;
 		TCPSocket* scondPeer;
 		switch (command) {
@@ -35,7 +35,7 @@ void PeersRequestsDispatcher::HandleCommandFromPeer(TCPSocket* readyPeer) {
 						readyPeer, scondPeer);
 				broker->start();
 			} else if (scondPeer == NULL) {
-				cout << "FAIL: didnt find peer:" << pName << endl;
+				cout << "FAIL: didn't find peer:" << pName << endl;
 				messenger->sendCommandToPeer(readyPeer, REFUSE);
 				messenger->sendDataToPeer(readyPeer, "user not found");
 			} else if (scondPeer == readyPeer) {
@@ -74,10 +74,11 @@ void PeersRequestsDispatcher::HandleCommandFromPeer(TCPSocket* readyPeer) {
 			break;
 		}
 		default:
+		{
 			cout << "peer disconnected: " << readyPeer->destIpAndPort() << endl;
-			cout << "disconnect : " << command << endl;
 			messenger->peerDisconnect(readyPeer);
 			break;
+		}
 		}
 	}
 }
