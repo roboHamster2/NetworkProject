@@ -17,8 +17,8 @@ UDPGame::UDPGame(string peerIP,int peerPort, int myPort) {
 }
 
 void UDPGame::showGameMenu(){
-	cout<<"Choose Rock,Scissors,Paper: s  <message>"<<endl;
-	cout<<"To reply to a message type: r <message>"<<endl;
+	cout<<"Rock Paper Scissors Lizard Spock:"<<endl;
+	cout<<"r | p | s | l | k"<<endl;
 	cout<<"To exit type: x"<<endl;
 }
 
@@ -31,7 +31,7 @@ int UDPGame::startGame() {
 	string myCommand;
 	while (invalidInput) {
 		cin >> myCommand;
-		if (!strcmp(myCommand.c_str(), "s") || !strcmp(myCommand.c_str(), "p") || !strcmp(myCommand.c_str(), "r") || !strcmp(myCommand.c_str(), "x"))
+		if (!strcmp(myCommand.c_str(), "s") || !strcmp(myCommand.c_str(), "p") || !strcmp(myCommand.c_str(), "r") || !strcmp(myCommand.c_str(), "l") || !strcmp(myCommand.c_str(), "k") || !strcmp(myCommand.c_str(), "x"))
 			invalidInput = false;
 		else
 			cout << "invalid input" << endl;
@@ -63,7 +63,7 @@ int UDPGame::startGame() {
 				if (!strcmp(buff, "r")) {
 					cout << "draw" << endl;
 					score = 1;
-				} else if (!strcmp(buff, "s")) {
+				} else if (!strcmp(buff, "s")||!strcmp(buff, "l")) {
 					cout << "you won" << endl;
 					score = 3;
 				} else {
@@ -74,7 +74,29 @@ int UDPGame::startGame() {
 				if (!strcmp(buff, "s")) {
 					cout << "draw" << endl;
 					score = 1;
-				} else if (!strcmp(buff, "p")) {
+				} else if (!strcmp(buff, "p")||!strcmp(buff, "l")) {
+					cout << "you won" << endl;
+					score = 3;
+				} else {
+					cout << "you lose" << endl;
+					score = 0;
+				}
+			} else if (!strcmp(myCommand.c_str(), "p")) {
+				if (!strcmp(buff, "p")) {
+					cout << "draw" << endl;
+					score = 1;
+				} else if (!strcmp(buff, "r")||!strcmp(buff, "k")) {
+					cout << "you won" << endl;
+					score = 3;
+				} else {
+					cout << "you lose" << endl;
+					score = 0;
+				}
+			} else if (!strcmp(myCommand.c_str(), "l")) {
+				if (!strcmp(buff, "l")) {
+					cout << "draw" << endl;
+					score = 1;
+				} else if (!strcmp(buff, "p")||!strcmp(buff, "k")) {
 					cout << "you won" << endl;
 					score = 3;
 				} else {
@@ -82,10 +104,10 @@ int UDPGame::startGame() {
 					score = 0;
 				}
 			} else {
-				if (!strcmp(buff, "p")) {
+				if (!strcmp(buff, "k")) {
 					cout << "draw" << endl;
 					score = 1;
-				} else if (!strcmp(buff, "r")) {
+				} else if (!strcmp(buff, "r")||!strcmp(buff, "s")) {
 					cout << "you won" << endl;
 					score = 3;
 				} else {
