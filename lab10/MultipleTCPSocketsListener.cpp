@@ -15,7 +15,6 @@ void MultipleTCPSocketsListener::addSockets(tSocketsContainer socketVec){
 }
 
 vector<TCPSocket*> MultipleTCPSocketsListener::listenToSocket(int timeout){
-	cout<< "Listen to socket has started " << endl;
 	struct timeval tv = {timeout, 0};
 	tSocketsContainer::iterator iter = sockets.begin();
 	tSocketsContainer::iterator endIter = sockets.end();

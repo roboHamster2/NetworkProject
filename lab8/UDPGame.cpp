@@ -23,7 +23,7 @@ void UDPGame::showGameMenu(){
 }
 
 int UDPGame::startGame() {
-	int score;
+	int score=0;
 	cout << "Welcome to UDP game area" << endl;
 	showGameMenu();
 	bool invalidInput = true;

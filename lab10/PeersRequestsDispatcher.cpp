@@ -24,7 +24,7 @@ void PeersRequestsDispatcher::run() {
 
 void PeersRequestsDispatcher::HandleCommandFromPeer(TCPSocket* readyPeer){
 	int command = messenger->readCommandFromPeer(readyPeer);
-	if (command > 0){
+	if (command > 0 && command <= 19){
 		string pName;
 		TCPSocket* scondPeer;
 		switch (command) {
@@ -53,6 +53,7 @@ void PeersRequestsDispatcher::HandleCommandFromPeer(TCPSocket* readyPeer){
 			break;
 		default:
 			cout << "peer disconnected: " << readyPeer->destIpAndPort() << endl;
+			cout << "disconnect : " << command << endl;
 			messenger->peerDisconnect(readyPeer);
 			break;
 		}

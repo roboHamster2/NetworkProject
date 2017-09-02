@@ -69,55 +69,40 @@ void TCPMessengerClient::showMenu(){
 void TCPMessengerClient::handleServerCommand()
 {
 	int command = readCommand();
-	switch (command){
-		case SEND_REQUEST_TO_PEER:
-		{
-			string msg;
-			msg = readCommandData();
-			cout<<">>"<<msg<<"[y/n]"<<endl;
-			string answear;
-			cin>>answear;
-			if(answear=="y"){
-				sendCommand(ACCEPT);
-				int comm = readCommand();
-				if(comm!=START_SESSION_WITH_PEER)
-					cout<< "got invalid command from server"<<endl;
-				else{
-					secPlayerData = readCommandData();
-					startGameWithPeer(false);
-				}
-			}else
-				sendCommand(REFUSE);
+	if (command > 0 && command <=19) {
+		switch (command){
+				case SEND_REQUEST_TO_PEER:
+				{
+					string msg;
+					msg = readCommandData();
+					cout<<">>"<<msg<<"[y/n]"<<endl;
+					string answear;
+					cin>>answear;
+					if(answear=="y"){
+						sendCommand(ACCEPT);
+						int comm = readCommand();
+						if(comm!=START_SESSION_WITH_PEER)
+							cout<< "got invalid command from server"<<endl;
+						else{
+							secPlayerData = readCommandData();
+							startGameWithPeer(false);
+						}
+					}else
+						sendCommand(REFUSE);
 
-			break;
-		}
-//		case CLOSE_SESSION_WITH_PEER:
-//		{
-//			cout<<"Session was closed by remote peer"<<endl;
-//			break;
-//		}
-//		case OPEN_SESSION_WITH_PEER:
-//		{
-//			sessionAddress = readCommandData();
-//			cout<<"Session was opened by remote peer: "<<sessionAddress<<endl;
-//			sessionActive = true;
-//			break;
-//		}
-//		case SESSION_ESTABLISHED:{
-//			cout<<"Session was established"<<endl;
-//			sessionActive = true;
-//			break;
-//		}
-		default:
-		{
-			cout<<"communication with server was interrupted - connection closed"<<endl;
-			socket->cclose();
-			connected = false;
-			sessionActive = false;
-			//sessionAddress = "";
-			delete socket;
-			break;
-		}
+					break;
+				}
+				default:
+				{
+					cout<<"communication with server was interrupted - connection closed"<<endl;
+					socket->cclose();
+					connected = false;
+					sessionActive = false;
+					//sessionAddress = "";
+					delete socket;
+					break;
+				}
+			}
 	}
 }
 
@@ -133,10 +118,9 @@ void TCPMessengerClient::startGameWithPeer(bool startedByMe){//change to UDPSOCK
 	cout << "the score is : " << score << endl;
 	//Updating the server
 	string resultToServer = to_string(score);
+	cout << resultToServer << endl;
 	sendCommand(CLOSE_SESSION_WITH_PEER);
-	sendCommandData("400");
-	cout<<"ffff "<<endl;
-//	closeActiveSession();
+	sendCommandData(resultToServer);
 	//close the game in server
 
 }
@@ -263,6 +247,7 @@ bool TCPMessengerClient::open(string userName){
 	sendCommandData(userName);
 	cout<<"waiting for "<< userName << " respond"<<endl;
 	int respond = readCommand();
+	cout <<"The Response is : " << respond << endl;
 	if (respond == START_SESSION_WITH_PEER)
 	{
 		cout<<userName << " accept your request"<<endl;

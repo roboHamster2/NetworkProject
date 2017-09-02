@@ -76,25 +76,20 @@ void startMainLoop(){
 	int socket = messenger->socket->getSocketFid();
 	FD_SET(socket, &master);
 	while(run == true){
-		cout<< "yyy "<<endl;
 		read_fds = master; // copy it
-		cout<< "zzz "<<endl;
 		if (select(socket + 1, &read_fds, NULL, NULL, NULL) == -1) {
 			perror("select");
 			run= false;
 		}
-		cout<<"fgfgf "<<endl;
 		if (FD_ISSET(socket, &read_fds))
 		{
 			messenger->handleServerCommand();
-			cout<< "hhh "<<endl;
 		}
 		if(FD_ISSET(STDIN, &read_fds))
 		{
 //			if(messenger->game != NULL){
 //				messenger->game->handleGameCommand();
 //			}else
-			cout<<"ggg "<< endl;
 				handleConsoleCommand();
 		}
 	}

@@ -31,7 +31,7 @@ bool TCPSessionBroker::CreateP2PSession(){
 			<< receiver->destIpAndPort() << " " << endl;
 
 	messengerServer->sendCommandToPeer(receiver, SEND_REQUEST_TO_PEER);
-	string userName = messengerServer->getUserBySocket(sender)->getUsername();
+	string userName = messengerServer->socketToUser[receiver];
 	messengerServer->sendDataToPeer(receiver, userName);
 	response = messengerServer->readCommandFromPeer(receiver);
 	if (response == ACCEPT) {
@@ -58,11 +58,6 @@ TCPSocket* TCPSessionBroker::pickRandomPeer(){
 	return (*item).second != peer1 ? (*item).second : NULL;
 }
 
-void TCPSessionBroker::setupUsers(){
-	user1 = messengerServer->getUserBySocket(peer1);
-	user2 = messengerServer->getUserBySocket(peer2);
-}
-
 string TCPSessionBroker::connectionDetails(TCPSocket* peer2Socket, int peer2Port, int peer1Port){
 	string peerData;
 	string ip = peer2Socket->fromAddr();
@@ -78,14 +73,12 @@ string TCPSessionBroker::connectionDetails(TCPSocket* peer2Socket, int peer2Port
 
 void TCPSessionBroker::run() {
 	messengerServer->markPeerAsUnavailable(peer1);
-//	if (peer2 != NULL) {
 	if (peer2 != NULL && peer1 != peer2) {
 		messengerServer->markPeerAsUnavailable(peer2);
 		if (CreateP2PSession()) {
-			setupUsers();
 			startGame();
 		}else {
-			string userName = messengerServer->getUserBySocket(peer2)->getUsername();
+			string userName = messengerServer->socketToUser[peer2];
 			messengerServer->sendCommandToPeer(peer1, REFUSE);
 			messengerServer->sendDataToPeer(peer1, userName+" Refused your request");
 		}
@@ -101,7 +94,6 @@ void TCPSessionBroker::run() {
 
 			messengerServer->markPeerAsUnavailable(peer2);
 			if (CreateP2PSession()) {
-				setupUsers();
 				startGame();
 				break;
 			}else { messengerServer->markPeerAsAvailable(peer2);}
@@ -112,8 +104,7 @@ void TCPSessionBroker::run() {
 			messengerServer->sendDataToPeer(peer1, "Did't found players");
 		}
 	}
-	cout << "closing session:" << peer1->destIpAndPort() << " -> "
-			<< peer1->destIpAndPort() << endl;
+	cout << "mark peer as available" << endl;
 	messengerServer->markPeerAsAvailable(peer1);
 	messengerServer->markPeerAsAvailable(peer2);
 }
@@ -123,8 +114,8 @@ void TCPSessionBroker::updateScore(TCPSocket* peer){
 	score = atoi(messengerServer->readDataFromPeer(peer).c_str());
 	string userName = messengerServer->socketToUser[peer];
 	User* user = messengerServer->users[userName];
-//	User * user = messengerServer->getUserBySocket(peer);
-	user->setScore(score);
+	user->setScore(user->getScore() + score);
+	messengerServer->writeUsersToFile();
 	cout << user->getUsername() <<" got : " << user->getScore() << endl;
 }
 
@@ -132,36 +123,42 @@ void TCPSessionBroker::startGame(){
 	bool run = true;
 	bool user1Active = true;
 	bool user2Active = true;
-	cout<< "d1"<<endl;
 	MultipleTCPSocketsListener multipleTCPSocketsListener;
 	multipleTCPSocketsListener.addSocket(peer1);
 	multipleTCPSocketsListener.addSocket(peer2);
 	while (run) {
-		cout<< "d3"<<endl;
-		vector<TCPSocket*> senders = multipleTCPSocketsListener.listenToSocket();
-		cout<< "d4 "<< senders.size() <<endl;
-		TCPSocket* sender = senders[0];
-		cout<< "d5"<<endl;
-		int command = messengerServer->readCommandFromPeer(sender);
-		cout<< "d6 "<< command <<endl;
-//		cout <<"the command received from  "<< messengerServer->getUserBySocket(sender)->getUsername() << "is : " << command << endl;
-		cout <<"the command received from  "<< messengerServer->socketToUser[sender] << "is : " << command << endl;
-		switch (command){
-		case CLOSE_SESSION_WITH_PEER:
-			cout<< "d7"<<endl;
-			cout << "closing session:" << peer1->destIpAndPort() << " -> " << peer1->destIpAndPort() << endl;
-			updateScore(sender);
-			cout<< "d8"<<endl;
-			messengerServer->markPeerAsAvailable(sender);
-			cout<< "d9"<<endl;
-			if(peer1 == sender)
-				user1Active = false;
-			else if(peer2 == sender)
-				user2Active = false;
 
-			if(!user1Active && !user2Active)
-				run = false;
+		vector<TCPSocket*> senders =
+				multipleTCPSocketsListener.listenToSocket();
+		vector<TCPSocket*>::iterator iter = senders.begin();
+
+		for (; iter != senders.end(); iter++) {
+			TCPSocket* sender = *iter;
+
+			int command = messengerServer->readCommandFromPeer(sender);
+			switch (command) {
+			case CLOSE_SESSION_WITH_PEER: {
+				cout << "closing session:" << sender->destIpAndPort() << endl;
+			updateScore(sender);
+//				messengerServer->markPeerAsAvailable(sender);
+				if (peer1 == sender)
+					user1Active = false;
+				else if (peer2 == sender)
+					user2Active = false;
+
+				if (!user1Active && !user2Active)
+					run = false;
+				break;
+			}
+			default: {
+				cout << "defult case" << endl;
+				break;
+			}
+			}
 		}
 	}
 }
-
+//	cout << "peer 1 : " << peer1->destIpAndPort() << endl;
+//	cout << "peer 2 : " << peer2->destIpAndPort() << endl;
+//	cout << "senders[0] : " << senders.at(0)->destIpAndPort() << endl;
+//cout << "the command received from  " << messengerServer->socketToUser[sender] << "is : "<< command << endl;

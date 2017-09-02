@@ -134,7 +134,7 @@ private:
 	/**
 	 * write users to CSV
 	 */
-	void writeUsersToFile(string path,vector<User*> users);
+	void writeUsersToFile();
 
 	/**
 	 * load users from CSV

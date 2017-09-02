@@ -147,20 +147,29 @@ void TCPMessengerServer::peerDisconnect(TCPSocket* peer) {
 		socketToUser.erase(peer);
 		openedPeers.erase(userName);
 		busyPeers.erase(userName);
-
 		peer->cclose();
 		delete peer;
 	}
 }
 
 void TCPMessengerServer::markPeerAsUnavailable(TCPSocket* peer) {
-	openedPeers.erase(peer->destIpAndPort());
-	busyPeers[peer->destIpAndPort()] = peer;
+	map<TCPSocket*,string>::iterator it = socketToUser.find(peer);
+		if(it != socketToUser.end())
+		{
+		   //element found;
+			string userName = it->second;
+			markPeerAsUnavailable(userName);
+		}
 }
 
 void TCPMessengerServer::markPeerAsAvailable(TCPSocket* peer) {
-	busyPeers.erase(peer->destIpAndPort());
-	openedPeers[peer->destIpAndPort()] = peer;
+	map<TCPSocket*,string>::iterator it = socketToUser.find(peer);
+		if(it != socketToUser.end())
+		{
+		   //element found;
+			string userName = it->second;
+			markPeerAsAvailable(userName);
+		}
 }
 
 void TCPMessengerServer::peerDisconnect(string peerName) {
@@ -241,10 +250,16 @@ void TCPMessengerServer::sendDataToPeer(TCPSocket* peer, string msg) {
 	peer->send(msg.data(), msg.length());
 }
 
-void TCPMessengerServer::writeUsersToFile(string path, vector<User*> users) {
+void TCPMessengerServer::writeUsersToFile() {
 	ofstream myfile;
-	myfile.open(path.c_str());
-	for (std::vector<User*>::iterator it = users.begin() ; it != users.end(); ++it){
+	myfile.open(USERS_FILE);
+	vector<User*> usersToSave;
+
+	for (std::map<string, User*>::iterator it = this->users.begin();it != this->users.end(); ++it) {
+		usersToSave.push_back(it->second);
+	}
+
+	for (std::vector<User*>::iterator it = usersToSave.begin() ; it != usersToSave.end(); ++it){
 		myfile << (*it)->getUsername()<<","<< (*it)->getPassword()<<","<< (*it)->getScore() << "\n";
 	}
 	myfile.close();
